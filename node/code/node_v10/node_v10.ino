@@ -126,8 +126,9 @@ void loop() {
   }
   Serial.print("- Measurement...");
 
-  thisPayload.battery_voltage = get_battery_voltage();
-  thisPayload.board_temp = get_board_temp();
+  thisPayload.battery_voltage = get_battery_voltage(); //NOTE: THIS IS NOT TESTED. MAKE SURE IT WORKS
+  thisPayload.board_temp = get_board_temp(); //NOTE: THERE IS NO CODE IN THIS FUNCTION. FILL IT PLEASE
+
   for (uint8_t i = 0; i < 8; i++)
   {
     selectMuxPin(i); // Select one at a time
@@ -151,11 +152,11 @@ void loop() {
 		}
 		if(EEPROM.read(5) == 0) { //Make sure there is no data stored, then send the measurement that was just taken
 			Serial.print("- No Stored Data, Sending ");
-			digitalWrite(LED, LOW); //turn on LED
+			digitalWrite(LED, HIGH); //turn on LED
 			if (radio.sendWithRetry(GATEWAYID, (const void*)(&thisPayload), sizeof(thisPayload)), ACK_RETRIES, ACK_WAIT_TIME) {
 				Serial.print(sizeof(thisPayload)); Serial.print(" bytes -> ");
 				Serial.print('['); Serial.print(GATEWAYID); Serial.print("] ");
-				digitalWrite(LED, HIGH); //Turn Off LED
+				digitalWrite(LED, LOW); //Turn Off LED
 			} else {
 				Serial.print("snd - Failed . . . no ack");
 				Blink(50);
@@ -249,7 +250,7 @@ void sendStoredEEPROMData() {
     for(int i = 0; i<8; i++)
       tmp.t[i] = theData.t[i];
 		//Send data to datalogger
-		digitalWrite(LED, LOW); //turn on LED to signal transmission
+		digitalWrite(LED, HIGH); //turn on LED to signal transmission
 		if (radio.sendWithRetry(GATEWAYID, (const void*)(&tmp), sizeof(tmp)), ACK_RETRIES, ACK_WAIT_TIME) {
 			Serial.print(".data sent, erasing...");
 			EEPROM.put(EEPROM_ADDR, blank); //If successfully sent, erase that data chunk...
@@ -258,7 +259,7 @@ void sendStoredEEPROMData() {
 			EEPROM.get(EEPROM_ADDR, theData); // and read in the next saved data...
 			storeIndex += 1; //and increment the count of saved values
 			Serial.print(".store index "); Serial.println(storeIndex);
-			digitalWrite(LED, HIGH);
+			digitalWrite(LED, LOW);
 		} else {
 			//this has never happened...
 			Serial.print(".data send failed, waiting for retry");
@@ -328,7 +329,7 @@ bool getTime()
 {
 	bool HANDSHAKE_SENT = false;
 	bool TIME_RECIEVED = false;
-	digitalWrite(LED, LOW); //turn on LED to signal tranmission event
+	digitalWrite(LED, HIGH); //turn on LED to signal tranmission event
 	//Send request for time to the Datalogger
 	if(!HANDSHAKE_SENT) {
 		Serial.print("time - ");
@@ -350,7 +351,7 @@ bool getTime()
 				Serial.print(" rcv - "); Serial.print('['); Serial.print(radio.SENDERID); Serial.print("] ");
 				Serial.print(theTimeStamp.timestamp); Serial.print(" [RX_RSSI:"); Serial.print(radio.RSSI); Serial.print("]"); Serial.println();
 				TIME_RECIEVED = true;
-				digitalWrite(LED, HIGH); //turn off LED
+				digitalWrite(LED, LOW); //turn off LED
 			}
 			if (radio.ACKRequested()) radio.sendACK();
 		}
@@ -397,8 +398,8 @@ bool ping()
 
 void Blink(uint8_t t)
 {
- 	digitalWrite(LED, LOW); //turn LED on
+ 	digitalWrite(LED, HIGH); //turn LED on
  	delay(t);
- 	digitalWrite(LED, HIGH); //turn LED off
+ 	digitalWrite(LED, LOW); //turn LED off
  	delay(t);
 }
