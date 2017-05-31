@@ -28,6 +28,7 @@
 //battery voltage divider. Measure and set these values manually
 #define bat_div_R1 15000
 #define bat_div_R2 3900
+#define LED 9
 
 //#define zero_factor -2689
 
@@ -66,6 +67,7 @@ struct Data {
 
 struct Payload {
   uint32_t time = 0;
+  uint16_t count = 0;
   float battery_voltage = 0;
   float board_temp = 0;
   float w[8] = {0,0,0,0,0,0,0,0};
@@ -91,7 +93,7 @@ void setup() {
 		Blink(250);
 		Sleepy::loseSomeTime(5000);
 	}
-	Serial.println("-- Datalogger Available")
+	Serial.println("-- Datalogger Available");
 	//Tell datalogger to unlatch
 	if (!radio.sendWithRetry(GATEWAYID, "r", 1)) {
 		Serial.println("snd - unlatch failed...");
@@ -106,8 +108,8 @@ void setup() {
   // Set up the select pins as outputs:
   for (int i=0; i<3; i++)
   {
-    pinMode(selectPins[i], OUTPUT);
-    digitalWrite(selectPins[i], HIGH);
+    pinMode(muxSelectPins[i], OUTPUT);
+    digitalWrite(muxSelectPins[i], HIGH);
   }
   pinMode(zInput, INPUT); // Set up Z as an input
   pinMode(eX, OUTPUT); // Set excitation
@@ -131,7 +133,7 @@ void loop() {
     selectMuxPin(i); // Select one at a time
     delay(10); //this may or may not be needed
     scale.power_up(); //powers on HX711
-    thisPayload.w[i] = scale.get_units(10), 4);
+    thisPayload.w[i] = scale.get_units(10);
     scale.power_down(); //powers off HX711
     digitalWrite(eX, HIGH);
     delay(10);
@@ -142,16 +144,16 @@ void loop() {
 		//If the Datalogger is listening and available to recieve data
 		Serial.println("- Datalogger Available");
 		//Check to see if there is data waiting to be sent
-		thePayload.timestamp = theTimeStamp.timestamp; //set payload time to current time
+		thisPayload.time = theTimeStamp.timestamp; //set payload time to current time
 		if(EEPROM.read(5) > 0) { //check the first byte of data storage, if there is data, send it all
 			Serial.println("- Stored Data Available, Sending...");
 			sendStoredEEPROMData();
 		}
 		if(EEPROM.read(5) == 0) { //Make sure there is no data stored, then send the measurement that was just taken
-			Serial.print("- No Stored Data, Sending ")
+			Serial.print("- No Stored Data, Sending ");
 			digitalWrite(LED, LOW); //turn on LED
-			if (radio.sendWithRetry(GATEWAYID, (const void*)(&thePayload), sizeof(thePayload)), ACK_RETRIES, ACK_WAIT_TIME) {
-				Serial.print(sizeof(thePayload)); Serial.print(" bytes -> ");
+			if (radio.sendWithRetry(GATEWAYID, (const void*)(&thisPayload), sizeof(thisPayload)), ACK_RETRIES, ACK_WAIT_TIME) {
+				Serial.print(sizeof(thisPayload)); Serial.print(" bytes -> ");
 				Serial.print('['); Serial.print(GATEWAYID); Serial.print("] ");
 				digitalWrite(LED, HIGH); //Turn Off LED
 			} else {
@@ -234,16 +236,18 @@ void sendStoredEEPROMData() {
 	EEPROM_ADDR = 1 + sizeof(theTimeStamp.timestamp); //Set to next address
 	EEPROM.get(EEPROM_ADDR, theData); //Read in saved data to the Data struct
 	Serial.print(".stored time "); Serial.println(theTimeStamp.timestamp);
-	while (theData.bat_v > 0) { //while there is data available in the EEPROM
+	while (theData.battery_voltage > 0) { //while there is data available in the EEPROM
 		uint32_t rec_time = eep_time + SLEEP_SECONDS*storeIndex; //Calculate the actual recorded time
 		Serial.print(".rec time "); Serial.println(rec_time);
 		//Save data into the Payload struct
-		tmp.timestamp = rec_time;
+		tmp.time = rec_time;
 		tmp.count = theData.count;
     tmp.battery_voltage = theData.battery_voltage;
     tmp.board_temp = theData.board_temp;
-    tmp.w = theData.w;
-    tmp.t = theData.t;
+    for(int i = 0; i<8; i++)
+      tmp.w[i] = theData.w[i];
+    for(int i = 0; i<8; i++)
+      tmp.t[i] = theData.t[i];
 		//Send data to datalogger
 		digitalWrite(LED, LOW); //turn on LED to signal transmission
 		if (radio.sendWithRetry(GATEWAYID, (const void*)(&tmp), sizeof(tmp)), ACK_RETRIES, ACK_WAIT_TIME) {
@@ -280,10 +284,12 @@ void writeDataToEEPROM() {
 	uint32_t eep_time = 0UL; //place to hold the saved time
 	//pull data from Payload to local struct to save
 	theData.count = thisPayload.count;
-  tmp.battery_voltage = thisPayload.battery_voltage;
-  tmp.board_temp = thisPayload.board_temp;
-  tmp.w = thisPayload.w;
-  tmp.t = thisPayload.t;
+  theData.battery_voltage = thisPayload.battery_voltage;
+  theData.board_temp = thisPayload.board_temp;
+  for(int i = 0; i<8; i++)
+    theData.w[i] = thisPayload.w[i];
+  for(int i = 0; i<8; i++)
+    theData.t[i] = thisPayload.t[i];
 
 	//update the saved eeprom time to the time of the
 	//last successful transaction (if they are different)
