@@ -27,6 +27,8 @@ void setup() {
 
 void loop() {
   //wake everything up
+  doMuxStuff();
+
 
   setMuxAddress(); //set mux address
   thisPayload.boardTemp = readBoardTemp();
