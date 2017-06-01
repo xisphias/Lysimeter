@@ -30,15 +30,16 @@
 #define bat_div_R2 3900
 #define LED 9
 
+const uint8_t scaleNmeasurements = 10; //no times to measure load cell for average
 const int muxSelectPins[3] = {3, 4, 5}; // S0~3, S1~4, S2~5
 // Define calibration for LC   Y0   , Y1  , Y2  , Y3  , Y4  , Y5  , Y6  , Y8  }
-float calibration_factor[8] = {52298,53388,   0,  0,  0,  0,  0,  0};
-float zero_factor[8] =        {-2200,-8760,   0,  0,  0,  0,  0,  0};
+long calibration_factor[8] = {52298,53388,   1,  1,  1,  1,  1,  1};
+long zero_factor[8] =        {-2200,-8760,   1,  1,  1,  1,  1,  1};
 uint16_t count = 0; //measurement number
 uint16_t EEPROM_ADDR = 5; //Start of data storage in EEPROM
 
 /*==============|| TIMING ||==============*/
-const uint8_t SLEEP_INTERVAL = 15; //sleep time in minutes
+const uint8_t SLEEP_INTERVAL = 5; //sleep time in minutes
 const uint16_t SLEEP_MS = 60000; //one minute in milliseconds
 const uint32_t SLEEP_SECONDS = SLEEP_INTERVAL * (SLEEP_MS/1000); //Sleep interval in seconds
 
@@ -58,19 +59,19 @@ TimeStamp theTimeStamp; //creates global instantiation of this
 //Data structure for storing data in EEPROM
 struct Data {
 	uint16_t count = 0;
-  float battery_voltage = 0;
-  float board_temp = 0;
-  float w[8] = {0,0,0,0,0,0,0,0};
-  float t[8] = {0,0,0,0,0,0,0,0};
+  int battery_voltage = 0;
+  int board_temp = 0;
+  long w[8] = {0,0,0,0,0,0,0,0};
+  int t[8] = {0,0,0,0,0,0,0,0};
 };
 
 struct Payload {
   uint32_t time = 0;
   uint16_t count = 0;
-  float battery_voltage = 0;
-  float board_temp = 0;
-  float w[8] = {0,0,0,0,0,0,0,0};
-  float t[8] = {0,0,0,0,0,0,0,0};
+  int battery_voltage = 0;
+  int board_temp = 0;
+  long w[8] = {0,0,0,0,0,0,0,0};
+  int t[8] = {0,0,0,0,0,0,0,0};
 };
 Payload thisPayload;
 
@@ -88,8 +89,7 @@ void setup() {
 		//If datalogger doesn't respond, Blink, wait 5 seconds, and try again
 		radio.sleep();
 		Serial.flush();
-		Blink(250);
-		Blink(250);
+		Blink(250,2);
 		Sleepy::loseSomeTime(5000);
 	}
 	Serial.println("-- Datalogger Available");
@@ -123,12 +123,10 @@ void loop() {
     Serial.println("time - No Response from Datalogger");
   }
   Serial.println("- Measurement...");
-  Blink(50);
-  Blink(50);
-  Blink(50);
+  Blink(50,3);
   thisPayload.battery_voltage = get_battery_voltage(); //NOTE: THIS IS NOT TESTED. MAKE SURE IT WORKS
   Serial.print("Bat V: ");
-  Serial.println(thisPayload.battery_voltage);
+  Serial.println(float(thisPayload.battery_voltage)/100.0);
   thisPayload.board_temp = get_board_temp(); 
   Serial.print("Board TempC: ");
   Serial.println(thisPayload.board_temp);
@@ -139,18 +137,20 @@ void loop() {
   {
     selectMuxPin(i); // Select one at a time
     delay(10); //this may or may not be needed
-    scale.power_up(); //powers on HX711
-    scale.set_scale(calibration_factor[i]); //sets calibration to this LC
-    scale.set_offset(zero_factor[i]);       //sets zero to this LC
-    thisPayload.w[i] = scale.get_units(10);
-    scale.power_down(); //powers off HX711
+//    scale.power_up(); //powers on HX711
+//    scale.set_scale(calibration_factor[i]); //sets calibration to this LC
+//    scale.set_offset(zero_factor[i]);       //sets zero to this LC
+//    thisPayload.w[i] = round(scale.get_units(10)*10000);
+//    scale.power_down(); //powers off HX711
+    measureWeight(i);
     digitalWrite(eX, HIGH);
     delay(10);
-    Serial.print(thisPayload.w[i],4);
-    thisPayload.t[i] = temp.getTemp();
+    thisPayload.t[i] = int(temp.getTemp()*100); // this is not tested, need to check params or write in function
     digitalWrite(eX, LOW);
+
+    Serial.print(float(thisPayload.w[i])/10000.0,4);
     Serial.print("kg ");
-    Serial.print(thisPayload.t[i],1);
+    Serial.print(float(thisPayload.t[i])/100.0,1);
     Serial.print(".C ");
   }
   Serial.println();
@@ -169,11 +169,11 @@ void loop() {
 			if (radio.sendWithRetry(GATEWAYID, (const void*)(&thisPayload), sizeof(thisPayload)), ACK_RETRIES, ACK_WAIT_TIME) {
 				Serial.print(sizeof(thisPayload)); Serial.print(" bytes -> ");
 				Serial.print('['); Serial.print(GATEWAYID); Serial.print("] ");
+				Serial.print(thisPayload.time);
 				digitalWrite(LED, LOW); //Turn Off LED
 			} else {
 				Serial.print("snd - Failed . . . no ack");
-				Blink(50);
-				Blink(50);
+				Blink(50,2);
 			}
 			Serial.println();
 		}
@@ -186,8 +186,7 @@ void loop() {
 		//If there is no response from the Datalogger save data locally
 		Serial.println("- Datalogger Not Available, Saving Locally");
 		writeDataToEEPROM(); //save that data to EEPROM
-		Blink(50);
-		Blink(50);
+		Blink(50,2);
 	}
 	Serial.print("- Sleeping for "); Serial.print(SLEEP_SECONDS); Serial.print(" seconds"); Serial.println();
 	Serial.flush();
@@ -199,6 +198,16 @@ void loop() {
 	/*==============|| Wakes Up Here! ||==============*/
 }
 
+//measure load cell weight and store values
+void measureWeight(uint8_t i)
+{
+    Blink(50,scaleNmeasurements);
+    scale.power_up(); //powers on HX711
+    scale.set_scale(calibration_factor[i]); //sets calibration to this LC
+    scale.set_offset(zero_factor[i]);       //sets zero to this LC
+    thisPayload.w[i] = round(scale.get_units(scaleNmeasurements)*10000);
+    scale.power_down(); //powers off HX711
+}
 // The selectMuxPin function sets the S0, S1, and S2 pins
 // accordingly, given a pin from 0-7.
 void selectMuxPin(uint8_t pin)
@@ -212,7 +221,7 @@ void selectMuxPin(uint8_t pin)
   }
 }
 
-float get_board_temp() {
+int get_board_temp() {
   int temperature = 0;
   //code to pull temp from RFM69
   temperature =  radio.readTemperature(-1); // -1 = user cal factor, adjust for correct ambient
@@ -220,14 +229,14 @@ float get_board_temp() {
   return temperature;
 }
 
-float get_battery_voltage() {
+int get_battery_voltage() {
   uint16_t readings = 0;
   digitalWrite(BAT_EN, HIGH);
   delay(10);
   for (byte i=0; i<3; i++)
     readings += analogRead(BAT_V);
   readings /= 3;
-  float v = 3.3 * (readings/1023.0) * (bat_div_R1/bat_div_R2); //Calculate battery voltage
+  int v = int(3.3 * (readings/1023.0) * (bat_div_R1/bat_div_R2))*100; //Calculate battery voltage
   digitalWrite(BAT_EN, LOW);
   return v;
 }
@@ -280,8 +289,7 @@ void sendStoredEEPROMData() {
 			//this has never happened...
 			Serial.print(".data send failed, waiting for retry");
 			uint16_t waitTime = random(1000);
-			for(int i = 0; i < 5; i++)
-				Blink(100);
+			Blink(100,5);
 			radio.sleep();
 			Sleepy::loseSomeTime(waitTime);
 		}
@@ -398,9 +406,11 @@ bool ping()
 			return false; //if there is no response, returns false and exits function
 		}
 	}
+ Serial.print(" waiting for ping response");
 	while(!PING_RECIEVED && PING_SENT) { //Wait for the ping to be returned
 		if (radio.receiveDone()) {
-			if (radio.DATALEN == sizeof('p')) { //check to make sure it's the right size
+      Serial.print(radio.DATA[0]);
+			if (radio.DATALEN == sizeof(1)) { //check to make sure it's the right size
 				Serial.print('['); Serial.print(radio.SENDERID); Serial.print("] > ");
 				Serial.print(radio.DATA[0]); Serial.print(" [RX_RSSI:"); Serial.print(radio.RSSI); Serial.print("]"); Serial.println();
 				PING_RECIEVED = true;
@@ -412,11 +422,12 @@ bool ping()
 	}
 }
 
-
-void Blink(uint8_t t)
-{
- 	digitalWrite(LED, HIGH); //turn LED on
- 	delay(t);
- 	digitalWrite(LED, LOW); //turn LED off
- 	delay(t);
+void Blink(byte DELAY_MS, byte loops) {
+  for (byte i = 0; i < loops; i++)
+  {
+    digitalWrite(LED, HIGH);
+    delay(DELAY_MS);
+    digitalWrite(LED, LOW);
+    delay(DELAY_MS);
+  }
 }

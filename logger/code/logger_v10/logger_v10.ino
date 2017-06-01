@@ -42,7 +42,7 @@
 /*==============|| RFM69 ||==============*/
 RFM69_ATC radio; //Declare Radio
 byte lastRequesterNodeID = NODEID; //Last Sensor to communicate with this device
-int8_t NodeID_latch; //Listen only to this Sensor #
+int8_t NodeID_latch = -1; //Listen only to this Sensor #
 
 /*==============|| DS3231_RTC ||==============*/
 uint32_t now; //Holder for Current Time
@@ -63,12 +63,11 @@ TimeStamp theTimeStamp;
 struct Payload {
   uint32_t time = 0;
   uint16_t count = 0;
-  float battery_voltage = 0;
-  float board_temp = 0;
-  float w[8] = {0,0,0,0,0,0,0,0};
-  float t[8] = {0,0,0,0,0,0,0,0};
+  int battery_voltage = 0;
+  int board_temp = 0;
+  long w[8] = {0,0,0,0,0,0,0,0};
+  int t[8] = {0,0,0,0,0,0,0,0};
 };
-Payload thisPayload;
 Payload thePayload;
 
 
@@ -164,9 +163,10 @@ void loop() {
 		//NOTE: there is nothing to stop another node from stealing that latch for itself.
 		if(radio.DATALEN == 1 && radio.DATA[0] == 'p') {
 		//NOTE: Untested, but should work. The nuetral state of this varibale is -1...
-		if(NodeID_latch < 0) { //NOTE: TEST THIS BEFORE DEPLOYMENT, or just comment out
-				DEBUGln("p");
-				DEBUG("latch->"); DEBUG('['); DEBUG(radio.SENDERID); DEBUGln("] ");
+		  DEBUGln("p");
+		  if(NodeID_latch < 0) { //NOTE: TEST THIS BEFORE DEPLOYMENT, or just comment out
+				DEBUG("latch->"); DEBUG('['); DEBUG(radio.SENDERID); DEBUG("]");
+        DEBUG(" [RX_RSSI:"); DEBUG(radio.RSSI); DEBUGln("]");
 				NodeID_latch = radio.SENDERID;
 				ping = true;
 			}
@@ -182,20 +182,29 @@ void loop() {
 		}
 		/*=== WRITE DATA ===*/
 		if(NodeID_latch > 0) {
+      DEBUGln();
+      DEBUG("Latched to ");DEBUG(NodeID_latch);DEBUG(" ?= SenderID: ");DEBUG(radio.SENDERID);
+      DEBUG(" Datalen: ");DEBUG(radio.DATALEN);DEBUG(" =? Payload: ");DEBUGln(sizeof(thePayload));
 			if (radio.DATALEN == sizeof(thePayload) && radio.SENDERID == NodeID_latch) {
 				thePayload = *(Payload*)radio.DATA; //assume radio.DATA actually contains our struct and not something else
 				writeData = true;
-				DEBUG("["); DEBUG(radio.SENDERID); DEBUG("] ");
-				DEBUG("@-"); DEBUG(thePayload.time);
+				DEBUG("["); DEBUG(radio.SENDERID); DEBUGln("] ");
+				DEBUG("@: "); DEBUGln(thePayload.time);
+        DEBUGln("     : Y0\tY1\tY2\tY3\tY4\tY5\tY6\tY7");
+        DEBUG("wts  : ");
         for(int i = 0; i < 8; i++) {
-          DEBUG(thePayload.w[i]);
-          DEBUG(",");
-          DEBUG(thePayload.t[i]);
-          DEBUG(",");
+          DEBUG(float(thePayload.w[i])/10000.0);
+          DEBUG(",\t");
         }
-				DEBUG(" temp-"); DEBUG(thePayload.board_temp);
-				DEBUG(" battery voltage-"); DEBUG(thePayload.battery_voltage);
-				DEBUG(" cnt-"); DEBUG(thePayload.count);
+        DEBUGln();DEBUG("temps: ");
+        for(int i = 0; i < 8; i++) {
+          DEBUG(thePayload.t[i]/100);
+          DEBUG(",\t");
+        }
+        DEBUGln();
+				DEBUG(" temp: "); DEBUGln(thePayload.board_temp/100);
+				DEBUG(" battery voltage: "); DEBUGln(thePayload.battery_voltage/100);
+				DEBUG(" cnt: "); DEBUG(thePayload.count);
 				DEBUGln();
 			}
 		}
@@ -241,14 +250,14 @@ void loop() {
 		f.print(radio.SENDERID); f.print(",");
     f.print(thePayload.time); f.print(",");
     for(int i = 0; i < 8; i++) {
-      f.print(thePayload.w[i]);
+      f.print(float(thePayload.w[i])/10000.0);
       f.print(",");
-      f.print(thePayload.t[i]);
+      f.print(float(thePayload.t[i])/100.0);
       f.print(",");
     }
 		f.print(thePayload.count); f.println();
-    f.print(thePayload.battery_voltage); f.print(",");
-    f.print(thePayload.board_temp); f.print(",");
+    f.print(float(thePayload.battery_voltage)/100.0); f.print(",");
+    f.print(float(thePayload.board_temp/100.0)); f.print(",");
     f.close();
 		//when done write, Close the File.
 		//If file isn't closed, the data won't be saved
