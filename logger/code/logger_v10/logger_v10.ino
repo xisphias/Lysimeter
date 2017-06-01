@@ -1,7 +1,7 @@
 #include <Arduino.h> //built in
 #include <SPI.h> //built in
 #include <RFM69_ATC.h>//https://www.github.com/lowpowerlab/rfm69
-#include "DS3231.h" //https://github.com/kinasmith/DS3231
+#include <SparkFunDS3234RTC.h> //https://github.com/kinasmith/SparkFun_DS3234_RTC_Arduino_Library
 #include "SdFat.h" //https://github.com/greiman/SdFat
 
 #define NODEID 0 //Address on Network
@@ -12,6 +12,7 @@
 #define SERIAL_BAUD 115200 //connection speed
 #define LED 9 //LED pin
 #define SD_CS_PIN 4 //Chip Select pin for SD card
+#define RTC_CS_PIN 8
 #define CARD_DETECT 5 //Pin to detect presence of SD card
 
 #define SERIAL_EN //Comment this out to remove Serial comms and save a few kb's of space
@@ -25,11 +26,6 @@
 #define DEBUGFlush();
 #endif
 
-/*==============|| Functions ||==============*/
-uint8_t setAddress();
-void Blink(byte, int);
-void checkSdCard();
-
 /*==============|| RFM69 ||==============*/
 RFM69_ATC radio; //Declare Radio
 uint8_t NETWORKID; //The Network this device is on (set via solder jumpers)
@@ -37,8 +33,7 @@ byte lastRequesterNodeID = NODEID; //Last Sensor to communicate with this device
 int8_t NodeID_latch; //Listen only to this Sensor #
 
 /*==============|| DS3231_RTC ||==============*/
-DateTime now; //Holder for Current Time
-DS3231 rtc; //Declare the Real Time Clock
+uint32_t now; //Holder for Current Time
 
 /*==============|| SD ||==============*/
 SdFat SD; //Declare the sd Card
@@ -54,13 +49,14 @@ TimeStamp theTimeStamp;
 //Holder for recieving data from sensors.
 //NOTE: This must be THE SAME as the payload on the sensors.
 struct Payload {
-	uint32_t timestamp;
-	uint16_t count;
-	uint32_t sense;
-	double brd_tmp;
-	double bat_v;
-	double ref_v;
+  uint32_t time = 0;
+  uint16_t count = 0;
+  float battery_voltage = 0;
+  float board_temp = 0;
+  float w[8] = {0,0,0,0,0,0,0,0};
+  float t[8] = {0,0,0,0,0,0,0,0};
 };
+Payload thisPayload;
 Payload thePayload;
 
 
@@ -70,12 +66,11 @@ void setup() {
 	#endif
 	DEBUGln("-- Datalogger for Dendrometer System --");
 	Wire.begin(); //begin i2c connection
-	NETWORKID = setAddress(); //Set the network address based on solder jumper selections
 	pinMode(LED, OUTPUT); //Set LED to output
 	pinMode(CARD_DETECT, INPUT_PULLUP); //Init. 10k internal Pullup resistor
-	rtc.begin(); //initialize RTC
+	rtc.begin(RTC_CS_PIN); //initialize RTC
 	//*****
-	// rtc.adjust(DateTime((__DATE__), (__TIME__))); //sets the RTC to the computer time.
+	// rtc.autoTime();
 	//*****
 	//Initializes the Radio
 	radio.initialize(FREQUENCY,NODEID,NETWORKID);
@@ -96,13 +91,14 @@ void setup() {
 		if (SD.begin(SD_CS_PIN)) { //Try initializing the Card...
 			DEBUG("initialized, ");
 			File f; //declare a File
-			now = rtc.now(); //get current time
+      rtc.update();
+			now = rtc.unixtime(); //get current time
 			if(f.open("start.txt", FILE_WRITE)) { //Try opening that File
 				DEBUGln("file write, OK!");
-				DEBUG("-- Time is "); DEBUGln(now.unixtime());
+				DEBUG("-- Time is "); DEBUGln(now);
 				//Print to open File
 				f.print("program started at: ");
-				f.print(now.unixtime());
+				f.print(now);
 				f.println();
 				f.close(); //Close file
 				sd_OK = true; //SD card is OK!
@@ -137,8 +133,9 @@ void loop() {
 	if (radio.receiveDone()) { //if recieve packets from sensor...
 		DEBUG("rcv < "); DEBUG('['); DEBUG(radio.SENDERID); DEBUG("] ");
 		lastRequesterNodeID = radio.SENDERID; //SENDERID is the Node ID of the device that sent the packet of data
-		now = rtc.now(); //record time of this event
-		theTimeStamp.timestamp = now.unixtime(); //and save it to the global variable
+    rtc.update()
+    now = rtc.unixtime(); //record time of this event
+		theTimeStamp.timestamp = now; //and save it to the global variable
 
 		/*=== TIME ===*/
 		//the sensor sends a 't' to request the time to be returned to it
@@ -174,11 +171,15 @@ void loop() {
 				thePayload = *(Payload*)radio.DATA; //assume radio.DATA actually contains our struct and not something else
 				writeData = true;
 				DEBUG("["); DEBUG(radio.SENDERID); DEBUG("] ");
-				DEBUG("@-"); DEBUG(thePayload.timestamp);
-				DEBUG(" sensor-"); DEBUG(thePayload.sense);
-				DEBUG(" temp-"); DEBUG(thePayload.brd_tmp);
-				DEBUG(" battery voltage-"); DEBUG(thePayload.bat_v);
-				DEBUG(" reference voltage-"); DEBUG(thePayload.ref_v);
+				DEBUG("@-"); DEBUG(thePayload.time);
+        for(int i = 0; i < 8; i++) {
+          DEBUG(thePayload.w[i]);
+          DEBUG(",");
+          DEBUG(thePayload.t[i]);
+          DEBUG(",");
+        }
+				DEBUG(" temp-"); DEBUG(thePayload.board_temp);
+				DEBUG(" battery voltage-"); DEBUG(thePayload.battery_voltage);
 				DEBUG(" cnt-"); DEBUG(thePayload.count);
 				DEBUGln();
 			}
@@ -223,13 +224,17 @@ void loop() {
 		DEBUG("sd - writing to "); DEBUG(_fileName); DEBUGln();
 		f.print(NETWORKID); f.print(".");
 		f.print(radio.SENDERID); f.print(",");
-		f.print(thePayload.timestamp); f.print(",");
-		f.print(thePayload.sense); f.print(",");
-		f.print(thePayload.brd_tmp); f.print(",");
-		f.print(thePayload.bat_v); f.print(",");
-		f.print(thePayload.ref_v); f.print(",");
+    f.print(thePayload.time); f.print(",");
+    for(int i = 0; i < 8; i++) {
+      f.print(thePayload.w[i]);
+      f.print(",");
+      f.print(thePayload.t[i]);
+      f.print(",");
+    }
 		f.print(thePayload.count); f.println();
-		f.close();
+    f.print(thePayload.battery_voltage); f.print(",");
+    f.print(thePayload.board_temp); f.print(",");
+    f.close();
 		//when done write, Close the File.
 		//If file isn't closed, the data won't be saved
 	}
@@ -259,34 +264,4 @@ void Blink(byte PIN, int DELAY_MS) {
 	delay(DELAY_MS);
 	digitalWrite(PIN,LOW);
 	delay(DELAY_MS);
-}
-/**
- * Sets the Network Address by reading the Solder Jumper positions
- * @return The Network Address (100-107)
- */
-uint8_t setAddress() {
-	//sets network address based on which solder jumpers are closed
-	//NOTE: The jumpers are in Binary with three values.
-	//NOTE: 000 = address 100
-	//NOTE: 100 = address 101
-	//NOTE: 010 = address 102
-	//NOTE: 110 = address 103
-	//NOTE: 001 = address 104
-	//NOTE: 011 = address 106
-	//NOTE: etc...
-	uint8_t addr01, addr02, addr03;
-	pinMode(6, INPUT_PULLUP);
-	pinMode(7, INPUT_PULLUP);
-	pinMode(8, INPUT_PULLUP);
-	addr01 = !digitalRead(8);
-	addr02 = !digitalRead(6) * 2;
-	addr03 = !digitalRead(7) * 4;
-	pinMode(6, OUTPUT);
-	pinMode(7, OUTPUT);
-	pinMode(8, OUTPUT);
-	digitalWrite(6, LOW);
-	digitalWrite(7, LOW);
-	digitalWrite(8, LOW);
-	uint8_t addr = addr01 | addr02 | addr03;
-	return addr += 100;
 }
