@@ -202,7 +202,7 @@ void loop() {
           DEBUG(",\t");
         }
         DEBUGln();
-				DEBUG(" temp: "); DEBUGln(thePayload.board_temp/100);
+				DEBUG(" temp: "); DEBUGln(thePayload.board_temp);
 				DEBUG(" battery voltage: "); DEBUGln(thePayload.battery_voltage/100);
 				DEBUG(" cnt: "); DEBUG(thePayload.count);
 				DEBUGln();
@@ -250,14 +250,14 @@ void loop() {
 		f.print(radio.SENDERID); f.print(",");
     f.print(thePayload.time); f.print(",");
     for(int i = 0; i < 8; i++) {
-      f.print(float(thePayload.w[i])/10000.0);
+      f.print(thePayload.w[i]); // these are *10000 need post processed to /10000
       f.print(",");
       f.print(float(thePayload.t[i])/100.0);
       f.print(",");
     }
 		f.print(thePayload.count); f.println();
     f.print(float(thePayload.battery_voltage)/100.0); f.print(",");
-    f.print(float(thePayload.board_temp/100.0)); f.print(",");
+    f.print(thePayload.board_temp); f.print(",");
     f.close();
 		//when done write, Close the File.
 		//If file isn't closed, the data won't be saved

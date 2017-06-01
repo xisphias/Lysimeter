@@ -137,11 +137,6 @@ void loop() {
   {
     selectMuxPin(i); // Select one at a time
     delay(10); //this may or may not be needed
-//    scale.power_up(); //powers on HX711
-//    scale.set_scale(calibration_factor[i]); //sets calibration to this LC
-//    scale.set_offset(zero_factor[i]);       //sets zero to this LC
-//    thisPayload.w[i] = round(scale.get_units(10)*10000);
-//    scale.power_down(); //powers off HX711
     measureWeight(i);
     digitalWrite(eX, HIGH);
     delay(10);
