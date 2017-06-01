@@ -1,3 +1,13 @@
+/**
+ * TODO:
+ * Check to make sure it compilies
+ * Correct the pin mappings
+ * Test.
+ *
+ *
+ */
+
+
 #include <Arduino.h> //built in
 #include <SPI.h> //built in
 #include <RFM69_ATC.h>//https://www.github.com/lowpowerlab/rfm69
