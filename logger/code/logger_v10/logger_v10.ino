@@ -14,16 +14,19 @@
 #include <SparkFunDS3234RTC.h> //https://github.com/kinasmith/SparkFun_DS3234_RTC_Arduino_Library
 #include "SdFat.h" //https://github.com/greiman/SdFat
 
+#define NETWORKID     100
 #define NODEID 0 //Address on Network
 #define FREQUENCY RF69_433MHZ //hardware frequency of Radio
 #define ATC_RSSI -70 //ideal signal strength
 #define ACK_WAIT_TIME 100 // # of ms to wait for an ack
 #define ACK_RETRIES 10 // # of attempts before giving up
 #define SERIAL_BAUD 115200 //connection speed
+#define RFM69_CS 10 //RFM69 CS pin
 #define LED 9 //LED pin
-#define SD_CS_PIN 4 //Chip Select pin for SD card
+#define SD_CS_PIN 7 //Chip Select pin for SD card
 #define RTC_CS_PIN 8
-#define CARD_DETECT 5 //Pin to detect presence of SD card
+#define CARD_DETECT 6 //Pin to detect presence of SD card
+//#define INTERRUPT_PIN 2 // DeadOn RTC SQW/interrupt pin (optional)
 
 #define SERIAL_EN //Comment this out to remove Serial comms and save a few kb's of space
 #ifdef SERIAL_EN
@@ -38,7 +41,6 @@
 
 /*==============|| RFM69 ||==============*/
 RFM69_ATC radio; //Declare Radio
-uint8_t NETWORKID; //The Network this device is on (set via solder jumpers)
 byte lastRequesterNodeID = NODEID; //Last Sensor to communicate with this device
 int8_t NodeID_latch; //Listen only to this Sensor #
 
@@ -74,8 +76,8 @@ void setup() {
 	#ifdef SERIAL_EN
 		Serial.begin(SERIAL_BAUD);
 	#endif
-	DEBUGln("-- Datalogger for Dendrometer System --");
-	Wire.begin(); //begin i2c connection
+  DEBUGln("+++++++++++++++++++++++++++++++++++++");
+	DEBUGln("-- Datalogger for Lysimeter System --");
 	pinMode(LED, OUTPUT); //Set LED to output
 	pinMode(CARD_DETECT, INPUT_PULLUP); //Init. 10k internal Pullup resistor
 	rtc.begin(RTC_CS_PIN); //initialize RTC
@@ -93,16 +95,19 @@ void setup() {
 	//NOTE: This is SUPER important!!! If the SD Card fails to initialize
 	//NOTE: no data will be saved. It is a MUST to test writing to a file, and having
 	//NOTE: foolproof notifications if something goes wrong!!!
+	rtc.update();
+  now = rtc.unixtime(); //get current time
 	bool sd_OK = false;
 	digitalWrite(LED, HIGH); //turn LED on to signal start of test
-	CARD_PRESENT = !digitalRead(CARD_DETECT); //read Card Detect pin (logic inverted to stay logical)
+	CARD_PRESENT = digitalRead(CARD_DETECT); //read Card Detect pin
 	if(CARD_PRESENT) { //If the Card is inserted correctly...
 		DEBUG("-- SD Present, ");
 		if (SD.begin(SD_CS_PIN)) { //Try initializing the Card...
 			DEBUG("initialized, ");
 			File f; //declare a File
-      rtc.update();
-			now = rtc.unixtime(); //get current time
+//      SPI doesnt like using two spi devices concurrently 
+//      rtc.update();
+//			now = rtc.unixtime(); //get current time
 			if(f.open("start.txt", FILE_WRITE)) { //Try opening that File
 				DEBUGln("file write, OK!");
 				DEBUG("-- Time is "); DEBUGln(now);
@@ -143,7 +148,7 @@ void loop() {
 	if (radio.receiveDone()) { //if recieve packets from sensor...
 		DEBUG("rcv < "); DEBUG('['); DEBUG(radio.SENDERID); DEBUG("] ");
 		lastRequesterNodeID = radio.SENDERID; //SENDERID is the Node ID of the device that sent the packet of data
-    rtc.update()
+    rtc.update();
     now = rtc.unixtime(); //record time of this event
 		theTimeStamp.timestamp = now; //and save it to the global variable
 
@@ -255,7 +260,7 @@ void loop() {
  * Checks to make sure the SD Card is still present.
  */
 void checkSdCard() {
-	CARD_PRESENT = !digitalRead(CARD_DETECT); //invert for logic's sake
+	CARD_PRESENT = digitalRead(CARD_DETECT); //
 	if (!CARD_PRESENT) {
 		DEBUGln("sd - card Not Present");
 		while (1) {

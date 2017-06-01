@@ -82,7 +82,7 @@ void setup() {
 	radio.encrypt(null);
 	radio.enableAutoPower(ATC_RSSI);
 	Serial.print("-- Network Address: "); Serial.print(NETWORKID); Serial.print("."); Serial.println(NODEID);
-	 Ping the datalogger. If it is alive, it will respond with a 1, and latch to this node until it recieves an "r"
+//	 Ping the datalogger. If it is alive, it will respond with a 1, and latch to this node until it recieves an "r"
 	while(!ping()) {
 		Serial.println("Failed to Setup ping");
 		//If datalogger doesn't respond, Blink, wait 5 seconds, and try again
@@ -93,7 +93,7 @@ void setup() {
 		Sleepy::loseSomeTime(5000);
 	}
 	Serial.println("-- Datalogger Available");
-	Tell datalogger to unlatch
+//	Tell datalogger to unlatch
 	if (!radio.sendWithRetry(GATEWAYID, "r", 1)) {
 		Serial.println("snd - unlatch failed...");
 	}
