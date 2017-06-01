@@ -1,0 +1,2 @@
+use this library for the RTC. It has unix stamp functionality
+https://github.com/kinasmith/SparkFun_DS3234_RTC_Arduino_Library
