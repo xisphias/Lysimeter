@@ -82,8 +82,11 @@ void setup() {
   initRTC();
   initSDCard();
   initRadio();
-	DEBUGln("=========================="); 
+	DEBUGln("==========================");
 }
+
+uint32_t latch_timeout_start;
+uint32_t latch_timeout = 1000;
 
 void loop() {
 	/*
@@ -100,72 +103,79 @@ void loop() {
 	bool reportTime = false;
 	bool ping = false;
 
+	if(millis() > latch_timeout_start + latch_timeout && NodeID_latch > 0) {
+		NodeID_latch = -1;
+		DEBUGln("Latch Timed Out");
+	}
+
 	if (radio.receiveDone()) { //if recieve packets from sensor...
-		DEBUG("rcv < "); DEBUG('['); DEBUG(radio.SENDERID); DEBUG("] ");
+		DEBUG("rcv ");DEBUG(radio.DATALEN); DEBUG(" byte/s from node "); DEBUG(radio.SENDERID); DEBUG(": ");
 		lastRequesterNodeID = radio.SENDERID; //SENDERID is the Node ID of the device that sent the packet of data
     rtc.update();
     now = rtc.unixtime(); //record time of this event
 		theTimeStamp.timestamp = now; //and save it to the global variable
 
-		/*=== TIME ===*/
-		//the sensor sends a 't' to request the time to be returned to it
-		if(radio.DATALEN == 1 && radio.DATA[0] == 't') {
-			DEBUGln("t");
-			reportTime = true;
-		}
-		/*=== PING ===*/
-		//the sensor will send a 'p' before sending data
-		//NOTE: This doesn't actually work in practice, because if one Node latches
-		//NOTE: there is nothing to stop another node from stealing that latch for itself.
+		/*=== PING ==*/
 		if(radio.DATALEN == 1 && radio.DATA[0] == 'p') {
-		//NOTE: Untested, but should work. The nuetral state of this varibale is -1...
-		  DEBUGln("p");
-		  if(NodeID_latch < 0) { //NOTE: TEST THIS BEFORE DEPLOYMENT, or just comment out
-				DEBUG("latch->"); DEBUG('['); DEBUG(radio.SENDERID); DEBUG("]");
-        DEBUG(" [RX_RSSI:"); DEBUG(radio.RSSI); DEBUGln("]");
+			DEBUG(radio.SENDERID); DEBUG(": ");
+			if(NodeID_latch < 0) {
+				DEBUG("p ");
 				NodeID_latch = radio.SENDERID;
+				latch_timeout_start = millis(); //set start time for timeout
+				DEBUGln(latch_timeout_start);
+				DEBUG("latch to "); DEBUGln(NodeID_latch);
 				ping = true;
+			} else {
+				DEBUG("failed, already latched to "); DEBUGln(NodeID_latch);
 			}
 		}
-		/*=== UN-LATCH ===*/
-		//only allow the original latcher to unlatch the connetion.
-		if(radio.DATALEN == 1 && radio.DATA[0] == 'r') {
-			if(NodeID_latch == radio.SENDERID) {
-				DEBUGln("r");
-				DEBUG("unlatch->"); DEBUG('['); DEBUG(radio.SENDERID); DEBUGln("] ");
+
+		if(NodeID_latch == radio.SENDERID) { //only the same sender that initiated the latch is able to release it
+			latch_timeout_start = millis(); //set start time for timeout
+
+			/*=== TIME ==*/
+			if(radio.DATALEN == 1 && radio.DATA[0] == 't') {
+				DEBUG("t ");
+				reportTime = true;
+			}
+
+			/*=== UN-LATCH ==*/
+			if(radio.DATALEN == 1 && radio.DATA[0] == 'r') { //send an r to release the reciever
+				DEBUG("r ");
 				NodeID_latch = -1;
+				DEBUGln("unlatched");
+				DEBUGln();
 			}
-		}
-		/*=== WRITE DATA ===*/
-		if(NodeID_latch > 0) {
-      DEBUGln();
-      DEBUG("Latched to ");DEBUG(NodeID_latch);DEBUG(" ?= SenderID: ");DEBUG(radio.SENDERID);
-      DEBUG(" Datalen: ");DEBUG(radio.DATALEN);DEBUG(" =? Payload: ");DEBUGln(sizeof(thePayload));
-			if (radio.DATALEN == sizeof(thePayload) && radio.SENDERID == NodeID_latch) {
+
+			/*=== PAYLOAD ==*/
+			if (radio.DATALEN == sizeof(thePayload)) {
 				thePayload = *(Payload*)radio.DATA; //assume radio.DATA actually contains our struct and not something else
 				writeData = true;
+				//print all the data
 				DEBUG("["); DEBUG(radio.SENDERID); DEBUGln("] ");
 				DEBUG("@: "); DEBUGln(thePayload.time);
-        DEBUGln("     : Y0\tY1\tY2\tY3\tY4\tY5\tY6\tY7");
-        DEBUG("wts  : ");
-        for(int i = 0; i < 8; i++) {
-          DEBUG(float(thePayload.w[i])/10000.0);
-          DEBUG(",\t");
-        }
-        DEBUGln();DEBUG("temps: ");
-        for(int i = 0; i < 8; i++) {
-          DEBUG(thePayload.t[i]/100);
-          DEBUG(",\t");
-        }
-        DEBUGln();
+	      DEBUGln("     : Y0\tY1\tY2\tY3\tY4\tY5\tY6\tY7");
+	      DEBUG("wts  : ");
+	      for(int i = 0; i < 8; i++) {
+	        DEBUG(float(thePayload.w[i])/10000.0);
+	        DEBUG(",\t");
+	      }
+	      DEBUGln();DEBUG("temps: ");
+	      for(int i = 0; i < 8; i++) {
+	        DEBUG(thePayload.t[i]/100);
+	        DEBUG(",\t");
+	      }
+	      DEBUGln();
 				DEBUG(" temp: "); DEBUGln(thePayload.board_temp);
 				DEBUG(" battery voltage: "); DEBUGln(thePayload.battery_voltage/100);
 				DEBUG(" cnt: "); DEBUG(thePayload.count);
 				DEBUGln();
 			}
+		} else { DEBUG(radio.SENDERID); DEBUGln(": not latched"); }
+		if(radio.ACKRequested()){
+			radio.sendACK();
 		}
-		if (radio.ACKRequested()) radio.sendACK(); //send acknoledgement of reciept
-		Blink(LED,5); //blink the LED really fast
+		Blink(LED,5);
 	}
 	/*=== DO THE RESPONSES TO THE MESSAGES ===*/
 	//Sends the time to the sensor that requested it
@@ -336,7 +346,7 @@ void initSDCard()
     if (SD.begin(SD_CS_PIN)) { //Try initializing the Card...
       DEBUG("initialized, ");
       File f; //declare a File
-//      SPI doesnt like using two spi devices concurrently 
+//      SPI doesnt like using two spi devices concurrently
 //      rtc.update();
 //      now = rtc.unixtime(); //get current time
       if(f.open("start.txt", FILE_WRITE)) { //Try opening that File
@@ -360,5 +370,3 @@ void initSDCard()
     }
   }
 }
-
-
