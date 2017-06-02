@@ -77,34 +77,6 @@ Payload thisPayload;
 
 void setup() {
   Serial.begin(115200); // Initialize the serial port
-  //Setup Radio
-	radio.initialize(FREQUENCY,NODEID,NETWORKID);
-	radio.setHighPower();
-	radio.encrypt(null);
-	radio.enableAutoPower(ATC_RSSI);
-	Serial.print("-- Network Address: "); Serial.print(NETWORKID); Serial.print("."); Serial.println(NODEID);
-//	 Ping the datalogger. If it is alive, it will respond with a 1, and latch to this node until it recieves an "r"
-	while(!ping()) {
-		Serial.println("Failed to Setup ping");
-		//If datalogger doesn't respond, Blink, wait 5 seconds, and try again
-		radio.sleep();
-		Serial.flush();
-		Blink(250,2);
-		Sleepy::loseSomeTime(5000);
-	}
-	Serial.println("-- Datalogger Available");
-//	Tell datalogger to unlatch
-	if (!radio.sendWithRetry(GATEWAYID, "r", 1)) {
-		Serial.println("snd - unlatch failed...");
-	}
-
-  //--SETUP OTHER STUFF
-  scale.set_scale(calibration_factor[0]);
-  scale.set_offset(zero_factor[0]);
-  //scale.tare();  //Reset the scale to 0
-  //long zero_factor = scale.read_average(10); //Get a baseline reading
-  //Serial.print("Zero factor: "); Serial.println(zero_factor); //This can be used to remove the need to tare the scale. Useful in permanent scale projects.
-  
   // Set up the select pins as outputs:
   for (int i=0; i<3; i++)
   {
@@ -115,6 +87,34 @@ void setup() {
   pinMode(eX, OUTPUT); // Set excitation
   digitalWrite(eX, LOW);
   pinMode(LED, OUTPUT); //led
+
+  //--SETUP OTHER STUFF
+  scale.set_scale(calibration_factor[0]);
+  scale.set_offset(zero_factor[0]);
+  //scale.tare();  //Reset the scale to 0
+  //long zero_factor = scale.read_average(10); //Get a baseline reading
+  //Serial.print("Zero factor: "); Serial.println(zero_factor); //This can be used to remove the need to tare the scale. Useful in permanent scale projects.
+  
+  //Setup Radio
+	radio.initialize(FREQUENCY,NODEID,NETWORKID);
+	radio.setHighPower();
+	radio.encrypt(null);
+	radio.enableAutoPower(ATC_RSSI);
+	Serial.print("-- Network Address: "); Serial.print(NETWORKID); Serial.print("."); Serial.println(NODEID);
+  //	 Ping the datalogger. If it is alive, it will respond with a 1, and latch to this node until it recieves an "r"
+	while(!ping()) {
+		Serial.println("Failed to Setup ping");
+		//If datalogger doesn't respond, Blink, wait 5 seconds, and try again
+		radio.sleep();
+		Serial.flush();
+		Blink(100,5);
+		Sleepy::loseSomeTime(5000);
+	}
+	Serial.println("-- Datalogger Available");
+//	Tell datalogger to unlatch
+	if (!radio.sendWithRetry(GATEWAYID, "r", 1)) {
+		Serial.println("snd - unlatch failed...");
+	}
 }
 
 void loop() {
