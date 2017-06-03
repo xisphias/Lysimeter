@@ -8,7 +8,7 @@
 /****************************************************************************/
 /***********************    DON'T FORGET TO SET ME    ***********************/
 /****************************************************************************/
-#define NODEID    2 //Node Address
+#define NODEID    1 //Node Address
 #define NETWORKID 100 //Network to communicate on
 /****************************************************************************/
 
@@ -131,6 +131,8 @@ void loop() {
   }
   Serial.println("- Measurement...");
   Blink(50,3);
+  count++;
+  thisPayload.count = count;
   thisPayload.battery_voltage = get_battery_voltage(); //NOTE: THIS IS NOT TESTED. MAKE SURE IT WORKS
   Serial.print("Bat V: ");
   Serial.println(float(thisPayload.battery_voltage)/100.0);
@@ -161,6 +163,7 @@ void loop() {
 		Serial.println("- Datalogger Available");
 		//Check to see if there is data waiting to be sent
 		thisPayload.time = theTimeStamp.timestamp; //set payload time to current time
+    //Serial.println(EEPROM.read(5));
 		if(EEPROM.read(5) > 0) { //check the first byte of data storage, if there is data, send it all
 			Serial.println("- Stored Data Available, Sending...");
 			sendStoredEEPROMData();
@@ -272,7 +275,8 @@ void sendStoredEEPROMData() {
 	EEPROM_ADDR = 1 + sizeof(theTimeStamp.timestamp); //Set to next address
 	EEPROM.get(EEPROM_ADDR, theData); //Read in saved data to the Data struct
 	Serial.print(".stored time "); Serial.println(theTimeStamp.timestamp);
-	while (theData.battery_voltage > 0) { //while there is data available in the EEPROM
+	Serial.println(theData.battery_voltage); //this is where nothing would happen. EEPROM 5 was >0 so we got here, but battery V was 0, so we exited without sending and without clearing the eeprom.  
+	while (theData.count > 0) { //while there is data available in the EEPROM // changed to count instead of battery V b/c batV was 0 in theData
 		uint32_t rec_time = eep_time + SLEEP_SECONDS*storeIndex; //Calculate the actual recorded time
 		Serial.print(".rec time "); Serial.println(rec_time);
 		//Save data into the Payload struct
@@ -304,6 +308,7 @@ void sendStoredEEPROMData() {
 			Sleepy::loseSomeTime(waitTime);
 		}
 	}
+	Serial.println(1 + sizeof(theTimeStamp.timestamp));
 	EEPROM_ADDR = 1 + sizeof(theTimeStamp.timestamp); //Reset Index to beginning of EEPROM_ADDR
 	//NOTE: This will front load the fatigue on the EEPROM causing failures of the first indeces
 	//NOTE: first. A good thing to do would be to build in a load balancing system to randomly
