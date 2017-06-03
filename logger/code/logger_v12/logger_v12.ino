@@ -109,7 +109,7 @@ void loop() {
   }
 
   if (radio.receiveDone()) { //if recieve packets from sensor...
-    DEBUG("rcv ");DEBUG(radio.DATALEN); DEBUG(" byte/s from node "); DEBUG(radio.SENDERID); DEBUG(": ");
+    DEBUG("rcv ");DEBUG(radio.DATA[0]);DEBUG(", ");DEBUG(radio.DATALEN); DEBUG(" byte/s from node "); DEBUG(radio.SENDERID); DEBUG(": ");
     lastRequesterNodeID = radio.SENDERID; //SENDERID is the Node ID of the device that sent the packet of data
     rtc.update();
     now = rtc.unixtime(); //record time of this event
@@ -129,15 +129,15 @@ void loop() {
         DEBUG("failed, already latched to "); DEBUGln(NodeID_latch);
       }
     }
-
-    if(NodeID_latch == radio.SENDERID) { //only the same sender that initiated the latch is able to release it
-      latch_timeout_start = millis(); //set start time for timeout
-
       /*=== TIME ==*/
+      // Moved this out so the logger would respond to time without latch
       if(radio.DATALEN == 1 && radio.DATA[0] == 't') {
         DEBUG("t ");
         reportTime = true;
       }
+      
+    if(NodeID_latch == radio.SENDERID) { //only the same sender that initiated the latch is able to release it
+      latch_timeout_start = millis(); //set start time for timeout
 
       /*=== UN-LATCH ==*/
       if(radio.DATALEN == 1 && radio.DATA[0] == 'r') { //send an r to release the reciever
@@ -233,6 +233,8 @@ void loop() {
     f.print(NETWORKID); f.print(".");
     f.print(radio.SENDERID); f.print(",");
     f.print(thePayload.time); f.print(",");
+    f.print(float(thePayload.battery_voltage)/100.0); f.print(",");
+    f.print(thePayload.board_temp); f.print(",");
     for(int i = 0; i < 8; i++) {
       f.print(thePayload.w[i]); // these are *10000 need post processed to /10000
       f.print(",");
@@ -240,8 +242,6 @@ void loop() {
       f.print(",");
     }
     f.print(thePayload.count); f.println();
-    f.print(float(thePayload.battery_voltage)/100.0); f.print(",");
-    f.print(thePayload.board_temp); f.print(",");
     f.close();
     //when done write, Close the File.
     //If file isn't closed, the data won't be saved
@@ -273,47 +273,12 @@ void Blink(byte PIN, int DELAY_MS) {
   digitalWrite(PIN,LOW);
   delay(DELAY_MS);
 }
-void printTime()
-{
-  DEBUG(String(rtc.hour()) + ":"); // Print hour
-  if (rtc.minute() < 10)
-    DEBUG('0'); // Print leading '0' for minute
-  DEBUG(String(rtc.minute()) + ":"); // Print minute
-  if (rtc.second() < 10)
-    DEBUG('0'); // Print leading '0' for second
-  DEBUG(String(rtc.second())); // Print second
-
-  if (rtc.is12Hour()) // If we're in 12-hour mode
-  {
-    // Use rtc.pm() to read the AM/PM state of the hour
-    if (rtc.pm())
-    {
-      DEBUG(" PM"); // Returns true if PM
-    }else{ DEBUG(" AM");}
-  }
-
-  DEBUG(" | ");
-
-  // Few options for printing the day, pick one:
-  DEBUG(rtc.dayStr()); // Print day string
-  //DEBUG(rtc.dayC()); // Print day character
-  //DEBUG(rtc.day()); // Print day integer (1-7, Sun-Sat)
-  DEBUG(" - ");
-#ifdef PRINT_USA_DATE
-  DEBUG(String(rtc.month()) + "/" +   // Print month
-               String(rtc.date()) + "/");  // Print date
-#else
-  DEBUG(String(rtc.date()) + "/" +    // (or) print date
-               String(rtc.month()) + "/"); // Print month
-#endif
-  DEBUGln(String(rtc.year()));        // Print year
-}
 /**
    [initRadio description]
 */
 void initRadio()
 {
-  DEBUG("Arduino RFM69HCW Transmitter");
+  DEBUGln("-- Arduino RFM69HCW Transmitter");
   //Now initialise the radio
   bool check = radio.initialize(FREQUENCY, NODEID, NETWORKID);
   if (check)
@@ -324,13 +289,13 @@ void initRadio()
     radio.encrypt(NULL);
     // radio.encrypt(ENCRYPTKEY);
     // radio.setFrequency(433000000);
-#ifdef ENABLE_ATC
-    DEBUGln("RFM69_ATC Enabled (Auto Transmission Control)");
+#ifdef ATC_RSSI
+    DEBUGln("-- RFM69_ATC Enabled (Auto Transmission Control)");
     radio.enableAutoPower(ATC_RSSI);
 #endif
-    DEBUGln("\Transmitting at "); DEBUG(radio.getFrequency());
+    DEBUG("-- Transmitting at "); DEBUGln(radio.getFrequency());
   } else {
-    DEBUGln("Cannot initialize radio");
+    DEBUGln("-- Cannot initialize radio");
   }
 }
 void initRTC()
@@ -370,7 +335,7 @@ void initSDCard()
       if(f.open("start.txt", FILE_WRITE)) { //Try opening that File
         DEBUGln("file write, OK!");
         DEBUG("-- Time is "); DEBUGln(now);
-        printTime();
+        //printTime();
         //Print to open File
         f.print("program started at: ");
         f.print(now);

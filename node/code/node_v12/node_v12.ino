@@ -1,3 +1,8 @@
+/**
+ * TODO:
+ * Add timeout function to ping and timestamp
+ *
+ */
 #include "Thermistor.h"
 #include "HX711.h" //https://github.com/bogde/HX711
 #include <EEPROM.h> //Built in
@@ -8,7 +13,7 @@
 /****************************************************************************/
 /***********************    DON'T FORGET TO SET ME    ***********************/
 /****************************************************************************/
-#define NODEID    1 //Node Address
+#define NODEID    3 //Node Address
 #define NETWORKID 100 //Network to communicate on
 /****************************************************************************/
 
@@ -196,7 +201,6 @@ void loop() {
 	Serial.print("- Sleeping for "); Serial.print(SLEEP_SECONDS); Serial.print(" seconds"); Serial.println();
 	Serial.flush();
 	radio.sleep();
-	count++;
 	for(uint8_t i = 0; i < SLEEP_INTERVAL; i++)
 		Sleepy::loseSomeTime(SLEEP_MS);
 //delay(1000);
