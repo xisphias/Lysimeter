@@ -8,7 +8,7 @@
 /****************************************************************************/
 /***********************    DON'T FORGET TO SET ME    ***********************/
 /****************************************************************************/
-#define NODEID    9 //Node Address
+#define NODEID    2 //Node Address
 #define NETWORKID 100 //Network to communicate on
 /****************************************************************************/
 
@@ -26,8 +26,8 @@
 #define BAT_EN A0
 #define BAT_V A6
 //battery voltage divider. Measure and set these values manually
-#define bat_div_R1 15000
-#define bat_div_R2 3900
+#define bat_div_R1 14700
+#define bat_div_R2 3820
 #define LED 9
 
 const uint8_t scaleNmeasurements = 10; //no times to measure load cell for average
@@ -121,6 +121,8 @@ void loop() {
   //Gets current time at start of measurement cycle. Stores in global theTimeStamp struct
   if(!getTime()) { //Gets time from datalogger and stores in Global Variable
     Serial.println("time - No Response from Datalogger");
+    // If the node gets no response the next measurement cycle will have the same timestamp
+    // as the last cycle. Could also set the timestamp here to a flag value...
   }
   Serial.println("- Measurement...");
   Blink(50,3);
@@ -227,11 +229,17 @@ int get_board_temp() {
 int get_battery_voltage() {
   uint16_t readings = 0;
   digitalWrite(BAT_EN, HIGH);
+  Serial.print(readings);Serial.print(" , ");
   delay(10);
   for (byte i=0; i<3; i++)
+  {
     readings += analogRead(BAT_V);
-  readings /= 3;
-  int v = int(3.3 * (readings/1023.0) * (bat_div_R1/bat_div_R2))*100; //Calculate battery voltage
+    Serial.print(readings);Serial.print(" , ");
+  }
+  readings = int(readings/3);
+  int v = int(330 * (readings/1023) * (bat_div_R1/bat_div_R2)); //Calculate battery voltage
+  Serial.print("batV ADC:");Serial.print(readings);
+  Serial.println(v);
   digitalWrite(BAT_EN, LOW);
   return v;
 }
