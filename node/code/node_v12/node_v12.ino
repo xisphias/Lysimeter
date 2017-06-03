@@ -90,10 +90,10 @@ void setup() {
     pinMode(muxSelectPins[i], OUTPUT);
     digitalWrite(muxSelectPins[i], HIGH);
   }
-  pinMode(zInput, INPUT); // Set up Z as an input
+  // pinMode(zInput, INPUT); // Set up Z as an input Don't need to do this, see below
   pinMode(eX, OUTPUT); // Set excitation
   pinMode(BAT_EN, OUTPUT); // Set excitation
-  pinMode(BAT_V, INPUT); 
+  // pinMode(BAT_V, INPUT); //Don't need to set pinMode for analog inputs. Setting it to INPUT sets as a DIGITAL INPUT, and is then set back to AnalogInput when analogRead() is called
   digitalWrite(eX, LOW);
   digitalWrite(BAT_EN, LOW);
   pinMode(LED, OUTPUT); //led
@@ -104,7 +104,7 @@ void setup() {
   //scale.tare();  //Reset the scale to 0
   //long zero_factor = scale.read_average(10); //Get a baseline reading
   //Serial.print("Zero factor: "); Serial.println(zero_factor); //This can be used to remove the need to tare the scale. Useful in permanent scale projects.
-  
+
   //Setup Radio
 	radio.initialize(FREQUENCY,NODEID,NETWORKID);
 	radio.setHighPower();
@@ -141,7 +141,7 @@ void loop() {
   thisPayload.battery_voltage = get_battery_voltage(); //NOTE: THIS IS NOT TESTED. MAKE SURE IT WORKS
   Serial.print("Bat V: ");
   Serial.println(float(thisPayload.battery_voltage)/100.0);
-  thisPayload.board_temp = get_board_temp(); 
+  thisPayload.board_temp = get_board_temp();
   Serial.print("Board TempC: ");
   Serial.println(thisPayload.board_temp);
   //   Print the header:
@@ -241,6 +241,9 @@ int get_board_temp() {
 int get_battery_voltage() {
   int readings = 0;
   float v = 0;
+	float LSB = 3.3/1023;
+	float bV = 0;
+
   digitalWrite(BAT_EN, HIGH);
   Serial.println(v);
   Serial.print(readings);Serial.print(" , ");
@@ -251,11 +254,14 @@ int get_battery_voltage() {
     Serial.print(readings);Serial.print(" , ");
   }
   readings /= 3;
-  v = (3.3) * ((readings)/1023.0) * ((bat_div_R1)/bat_div_R2) * 100.0; //Calculate battery voltage
+	v = readings * LSB;
+	bV = ((bat_div_R1+bat_div_R2) * v)/bat_div_R2;
+	bV *= 100.0;
+  // v = (3.3) * (readings/1023.0) * (bat_div_R1/bat_div_R2) * 100.0; //Calculate battery voltage
   Serial.print("batV ADC:");Serial.println(readings);
-  Serial.println(v/(100.0));
+  Serial.println(bV/(100.0));
   digitalWrite(BAT_EN, LOW);
-  return v;
+  return int(bV);
 }
 
 
@@ -279,7 +285,7 @@ void sendStoredEEPROMData() {
 	EEPROM_ADDR = 1 + sizeof(theTimeStamp.timestamp); //Set to next address
 	EEPROM.get(EEPROM_ADDR, theData); //Read in saved data to the Data struct
 	Serial.print(".stored time "); Serial.println(theTimeStamp.timestamp);
-	Serial.println(theData.battery_voltage); //this is where nothing would happen. EEPROM 5 was >0 so we got here, but battery V was 0, so we exited without sending and without clearing the eeprom.  
+	Serial.println(theData.battery_voltage); //this is where nothing would happen. EEPROM 5 was >0 so we got here, but battery V was 0, so we exited without sending and without clearing the eeprom.
 	while (theData.count > 0) { //while there is data available in the EEPROM // changed to count instead of battery V b/c batV was 0 in theData
 		uint32_t rec_time = eep_time + SLEEP_SECONDS*storeIndex; //Calculate the actual recorded time
 		Serial.print(".rec time "); Serial.println(rec_time);
