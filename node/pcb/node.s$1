@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.2.1">
+<eagle version="8.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -2028,7 +2028,7 @@ http://www.bourns.com/data/global/pdfs/7914.pdf</description>
 <pad name="3" x="6.25" y="2.5" drill="1.2"/>
 <pad name="1" x="6.25" y="-2.5" drill="1.2"/>
 <hole x="0" y="4.5" drill="1.8"/>
-<hole x="0" y="-4.5" drill="1.8"/>
+<hole x="0.5" y="-4.5" drill="1.8"/>
 <text x="-5.969" y="6.35" size="1.27" layer="21" font="vector" ratio="15">&gt;NAME</text>
 </package>
 </packages>
