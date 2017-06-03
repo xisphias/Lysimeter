@@ -17,7 +17,6 @@
 #define ATC_RSSI -70 //ideal Signal Strength of trasmission
 #define ACK_WAIT_TIME 100 // # of ms to wait for an ack
 #define ACK_RETRIES 10 // # of attempts before giving up
-
 #define DOUT  8
 #define CLK  7
 #define zOutput 3.3
@@ -25,11 +24,14 @@
 #define eX A5 //Thermister excitation voltage
 #define BAT_EN A0
 #define BAT_V A6
-//battery voltage divider. Measure and set these values manually
-#define bat_div_R1 14700
-#define bat_div_R2 3820
 #define LED 9
+//battery voltage divider. Measure and set these values manually
+//#define bat_div_R1 14700
+//#define bat_div_R2 3820
 
+//battery voltage divider. Measure and set these values manually
+const int bat_div_R1 = 14700;
+const int bat_div_R2 = 3820;
 const uint8_t scaleNmeasurements = 10; //no times to measure load cell for average
 const int muxSelectPins[3] = {3, 4, 5}; // S0~3, S1~4, S2~5
 // Define calibration for LC   Y0   , Y1  , Y2  , Y3  , Y4  , Y5  , Y6  , Y8  }
@@ -85,7 +87,10 @@ void setup() {
   }
   pinMode(zInput, INPUT); // Set up Z as an input
   pinMode(eX, OUTPUT); // Set excitation
+  pinMode(BAT_EN, OUTPUT); // Set excitation
+  pinMode(BAT_V, INPUT); 
   digitalWrite(eX, LOW);
+  digitalWrite(BAT_EN, LOW);
   pinMode(LED, OUTPUT); //led
 
   //--SETUP OTHER STUFF
@@ -142,7 +147,7 @@ void loop() {
     measureWeight(i);
     digitalWrite(eX, HIGH);
     delay(10);
-    thisPayload.t[i] = int(temp.getTemp()*100); // this is not tested, need to check params or write in function
+    thisPayload.t[i] = int(temp.getTemp()*100); // this is not tested, need to check thermistor resistance on cable
     digitalWrite(eX, LOW);
 
     Serial.print(float(thisPayload.w[i])/10000.0,4);
@@ -227,8 +232,10 @@ int get_board_temp() {
 }
 
 int get_battery_voltage() {
-  uint16_t readings = 0;
+  int readings = 0;
+  float v = 0;
   digitalWrite(BAT_EN, HIGH);
+  Serial.println(v);
   Serial.print(readings);Serial.print(" , ");
   delay(10);
   for (byte i=0; i<3; i++)
@@ -236,10 +243,10 @@ int get_battery_voltage() {
     readings += analogRead(BAT_V);
     Serial.print(readings);Serial.print(" , ");
   }
-  readings = int(readings/3);
-  int v = int(330 * (readings/1023) * (bat_div_R1/bat_div_R2)); //Calculate battery voltage
-  Serial.print("batV ADC:");Serial.print(readings);
-  Serial.println(v);
+  readings /= 3;
+  v = (3.3) * ((readings)/1023.0) * ((bat_div_R1)/bat_div_R2) * 100.0; //Calculate battery voltage
+  Serial.print("batV ADC:");Serial.println(readings);
+  Serial.println(v/(100.0));
   digitalWrite(BAT_EN, LOW);
   return v;
 }
