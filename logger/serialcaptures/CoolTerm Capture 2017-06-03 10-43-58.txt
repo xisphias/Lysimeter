@@ -1,0 +1,2110 @@
+rcv 112, 1 byte/s from node 1: 1: p 232826
+latch to 1
+snd > [1] 1
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496486649
+rcv 112, 1 byte/s from node 2: 2: p 246204
+latch to 2
+snd > [2] 1
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496486662
+rcv 112, 1 byte/s from node 3: 3: p 253323
+latch to 3
+snd > [3] 1
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496486670
+rcv 112, 1 byte/s from node 1: 1: p 258505
+latch to 1
+snd > [1] 1
+rcv 249, 58 byte/s from node 1: [1] 
+@: 1496486649
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.64,	3.48,	-45439.00,	16012.00,	-3962.00,	-3942.00,	-3943.00,	-3945.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 27
+ battery voltage: 7
+ cnt: 1
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 112, 1 byte/s from node 2: 2: p 270910
+latch to 2
+snd > [2] 1
+rcv 6, 58 byte/s from node 2: [2] 
+@: 1496486662
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5050.00,	-5052.00,	-5058.00,	-5060.00,	-5064.00,	-5054.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 1
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 112, 1 byte/s from node 3: 3: p 278593
+latch to 3
+snd > [3] 1
+rcv 14, 58 byte/s from node 3: [3] 
+@: 1496486670
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4150.00,	-4156.00,	-4156.00,	-4170.00,	-4153.00,	-4157.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 26
+ battery voltage: 7
+ cnt: 1
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496486990
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496487010
+rcv 112, 1 byte/s from node 1: 1: p 599857
+latch to 1
+snd > [1] 1
+rcv 78, 58 byte/s from node 1: [1] 
+@: 1496486990
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45446.00,	16015.00,	-3956.00,	-3954.00,	-3955.00,	-3955.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 25
+ battery voltage: 7
+ cnt: 2
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496487020
+rcv 112, 1 byte/s from node 2: 2: p 619279
+latch to 2
+snd > [2] 1
+rcv 98, 58 byte/s from node 2: [2] 
+@: 1496487010
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5068.00,	-5064.00,	-5058.00,	-5054.00,	-5054.00,	-5057.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 7
+ cnt: 2
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 112, 1 byte/s from node 3: 3: p 630183
+latch to 3
+snd > [3] 1
+rcv 108, 58 byte/s from node 3: [3] 
+@: 1496487020
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4156.00,	-4159.00,	-4154.00,	-4149.00,	-4154.00,	-4146.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 2
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496487331
+rcv 112, 1 byte/s from node 1: 1: p 941057
+latch to 1
+snd > [1] 1
+rcv 163, 58 byte/s from node 1: [1] 
+@: 1496487331
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45476.00,	16007.00,	-3945.00,	-3941.00,	-3947.00,	-3949.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 3
+sd - writing to 100_1.csv
+Latch Timed Out
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496487358
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496487372
+rcv 112, 1 byte/s from node 2: 2: p 967449
+latch to 2
+snd > [2] 1
+rcv 190, 58 byte/s from node 2: [2] 
+@: 1496487358
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5066.00,	-5061.00,	-5065.00,	-5053.00,	-5050.00,	-5064.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 7
+ cnt: 3
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 112, 1 byte/s from node 3: 3: p 981479
+latch to 3
+snd > [3] 1
+rcv 204, 58 byte/s from node 3: [3] 
+@: 1496487372
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4160.00,	-4154.00,	-4164.00,	-4147.00,	-4157.00,	-4152.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 3
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496487672
+rcv 112, 1 byte/s from node 1: 1: p 1282249
+latch to 1
+snd > [1] 1
+rcv 248, 58 byte/s from node 1: [1] 
+@: 1496487672
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45444.00,	16003.00,	-3953.00,	-3957.00,	-3956.00,	-3951.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 4
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496487706
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496487723
+rcv 112, 1 byte/s from node 2: 2: p 1315658
+latch to 2
+snd > [2] 1
+rcv 26, 58 byte/s from node 2: [2] 
+@: 1496487706
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5054.00,	-5067.00,	-5058.00,	-5069.00,	-5057.00,	-5055.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 4
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 112, 1 byte/s from node 3: 3: p 1332681
+latch to 3
+snd > [3] 1
+rcv 43, 58 byte/s from node 3: [3] 
+@: 1496487723
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4146.00,	-4168.00,	-4156.00,	-4176.00,	-4152.00,	-4166.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 4
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496488013
+rcv 112, 1 byte/s from node 1: 1: p 1623380
+latch to 1
+snd > [1] 1
+rcv 77, 58 byte/s from node 1: [1] 
+@: 1496488013
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45421.00,	16013.00,	-3954.00,	-3946.00,	-3954.00,	-3948.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 5
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496488054
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496488074
+rcv 112, 1 byte/s from node 2: 2: p 1663810
+latch to 2
+snd > [2] 1
+rcv 118, 58 byte/s from node 2: [2] 
+@: 1496488054
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5057.00,	-5049.00,	-5061.00,	-5048.00,	-5059.00,	-5056.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 5
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 112, 1 byte/s from node 3: 3: p 1683858
+latch to 3
+snd > [3] 1
+rcv 138, 58 byte/s from node 3: [3] 
+@: 1496488074
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4159.00,	-4146.00,	-4166.00,	-4158.00,	-4164.00,	-4145.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 5
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496488354
+rcv 112, 1 byte/s from node 1: 1: p 1964538
+latch to 1
+snd > [1] 1
+rcv 162, 58 byte/s from node 1: [1] 
+@: 1496488354
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45407.00,	16019.00,	-3945.00,	-3946.00,	-3957.00,	-3953.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 6
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496488402
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496488425
+rcv 112, 1 byte/s from node 2: 2: p 2011971
+latch to 2
+snd > [2] 1
+rcv 210, 58 byte/s from node 2: [2] 
+@: 1496488402
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5047.00,	-5040.00,	-5043.00,	-5056.00,	-5067.00,	-5059.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 6
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 112, 1 byte/s from node 3: 3: p 2035080
+latch to 3
+snd > [3] 1
+rcv 233, 58 byte/s from node 3: [3] 
+@: 1496488425
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4158.00,	-4160.00,	-4156.00,	-4150.00,	-4152.00,	-4158.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 6
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496488695
+rcv 112, 1 byte/s from node 1: 1: p 2305636
+latch to 1
+snd > [1] 1
+rcv 247, 58 byte/s from node 1: [1] 
+@: 1496488695
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45450.00,	16000.00,	-3949.00,	-3946.00,	-3961.00,	-3941.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 7
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496488750
+rcv 112, 1 byte/s from node 2: 2: p 2360130
+latch to 2
+snd > [2] 1
+rcv 46, 58 byte/s from node 2: [2] 
+@: 1496488750
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5061.00,	-5054.00,	-5045.00,	-5054.00,	-5057.00,	-5065.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 7
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496488776
+rcv 112, 1 byte/s from node 3: 3: p 2386226
+latch to 3
+snd > [3] 1
+rcv 72, 58 byte/s from node 3: [3] 
+@: 1496488776
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4164.00,	-4161.00,	-4161.00,	-4159.00,	-4151.00,	-4160.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 7
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496489036
+rcv 112, 1 byte/s from node 1: 1: p 2646737
+latch to 1
+snd > [1] 1
+rcv 76, 58 byte/s from node 1: [1] 
+@: 1496489036
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45440.00,	16012.00,	-3960.00,	-3944.00,	-3941.00,	-3952.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 8
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496489098
+rcv 112, 1 byte/s from node 2: 2: p 2708277
+latch to 2
+snd > [2] 1
+rcv 138, 58 byte/s from node 2: [2] 
+@: 1496489098
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5061.00,	-5054.00,	-5058.00,	-5059.00,	-5064.00,	-5058.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 8
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496489127
+rcv 112, 1 byte/s from node 3: 3: p 2737353
+latch to 3
+snd > [3] 1
+rcv 167, 58 byte/s from node 3: [3] 
+@: 1496489127
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4149.00,	-4151.00,	-4156.00,	-4153.00,	-4159.00,	-4151.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 8
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496489376
+rcv 112, 1 byte/s from node 1: 1: p 2987831
+latch to 1
+snd > [1] 1
+rcv 160, 58 byte/s from node 1: [1] 
+@: 1496489376
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45414.00,	15990.00,	-3953.00,	-3944.00,	-3955.00,	-3962.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 9
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496489446
+rcv 112, 1 byte/s from node 2: 2: p 3056339
+latch to 2
+snd > [2] 1
+rcv 230, 58 byte/s from node 2: [2] 
+@: 1496489446
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5061.00,	-5050.00,	-5053.00,	-5066.00,	-5062.00,	-5060.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 9
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496489477
+rcv 112, 1 byte/s from node 3: 3: p 3088482
+latch to 3
+snd > [3] 1
+rcv 5, 58 byte/s from node 3: [3] 
+@: 1496489477
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4160.00,	-4155.00,	-4160.00,	-4155.00,	-4158.00,	-4151.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 9
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496489717
+rcv 112, 1 byte/s from node 1: 1: p 3328920
+latch to 1
+snd > [1] 1
+rcv 245, 58 byte/s from node 1: [1] 
+@: 1496489717
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.49,	-45411.00,	16023.00,	-3943.00,	-3945.00,	-3962.00,	-3947.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 10
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496489794
+rcv 112, 1 byte/s from node 2: 2: p 3404440
+latch to 2
+snd > [2] 1
+rcv 66, 58 byte/s from node 2: [2] 
+@: 1496489794
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5069.00,	-5061.00,	-5052.00,	-5062.00,	-5061.00,	-5054.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 10
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496489828
+rcv 112, 1 byte/s from node 3: 3: p 3439613
+latch to 3
+snd > [3] 1
+rcv 100, 58 byte/s from node 3: [3] 
+@: 1496489828
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4164.00,	-4162.00,	-4158.00,	-4155.00,	-4158.00,	-4146.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 10
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496490058
+rcv 112, 1 byte/s from node 1: 1: p 3670002
+latch to 1
+snd > [1] 1
+rcv 74, 58 byte/s from node 1: [1] 
+@: 1496490058
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45439.00,	16017.00,	-3972.00,	-3939.00,	-3942.00,	-3960.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 11
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496490142
+rcv 112, 1 byte/s from node 2: 2: p 3752505
+latch to 2
+snd > [2] 1
+rcv 158, 58 byte/s from node 2: [2] 
+@: 1496490142
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5056.00,	-5052.00,	-5056.00,	-5047.00,	-5053.00,	-5052.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 11
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496490179
+rcv 112, 1 byte/s from node 3: 3: p 3790732
+latch to 3
+snd > [3] 1
+rcv 195, 58 byte/s from node 3: [3] 
+@: 1496490179
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4154.00,	-4162.00,	-4159.00,	-4165.00,	-4162.00,	-4154.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 11
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496490399
+rcv 112, 1 byte/s from node 1: 1: p 4011073
+latch to 1
+snd > [1] 1
+rcv 159, 58 byte/s from node 1: [1] 
+@: 1496490399
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.49,	-45378.00,	16004.00,	-3953.00,	-3954.00,	-3957.00,	-3945.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 12
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496490490
+rcv 112, 1 byte/s from node 2: 2: p 4100621
+latch to 2
+snd > [2] 1
+rcv 250, 58 byte/s from node 2: [2] 
+@: 1496490490
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5071.00,	-5051.00,	-5060.00,	-5059.00,	-5048.00,	-5062.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 12
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496490530
+rcv 112, 1 byte/s from node 3: 3: p 4141842
+latch to 3
+snd > [3] 1
+rcv 34, 58 byte/s from node 3: [3] 
+@: 1496490530
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4157.00,	-4152.00,	-4147.00,	-4151.00,	-4165.00,	-4156.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 12
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496490740
+rcv 112, 1 byte/s from node 1: 1: p 4352158
+latch to 1
+snd > [1] 1
+rcv 244, 58 byte/s from node 1: [1] 
+@: 1496490740
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45335.00,	16071.00,	-3950.00,	-3945.00,	-3951.00,	-3951.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 13
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496490838
+rcv 112, 1 byte/s from node 2: 2: p 4448730
+latch to 2
+snd > [2] 1
+rcv 86, 58 byte/s from node 2: [2] 
+@: 1496490838
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5058.00,	-5055.00,	-5070.00,	-5050.00,	-5057.00,	-5060.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 13
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496490881
+rcv 112, 1 byte/s from node 3: 3: p 4492999
+latch to 3
+snd > [3] 1
+rcv 129, 58 byte/s from node 3: [3] 
+@: 1496490881
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4154.00,	-4144.00,	-4154.00,	-4154.00,	-4152.00,	-4155.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 13
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496491081
+rcv 112, 1 byte/s from node 1: 1: p 4693252
+latch to 1
+snd > [1] 1
+rcv 73, 58 byte/s from node 1: [1] 
+@: 1496491081
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45364.00,	16091.00,	-3953.00,	-3952.00,	-3966.00,	-3942.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 14
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496491186
+rcv 112, 1 byte/s from node 2: 2: p 4796882
+latch to 2
+snd > [2] 1
+rcv 178, 58 byte/s from node 2: [2] 
+@: 1496491186
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5064.00,	-5054.00,	-5056.00,	-5067.00,	-5056.00,	-5059.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 14
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496491232
+rcv 112, 1 byte/s from node 3: 3: p 4844157
+latch to 3
+snd > [3] 1
+rcv 224, 58 byte/s from node 3: [3] 
+@: 1496491232
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4165.00,	-4157.00,	-4139.00,	-4148.00,	-4164.00,	-4146.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 14
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496491422
+rcv 112, 1 byte/s from node 1: 1: p 5034357
+latch to 1
+snd > [1] 1
+rcv 158, 58 byte/s from node 1: [1] 
+@: 1496491422
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45337.00,	16054.00,	-3957.00,	-3948.00,	-3946.00,	-3944.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 15
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496491533
+rcv 112, 1 byte/s from node 2: 2: p 5145030
+latch to 2
+snd > [2] 1
+rcv 13, 58 byte/s from node 2: [2] 
+@: 1496491533
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5075.00,	-5063.00,	-5063.00,	-5056.00,	-5059.00,	-5060.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 15
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496491583
+rcv 112, 1 byte/s from node 3: 3: p 5195332
+latch to 3
+snd > [3] 1
+rcv 63, 58 byte/s from node 3: [3] 
+@: 1496491583
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4156.00,	-4149.00,	-4149.00,	-4154.00,	-4155.00,	-4149.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 15
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496491763
+rcv 112, 1 byte/s from node 1: 1: p 5375470
+latch to 1
+snd > [1] 1
+rcv 243, 58 byte/s from node 1: [1] 
+@: 1496491763
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45350.00,	16086.00,	-3956.00,	-3956.00,	-3942.00,	-3959.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 16
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496491881
+rcv 112, 1 byte/s from node 2: 2: p 5493159
+latch to 2
+snd > [2] 1
+rcv 105, 58 byte/s from node 2: [2] 
+@: 1496491881
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5051.00,	-5057.00,	-5056.00,	-5059.00,	-5051.00,	-5045.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 16
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496491934
+rcv 112, 1 byte/s from node 3: 3: p 5546501
+latch to 3
+snd > [3] 1
+rcv 158, 58 byte/s from node 3: [3] 
+@: 1496491934
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4156.00,	-4167.00,	-4151.00,	-4156.00,	-4168.00,	-4138.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 16
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496492104
+rcv 112, 1 byte/s from node 1: 1: p 5716570
+latch to 1
+snd > [1] 1
+rcv 72, 58 byte/s from node 1: [1] 
+@: 1496492104
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45357.00,	16108.00,	-3957.00,	-3954.00,	-3951.00,	-3948.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 17
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496492229
+rcv 112, 1 byte/s from node 2: 2: p 5841324
+latch to 2
+snd > [2] 1
+rcv 197, 58 byte/s from node 2: [2] 
+@: 1496492229
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5056.00,	-5056.00,	-5060.00,	-5057.00,	-5060.00,	-5061.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 17
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496492285
+rcv 112, 1 byte/s from node 3: 3: p 5897682
+latch to 3
+snd > [3] 1
+rcv 253, 58 byte/s from node 3: [3] 
+@: 1496492285
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4155.00,	-4158.00,	-4156.00,	-4156.00,	-4146.00,	-4141.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 17
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496492445
+rcv 112, 1 byte/s from node 1: 1: p 6057683
+latch to 1
+snd > [1] 1
+rcv 157, 58 byte/s from node 1: [1] 
+@: 1496492445
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45353.00,	16103.00,	-3952.00,	-3954.00,	-3951.00,	-3947.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 18
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496492577
+rcv 112, 1 byte/s from node 2: 2: p 6189473
+latch to 2
+snd > [2] 1
+rcv 33, 58 byte/s from node 2: [2] 
+@: 1496492577
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5056.00,	-5049.00,	-5067.00,	-5055.00,	-5059.00,	-5055.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 18
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496492636
+rcv 112, 1 byte/s from node 3: 3: p 6248872
+latch to 3
+snd > [3] 1
+rcv 92, 58 byte/s from node 3: [3] 
+@: 1496492636
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4157.00,	-4149.00,	-4143.00,	-4153.00,	-4159.00,	-4143.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 18
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496492786
+rcv 112, 1 byte/s from node 1: 1: p 6398811
+latch to 1
+snd > [1] 1
+rcv 242, 58 byte/s from node 1: [1] 
+@: 1496492786
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45387.00,	16071.00,	-3955.00,	-3939.00,	-3959.00,	-3945.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 19
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496492925
+rcv 112, 1 byte/s from node 2: 2: p 6537614
+latch to 2
+snd > [2] 1
+rcv 125, 58 byte/s from node 2: [2] 
+@: 1496492925
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5062.00,	-5058.00,	-5059.00,	-5060.00,	-5052.00,	-5049.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 19
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496492987
+rcv 112, 1 byte/s from node 3: 3: p 6600059
+latch to 3
+snd > [3] 1
+rcv 187, 58 byte/s from node 3: [3] 
+@: 1496492987
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4155.00,	-4151.00,	-4157.00,	-4144.00,	-4151.00,	-4149.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 19
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496493127
+rcv 112, 1 byte/s from node 1: 1: p 6739940
+latch to 1
+snd > [1] 1
+rcv 71, 58 byte/s from node 1: [1] 
+@: 1496493127
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45389.00,	16107.00,	-3960.00,	-3948.00,	-3946.00,	-3943.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 20
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496493273
+rcv 112, 1 byte/s from node 2: 2: p 6885766
+latch to 2
+snd > [2] 1
+rcv 217, 58 byte/s from node 2: [2] 
+@: 1496493273
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5064.00,	-5051.00,	-5059.00,	-5061.00,	-5063.00,	-5049.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 20
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496493338
+rcv 112, 1 byte/s from node 3: 3: p 6951242
+latch to 3
+snd > [3] 1
+rcv 26, 58 byte/s from node 3: [3] 
+@: 1496493338
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4149.00,	-4144.00,	-4151.00,	-4156.00,	-4136.00,	-4155.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 20
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496493467
+rcv 112, 1 byte/s from node 1: 1: p 7081066
+latch to 1
+snd > [1] 1
+rcv 155, 58 byte/s from node 1: [1] 
+@: 1496493467
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45430.00,	16056.00,	-3949.00,	-3947.00,	-3956.00,	-3947.00,	
+temps: 24,	23,	24,	24,	0,	0,	0,	0,	
+ temp: 25
+ battery voltage: 7
+ cnt: 21
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496493621
+rcv 112, 1 byte/s from node 2: 2: p 7233917
+latch to 2
+snd > [2] 1
+rcv 53, 58 byte/s from node 2: [2] 
+@: 1496493621
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5057.00,	-5070.00,	-5055.00,	-5060.00,	-5055.00,	-5054.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 21
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496493689
+rcv 112, 1 byte/s from node 3: 3: p 7302433
+latch to 3
+snd > [3] 1
+rcv 121, 58 byte/s from node 3: [3] 
+@: 1496493689
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4156.00,	-4152.00,	-4150.00,	-4158.00,	-4167.00,	-4161.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 21
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496493808
+rcv 112, 1 byte/s from node 1: 1: p 7422238
+latch to 1
+snd > [1] 1
+rcv 240, 58 byte/s from node 1: [1] 
+@: 1496493808
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45456.00,	16080.00,	-3963.00,	-3955.00,	-3949.00,	-3949.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 22
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496493969
+rcv 112, 1 byte/s from node 2: 2: p 7582047
+latch to 2
+snd > [2] 1
+rcv 145, 58 byte/s from node 2: [2] 
+@: 1496493969
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5053.00,	-5054.00,	-5044.00,	-5061.00,	-5050.00,	-5077.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 22
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496494040
+rcv 112, 1 byte/s from node 3: 3: p 7653643
+latch to 3
+snd > [3] 1
+rcv 216, 58 byte/s from node 3: [3] 
+@: 1496494040
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4161.00,	-4157.00,	-4154.00,	-4159.00,	-4158.00,	-4158.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 22
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496494149
+rcv 112, 1 byte/s from node 1: 1: p 7763378
+latch to 1
+snd > [1] 1
+rcv 69, 58 byte/s from node 1: [1] 
+@: 1496494149
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45461.00,	16074.00,	-3958.00,	-3953.00,	-3946.00,	-3943.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 23
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496494317
+rcv 112, 1 byte/s from node 2: 2: p 7930241
+latch to 2
+snd > [2] 1
+rcv 237, 58 byte/s from node 2: [2] 
+@: 1496494317
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5060.00,	-5056.00,	-5058.00,	-5056.00,	-5063.00,	-5055.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 23
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496494391
+rcv 112, 1 byte/s from node 3: 3: p 8004846
+latch to 3
+snd > [3] 1
+rcv 55, 58 byte/s from node 3: [3] 
+@: 1496494391
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4150.00,	-4152.00,	-4154.00,	-4160.00,	-4147.00,	-4158.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 23
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496494490
+rcv 112, 1 byte/s from node 1: 1: p 8104515
+latch to 1
+snd > [1] 1
+rcv 154, 58 byte/s from node 1: [1] 
+@: 1496494490
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45534.00,	16079.00,	-3960.00,	-3949.00,	-3939.00,	-3943.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 24
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496494665
+rcv 112, 1 byte/s from node 2: 2: p 8278375
+latch to 2
+snd > [2] 1
+rcv 73, 58 byte/s from node 2: [2] 
+@: 1496494665
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5051.00,	-5053.00,	-5065.00,	-5055.00,	-5053.00,	-5057.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 24
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496494742
+rcv 112, 1 byte/s from node 3: 3: p 8356068
+latch to 3
+snd > [3] 1
+rcv 150, 58 byte/s from node 3: [3] 
+@: 1496494742
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4150.00,	-4149.00,	-4144.00,	-4146.00,	-4156.00,	-4149.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 24
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496494831
+rcv 112, 1 byte/s from node 1: 1: p 8445658
+latch to 1
+snd > [1] 1
+rcv 239, 58 byte/s from node 1: [1] 
+@: 1496494831
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45528.00,	16019.00,	-3954.00,	-3947.00,	-3948.00,	-3945.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 25
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496495013
+rcv 112, 1 byte/s from node 2: 2: p 8626533
+latch to 2
+snd > [2] 1
+rcv 165, 58 byte/s from node 2: [2] 
+@: 1496495013
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5063.00,	-5065.00,	-5062.00,	-5057.00,	-5054.00,	-5055.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 25
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496495093
+rcv 112, 1 byte/s from node 3: 3: p 8707290
+latch to 3
+snd > [3] 1
+rcv 245, 58 byte/s from node 3: [3] 
+@: 1496495093
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4158.00,	-4144.00,	-4157.00,	-4155.00,	-4143.00,	-4146.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 25
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496495172
+rcv 112, 1 byte/s from node 1: 1: p 8786808
+latch to 1
+snd > [1] 1
+rcv 68, 58 byte/s from node 1: [1] 
+@: 1496495172
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45499.00,	16088.00,	-3949.00,	-3941.00,	-3942.00,	-3948.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 25
+ battery voltage: 7
+ cnt: 26
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496495361
+rcv 112, 1 byte/s from node 2: 2: p 8974747
+latch to 2
+snd > [2] 1
+rcv 1, 58 byte/s from node 2: [2] 
+@: 1496495361
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5044.00,	-5069.00,	-5051.00,	-5066.00,	-5058.00,	-5067.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 26
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496495444
+rcv 112, 1 byte/s from node 3: 3: p 9058512
+latch to 3
+snd > [3] 1
+rcv 84, 58 byte/s from node 3: [3] 
+@: 1496495444
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4154.00,	-4159.00,	-4161.00,	-4164.00,	-4152.00,	-4159.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 26
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496495513
+rcv 112, 1 byte/s from node 1: 1: p 9127970
+latch to 1
+snd > [1] 1
+rcv 153, 58 byte/s from node 1: [1] 
+@: 1496495513
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45557.00,	16090.00,	-3953.00,	-3950.00,	-3948.00,	-3947.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 27
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496495709
+rcv 112, 1 byte/s from node 2: 2: p 9322968
+latch to 2
+snd > [2] 1
+rcv 93, 58 byte/s from node 2: [2] 
+@: 1496495709
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5059.00,	-5047.00,	-5062.00,	-5054.00,	-5059.00,	-5065.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 27
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496495795
+rcv 112, 1 byte/s from node 3: 3: p 9409745
+latch to 3
+snd > [3] 1
+rcv 179, 58 byte/s from node 3: [3] 
+@: 1496495795
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4159.00,	-4159.00,	-4150.00,	-4159.00,	-4154.00,	-4164.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 27
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496495854
+rcv 112, 1 byte/s from node 1: 1: p 9469121
+latch to 1
+snd > [1] 1
+rcv 238, 58 byte/s from node 1: [1] 
+@: 1496495854
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45538.00,	16109.00,	-3944.00,	-3950.00,	-3941.00,	-3942.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 28
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496496057
+rcv 112, 1 byte/s from node 2: 2: p 9671132
+latch to 2
+snd > [2] 1
+rcv 185, 58 byte/s from node 2: [2] 
+@: 1496496057
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5059.00,	-5055.00,	-5047.00,	-5059.00,	-5058.00,	-5063.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 28
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496496146
+rcv 112, 1 byte/s from node 3: 3: p 9760973
+latch to 3
+snd > [3] 1
+rcv 18, 58 byte/s from node 3: [3] 
+@: 1496496146
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4166.00,	-4159.00,	-4150.00,	-4158.00,	-4149.00,	-4151.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 28
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496496195
+rcv 112, 1 byte/s from node 1: 1: p 9810283
+latch to 1
+snd > [1] 1
+rcv 67, 58 byte/s from node 1: [1] 
+@: 1496496195
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45560.00,	16105.00,	-3957.00,	-3950.00,	-3949.00,	-3952.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 29
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496496405
+rcv 112, 1 byte/s from node 2: 2: p 10019318
+latch to 2
+snd > [2] 1
+rcv 21, 58 byte/s from node 2: [2] 
+@: 1496496405
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5053.00,	-5066.00,	-5056.00,	-5051.00,	-5062.00,	-5063.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 7
+ cnt: 29
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496496497
+rcv 112, 1 byte/s from node 3: 3: p 10112260
+latch to 3
+snd > [3] 1
+rcv 113, 58 byte/s from node 3: [3] 
+@: 1496496497
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4154.00,	-4152.00,	-4159.00,	-4149.00,	-4149.00,	-4147.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 29
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496496536
+rcv 112, 1 byte/s from node 1: 1: p 10151397
+latch to 1
+snd > [1] 1
+rcv 152, 58 byte/s from node 1: [1] 
+@: 1496496536
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45622.00,	16030.00,	-3957.00,	-3942.00,	-3943.00,	-3939.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 30
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496496753
+rcv 112, 1 byte/s from node 2: 2: p 10367472
+latch to 2
+snd > [2] 1
+rcv 113, 58 byte/s from node 2: [2] 
+@: 1496496753
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5063.00,	-5054.00,	-5059.00,	-5052.00,	-5059.00,	-5061.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 7
+ cnt: 30
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496496848
+rcv 112, 1 byte/s from node 3: 3: p 10463492
+latch to 3
+snd > [3] 1
+rcv 208, 58 byte/s from node 3: [3] 
+@: 1496496848
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4153.00,	-4155.00,	-4145.00,	-4156.00,	-4149.00,	-4152.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 30
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496496877
+rcv 112, 1 byte/s from node 1: 1: p 10492565
+latch to 1
+snd > [1] 1
+rcv 237, 58 byte/s from node 1: [1] 
+@: 1496496877
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45633.00,	16068.00,	-3964.00,	-3953.00,	-3967.00,	-3947.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 31
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496497101
+rcv 112, 1 byte/s from node 2: 2: p 10715703
+latch to 2
+snd > [2] 1
+rcv 205, 58 byte/s from node 2: [2] 
+@: 1496497101
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5046.00,	-5064.00,	-5064.00,	-5064.00,	-5059.00,	-5057.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 7
+ cnt: 31
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496497199
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496497218
+rcv 112, 1 byte/s from node 3: 3: p 10814720
+latch to 3
+snd > [3] 1
+rcv 47, 58 byte/s from node 3: [3] 
+@: 1496497199
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4159.00,	-4152.00,	-4159.00,	-4154.00,	-4156.00,	-4163.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 31
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 112, 1 byte/s from node 1: 1: p 10833733
+latch to 1
+snd > [1] 1
+rcv 66, 58 byte/s from node 1: [1] 
+@: 1496497218
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45646.00,	16023.00,	-3954.00,	-3959.00,	-3949.00,	-3942.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 32
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496497449
+rcv 112, 1 byte/s from node 2: 2: p 11063941
+latch to 2
+snd > [2] 1
+rcv 41, 58 byte/s from node 2: [2] 
+@: 1496497449
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5052.00,	-5066.00,	-5058.00,	-5053.00,	-5061.00,	-5058.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 32
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496497551
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496497559
+rcv 112, 1 byte/s from node 3: 3: p 11165976
+latch to 3
+snd > [3] 1
+rcv 143, 58 byte/s from node 3: [3] 
+@: 1496497551
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4144.00,	-4143.00,	-4139.00,	-4147.00,	-4154.00,	-4160.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 32
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 112, 1 byte/s from node 1: 1: p 11174914
+latch to 1
+snd > [1] 1
+rcv 151, 58 byte/s from node 1: [1] 
+@: 1496497559
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45636.00,	16039.00,	-3954.00,	-3947.00,	-3944.00,	-3950.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 33
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496497797
+rcv 112, 1 byte/s from node 2: 2: p 11412180
+latch to 2
+snd > [2] 1
+rcv 133, 58 byte/s from node 2: [2] 
+@: 1496497797
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5050.00,	-5061.00,	-5056.00,	-5056.00,	-5061.00,	-5061.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 7
+ cnt: 33
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496497900
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496497902
+rcv 112, 1 byte/s from node 1: 1: p 11516075
+latch to 1
+snd > [1] 1
+rcv 236, 58 byte/s from node 1: [1] 
+@: 1496497900
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45643.00,	16032.00,	-3955.00,	-3936.00,	-3945.00,	-3945.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 34
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 112, 1 byte/s from node 3: 3: p 11517229
+latch to 3
+snd > [3] 1
+rcv 238, 58 byte/s from node 3: [3] 
+@: 1496497902
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4159.00,	-4154.00,	-4162.00,	-4157.00,	-4164.00,	-4158.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 33
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496498145
+rcv 112, 1 byte/s from node 2: 2: p 11760349
+latch to 2
+snd > [2] 1
+rcv 225, 58 byte/s from node 2: [2] 
+@: 1496498145
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5060.00,	-5061.00,	-5048.00,	-5050.00,	-5060.00,	-5065.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 7
+ cnt: 34
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496498241
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496498253
+rcv 112, 1 byte/s from node 1: 1: p 11857245
+latch to 1
+snd > [1] 1
+rcv 65, 58 byte/s from node 1: [1] 
+@: 1496498241
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45635.00,	16043.00,	-3957.00,	-3950.00,	-3953.00,	-3949.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 35
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 112, 1 byte/s from node 3: 3: p 11868486
+latch to 3
+snd > [3] 1
+rcv 77, 58 byte/s from node 3: [3] 
+@: 1496498253
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4158.00,	-4159.00,	-4158.00,	-4159.00,	-4151.00,	-4157.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 34
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496498493
+rcv 112, 1 byte/s from node 2: 2: p 12108529
+latch to 2
+snd > [2] 1
+rcv 61, 58 byte/s from node 2: [2] 
+@: 1496498493
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5069.00,	-5045.00,	-5066.00,	-5054.00,	-5056.00,	-5055.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 35
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496498582
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496498604
+rcv 112, 1 byte/s from node 1: 1: p 12198403
+latch to 1
+snd > [1] 1
+rcv 150, 58 byte/s from node 1: [1] 
+@: 1496498582
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45644.00,	16032.00,	-3952.00,	-3946.00,	-3946.00,	-3946.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 36
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 112, 1 byte/s from node 3: 3: p 12219736
+latch to 3
+snd > [3] 1
+rcv 172, 58 byte/s from node 3: [3] 
+@: 1496498604
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4157.00,	-4154.00,	-4154.00,	-4146.00,	-4163.00,	-4153.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 35
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496498841
+rcv 112, 1 byte/s from node 2: 2: p 12456690
+latch to 2
+snd > [2] 1
+rcv 153, 58 byte/s from node 2: [2] 
+@: 1496498841
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5058.00,	-5065.00,	-5050.00,	-5059.00,	-5057.00,	-5059.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 7
+ cnt: 36
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496498923
+rcv 112, 1 byte/s from node 1: 1: p 12539561
+latch to 1
+snd > [1] 1
+rcv 235, 58 byte/s from node 1: [1] 
+@: 1496498923
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45632.00,	16059.00,	-3943.00,	-3938.00,	-3945.00,	-3953.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 37
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496498955
+rcv 112, 1 byte/s from node 3: 3: p 12570977
+latch to 3
+snd > [3] 1
+rcv 11, 58 byte/s from node 3: [3] 
+@: 1496498955
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4154.00,	-4159.00,	-4155.00,	-4158.00,	-4167.00,	-4158.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 36
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496499189
+rcv 112, 1 byte/s from node 2: 2: p 12804883
+latch to 2
+snd > [2] 1
+rcv 245, 58 byte/s from node 2: [2] 
+@: 1496499189
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5049.00,	-5058.00,	-5058.00,	-5053.00,	-5054.00,	-5050.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 7
+ cnt: 37
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496499264
+rcv 112, 1 byte/s from node 1: 1: p 12880711
+latch to 1
+snd > [1] 1
+rcv 64, 58 byte/s from node 1: [1] 
+@: 1496499264
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45629.00,	16016.00,	-3966.00,	-3953.00,	-3953.00,	-3954.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 38
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496499306
+rcv 112, 1 byte/s from node 3: 3: p 12922215
+latch to 3
+snd > [3] 1
+rcv 106, 58 byte/s from node 3: [3] 
+@: 1496499306
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4162.00,	-4156.00,	-4146.00,	-4159.00,	-4153.00,	-4141.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 37
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496499537
+rcv 112, 1 byte/s from node 2: 2: p 13153065
+latch to 2
+snd > [2] 1
+rcv 81, 58 byte/s from node 2: [2] 
+@: 1496499537
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5063.00,	-5048.00,	-5070.00,	-5057.00,	-5049.00,	-5054.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 7
+ cnt: 38
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496499605
+rcv 112, 1 byte/s from node 1: 1: p 13221870
+latch to 1
+snd > [1] 1
+rcv 149, 58 byte/s from node 1: [1] 
+@: 1496499605
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45599.00,	16044.00,	-3949.00,	-3959.00,	-3950.00,	-3951.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 39
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496499657
+rcv 112, 1 byte/s from node 3: 3: p 13273450
+latch to 3
+snd > [3] 1
+rcv 201, 58 byte/s from node 3: [3] 
+@: 1496499657
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4151.00,	-4157.00,	-4153.00,	-4154.00,	-4154.00,	-4156.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 38
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496499885
+rcv 112, 1 byte/s from node 2: 2: p 13501246
+latch to 2
+snd > [2] 1
+rcv 173, 58 byte/s from node 2: [2] 
+@: 1496499885
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5055.00,	-5056.00,	-5056.00,	-5046.00,	-5058.00,	-5063.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 7
+ cnt: 39
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496499946
+rcv 112, 1 byte/s from node 1: 1: p 13563027
+latch to 1
+snd > [1] 1
+rcv 234, 58 byte/s from node 1: [1] 
+@: 1496499946
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45630.00,	16058.00,	-3967.00,	-3944.00,	-3953.00,	-3956.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 40
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496500008
+rcv 112, 1 byte/s from node 3: 3: p 13624731
+latch to 3
+snd > [3] 1
+rcv 40, 58 byte/s from node 3: [3] 
+@: 1496500008
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4153.00,	-4160.00,	-4170.00,	-4162.00,	-4146.00,	-4151.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 21
+ battery voltage: 7
+ cnt: 39
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+sd - card Not Present
++++++++++++++++++++++++++++++++++++++
+-- Datalogger for Lysimeter System --
+-- SD Present, initialized, file write, OK!
+-- Time is 1496500877
+-- Arduino RFM69HCW Transmitter
+-- Network Address: 100.0
+-- RFM69_ATC Enabled (Auto Transmission Control)
+-- Transmitting at 433000000
+==========================
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496500930
+rcv 112, 1 byte/s from node 2: 2: p 77829
+latch to 2
+snd > [2] 1
+rcv 217, 58 byte/s from node 2: [2] 
+@: 1496500185
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5062.00,	-5059.00,	-5049.00,	-5054.00,	-5046.00,	-5062.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 7
+ cnt: 40
+sd - writing to 100_2.csv
+rcv 5, 58 byte/s from node 2: [2] 
+@: 1496500485
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5062.00,	-5058.00,	-5067.00,	-5056.00,	-5050.00,	-5058.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 7
+ cnt: 41
+sd - writing to 100_2.csv
+rcv 194, 58 byte/s from node 2: [2] 
+@: 1496500930
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5056.00,	-5053.00,	-5056.00,	-5054.00,	-5055.00,	-5061.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 42
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496500969
+rcv 112, 1 byte/s from node 1: 1: p 118459
+latch to 1
+snd > [1] 1
+rcv 22, 58 byte/s from node 1: [1] 
+@: 1496500246
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45593.00,	16067.00,	-3958.00,	-3955.00,	-3956.00,	-3957.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 25
+ battery voltage: 7
+ cnt: 41
+sd - writing to 100_1.csv
+rcv 66, 58 byte/s from node 1: [1] 
+@: 1496500546
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45601.00,	16040.00,	-3957.00,	-3952.00,	-3945.00,	-3958.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 42
+sd - writing to 100_1.csv
+rcv 233, 58 byte/s from node 1: [1] 
+@: 1496500969
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45599.00,	16073.00,	-3948.00,	-3949.00,	-3937.00,	-3959.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 43
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496501062
+rcv 112, 1 byte/s from node 3: 3: p 210409
+latch to 3
+snd > [3] 1
+rcv 84, 58 byte/s from node 3: [3] 
+@: 1496500308
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4157.00,	-4148.00,	-4158.00,	-4144.00,	-4159.00,	-4156.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 40
+sd - writing to 100_3.csv
+rcv 128, 58 byte/s from node 3: [3] 
+@: 1496500608
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4159.00,	-4157.00,	-4172.00,	-4158.00,	-4148.00,	-4142.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 41
+sd - writing to 100_3.csv
+rcv 70, 58 byte/s from node 3: [3] 
+@: 1496501062
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4160.00,	-4153.00,	-4155.00,	-4159.00,	-4146.00,	-4152.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 42
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496501278
+rcv 112, 1 byte/s from node 2: 2: p 426275
+latch to 2
+snd > [2] 1
+rcv 30, 58 byte/s from node 2: [2] 
+@: 1496501278
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5060.00,	-5066.00,	-5046.00,	-5061.00,	-5063.00,	-5057.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 18
+ battery voltage: 7
+ cnt: 43
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496501311
+rcv 112, 1 byte/s from node 1: 1: p 459928
+latch to 1
+snd > [1] 1
+rcv 63, 58 byte/s from node 1: [1] 
+@: 1496501311
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45632.00,	16052.00,	-3967.00,	-3954.00,	-3955.00,	-3946.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 24
+ battery voltage: 7
+ cnt: 44
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496501413
+rcv 112, 1 byte/s from node 3: 3: p 561925
+latch to 3
+snd > [3] 1
+rcv 165, 58 byte/s from node 3: [3] 
+@: 1496501413
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4152.00,	-4144.00,	-4152.00,	-4156.00,	-4155.00,	-4152.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 43
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496501626
+rcv 112, 1 byte/s from node 2: 2: p 774504
+latch to 2
+snd > [2] 1
+rcv 122, 58 byte/s from node 2: [2] 
+@: 1496501626
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5051.00,	-5057.00,	-5046.00,	-5053.00,	-5058.00,	-5046.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 7
+ cnt: 44
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496501652
+rcv 112, 1 byte/s from node 1: 1: p 801104
+latch to 1
+snd > [1] 1
+rcv 148, 58 byte/s from node 1: [1] 
+@: 1496501652
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45652.00,	16059.00,	-3948.00,	-3950.00,	-3940.00,	-3942.00,	
+temps: 24,	24,	24,	24,	0,	0,	0,	0,	
+ temp: 25
+ battery voltage: 7
+ cnt: 45
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496501764
+rcv 112, 1 byte/s from node 3: 3: p 913219
+latch to 3
+snd > [3] 1
+rcv 4, 58 byte/s from node 3: [3] 
+@: 1496501764
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4152.00,	-4161.00,	-4161.00,	-4158.00,	-4151.00,	-4149.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 7
+ cnt: 44
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+

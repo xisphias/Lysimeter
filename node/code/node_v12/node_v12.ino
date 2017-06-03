@@ -13,7 +13,7 @@
 /****************************************************************************/
 /***********************    DON'T FORGET TO SET ME    ***********************/
 /****************************************************************************/
-#define NODEID    3 //Node Address
+#define NODEID    1 //Node Address
 #define NETWORKID 100 //Network to communicate on
 /****************************************************************************/
 
@@ -240,20 +240,15 @@ int get_board_temp() {
 
 int get_battery_voltage() {
   int readings = 0;
-  float v = 0;
+  int v = 0;
   digitalWrite(BAT_EN, HIGH);
-  Serial.println(v);
-  Serial.print(readings);Serial.print(" , ");
   delay(10);
   for (byte i=0; i<3; i++)
   {
     readings += analogRead(BAT_V);
-    Serial.print(readings);Serial.print(" , ");
   }
   readings /= 3;
-  v = (3.3) * ((readings)/1023.0) * ((bat_div_R1)/bat_div_R2) * 100.0; //Calculate battery voltage
-  Serial.print("batV ADC:");Serial.println(readings);
-  Serial.println(v/(100.0));
+  v = int(100.0 * (((bat_div_R1+bat_div_R2)/1023.0) * readings * 3.3) / bat_div_R2); //Calculate battery voltage
   digitalWrite(BAT_EN, LOW);
   return v;
 }

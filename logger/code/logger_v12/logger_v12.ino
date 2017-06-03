@@ -154,22 +154,6 @@ void loop() {
         //NOTE: Be careful with too many prints and too much math in here. Do it in the writeData function down below
         DEBUG("["); DEBUG(radio.SENDERID); DEBUGln("] ");
         DEBUG("@: "); DEBUGln(thePayload.time);
-        // DEBUGln("     : Y0\tY1\tY2\tY3\tY4\tY5\tY6\tY7");
-        // DEBUG("wts  : ");
-        // for(int i = 0; i < 8; i++) {
-        //   DEBUG(float(thePayload.w[i])/10000.0); //this is computationally expensive
-        //   DEBUG(",\t");
-        // }
-        // DEBUGln();DEBUG("temps: ");
-        // for(int i = 0; i < 8; i++) {
-        //   DEBUG(thePayload.t[i]/100);
-        //   DEBUG(",\t");
-        // }
-        // DEBUGln();
-        // DEBUG(" temp: "); DEBUGln(thePayload.board_temp);
-        // DEBUG(" battery voltage: "); DEBUGln(thePayload.battery_voltage/100);
-        // DEBUG(" cnt: "); DEBUG(thePayload.count);
-        // DEBUGln();
       }
     } else { DEBUG(radio.SENDERID); DEBUGln(": not latched"); }
     if(radio.ACKRequested()){
