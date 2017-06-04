@@ -42,7 +42,7 @@
 /*==============|| RFM69 ||==============*/
 RFM69_ATC radio; //Declare Radio
 byte lastRequesterNodeID = NODEID; //Last Sensor to communicate with this device
-int8_t NodeID_latch = -1; //Listen only to this Sensor #
+
 
 /*==============|| DS3231_RTC ||==============*/
 uint32_t now; //Holder for Current Time
@@ -85,9 +85,6 @@ void setup() {
   DEBUGln("==========================");
 }
 
-uint32_t latch_timeout_start;
-uint32_t latch_timeout = 1000;
-
 void loop() {
   /*
   NOTE: There are a couple interesting things here.
@@ -103,11 +100,6 @@ void loop() {
   bool reportTime = false;
   bool ping = false;
 
-  if(millis() > latch_timeout_start + latch_timeout && NodeID_latch > 0) {
-    NodeID_latch = -1;
-    DEBUGln("Latch Timed Out");
-  }
-
   if (radio.receiveDone()) { //if recieve packets from sensor...
     DEBUG("rcv ");DEBUG(radio.DATA[0]);DEBUG(", ");DEBUG(radio.DATALEN); DEBUG(" byte/s from node "); DEBUG(radio.SENDERID); DEBUG(": ");
     lastRequesterNodeID = radio.SENDERID; //SENDERID is the Node ID of the device that sent the packet of data
@@ -118,65 +110,29 @@ void loop() {
     /*=== PING ==*/
     if(radio.DATALEN == 1 && radio.DATA[0] == 'p') {
       DEBUG(radio.SENDERID); DEBUG(": ");
-      if(NodeID_latch < 0) {
-        DEBUG("p ");
-        NodeID_latch = radio.SENDERID;
-        latch_timeout_start = millis(); //set start time for timeout
-        DEBUGln(latch_timeout_start);
-        DEBUG("latch to "); DEBUGln(NodeID_latch);
-        ping = true;
-      } else {
-        DEBUG("failed, already latched to "); DEBUGln(NodeID_latch);
-      }
+      DEBUG("p ");
+      ping = true;
     }
-      /*=== TIME ==*/
-      // Moved this out so the logger would respond to time without latch
-      if(radio.DATALEN == 1 && radio.DATA[0] == 't') {
-        DEBUG("t ");
-        reportTime = true;
-      }
-      
-    if(NodeID_latch == radio.SENDERID) { //only the same sender that initiated the latch is able to release it
-      latch_timeout_start = millis(); //set start time for timeout
+    /*=== TIME ==*/
+    if(radio.DATALEN == 1 && radio.DATA[0] == 't') {
+      DEBUG("t ");
+      reportTime = true;
+    }
 
-      /*=== UN-LATCH ==*/
-      if(radio.DATALEN == 1 && radio.DATA[0] == 'r') { //send an r to release the reciever
-        DEBUG("r ");
-        NodeID_latch = -1;
-        DEBUGln("unlatched");
-        DEBUGln();
-      }
-
-      /*=== PAYLOAD ==*/
-      if (radio.DATALEN == sizeof(thePayload)) {
-        thePayload = *(Payload*)radio.DATA; //assume radio.DATA actually contains our struct and not something else
-        writeData = true;
-        //NOTE: Be careful with too many prints and too much math in here. Do it in the writeData function down below
-        DEBUG("["); DEBUG(radio.SENDERID); DEBUGln("] ");
-        DEBUG("@: "); DEBUGln(thePayload.time);
-        // DEBUGln("     : Y0\tY1\tY2\tY3\tY4\tY5\tY6\tY7");
-        // DEBUG("wts  : ");
-        // for(int i = 0; i < 8; i++) {
-        //   DEBUG(float(thePayload.w[i])/10000.0); //this is computationally expensive
-        //   DEBUG(",\t");
-        // }
-        // DEBUGln();DEBUG("temps: ");
-        // for(int i = 0; i < 8; i++) {
-        //   DEBUG(thePayload.t[i]/100);
-        //   DEBUG(",\t");
-        // }
-        // DEBUGln();
-        // DEBUG(" temp: "); DEBUGln(thePayload.board_temp);
-        // DEBUG(" battery voltage: "); DEBUGln(thePayload.battery_voltage/100);
-        // DEBUG(" cnt: "); DEBUG(thePayload.count);
-        // DEBUGln();
-      }
-    } else { DEBUG(radio.SENDERID); DEBUGln(": not latched"); }
+    /*=== PAYLOAD ==*/
+    if (radio.DATALEN == sizeof(thePayload)) {
+      thePayload = *(Payload*)radio.DATA; //assume radio.DATA actually contains our struct and not something else
+      writeData = true;
+      //NOTE: Be careful with too many prints and too much math in here. Do it in the writeData function down below
+      DEBUG("["); DEBUG(radio.SENDERID); DEBUGln("] ");
+      DEBUG("@: "); DEBUGln(thePayload.time);
+    }
     if(radio.ACKRequested()){
       radio.sendACK();
     }
     Blink(LED,5);
   }
+
   /*=== DO THE RESPONSES TO THE MESSAGES ===*/
   //Sends the time to the sensor that requested it
   if(reportTime) {
@@ -215,7 +171,7 @@ void loop() {
     DEBUG(" battery voltage: "); DEBUGln(thePayload.battery_voltage/100);
     DEBUG(" cnt: "); DEBUG(thePayload.count);
     DEBUGln();
-    
+
     File f; //declares a File
     String address = String(String(NETWORKID) + "_" + String(lastRequesterNodeID)); //creates a file name based off of Sender Address
     String fileName = String(address + ".csv"); //Save is a CSV file...because
