@@ -13,7 +13,7 @@
 /****************************************************************************/
 /***********************    DON'T FORGET TO SET ME    ***********************/
 /****************************************************************************/
-#define NODEID    1 //Node Address
+#define NODEID    3 //Node Address
 #define NETWORKID 100 //Network to communicate on
 /****************************************************************************/
 
@@ -201,9 +201,9 @@ void loop() {
 	Serial.print("- Sleeping for "); Serial.print(SLEEP_SECONDS); Serial.print(" seconds"); Serial.println();
 	Serial.flush();
 	radio.sleep();
-	for(uint8_t i = 0; i < SLEEP_INTERVAL; i++)
-		Sleepy::loseSomeTime(SLEEP_MS);
-//delay(1000);
+//	for(uint8_t i = 0; i < SLEEP_INTERVAL; i++)
+//		Sleepy::loseSomeTime(SLEEP_MS);
+delay(1000);
 	/*==============|| Wakes Up Here! ||==============*/
 }
 
@@ -397,6 +397,11 @@ bool getTime()
 	}
 	return true;
 }
+
+//if(millis() > timeout_start + timeout) {
+//    DEBUGln("Timed Out");
+//  }
+
 /**
  * Requests a response from the Datalogger. For checking that the Datalogger is online
  * before sending data to it. It also latches this sensor to the datalogger until a 'r' is sent

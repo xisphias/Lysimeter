@@ -109,7 +109,8 @@ void loop() {
   }
 
   if (radio.receiveDone()) { //if recieve packets from sensor...
-    DEBUG("rcv ");DEBUG(radio.DATA[0]);DEBUG(", ");DEBUG(radio.DATALEN); DEBUG(" byte/s from node "); DEBUG(radio.SENDERID); DEBUG(": ");
+    DEBUG("rcv ");DEBUG(char(radio.DATA[0]));DEBUG(", ");DEBUG(radio.DATALEN); DEBUG(" byte/s from node "); DEBUG(radio.SENDERID); 
+    DEBUG(" [RX_RSSI:"); DEBUG(radio.RSSI); DEBUG("]");DEBUG(": ");
     lastRequesterNodeID = radio.SENDERID; //SENDERID is the Node ID of the device that sent the packet of data
     rtc.update();
     now = rtc.unixtime(); //record time of this event
@@ -126,19 +127,20 @@ void loop() {
         DEBUG("latch to "); DEBUGln(NodeID_latch);
         ping = true;
       } else {
-        DEBUG("failed, already latched to "); DEBUGln(NodeID_latch);
+        DEBUG(" - - - failed, already latched to "); DEBUGln(NodeID_latch);
       }
     }
+    /*=== LATCHED ==*/  
+    if(NodeID_latch == radio.SENDERID) { //only the same sender that initiated the latch is able to release it
+      latch_timeout_start = millis(); //set start time for timeout
+
       /*=== TIME ==*/
-      // Moved this out so the logger would respond to time without latch
+      // Moved this back in b/c t requests were interupting data after pings
       if(radio.DATALEN == 1 && radio.DATA[0] == 't') {
         DEBUG("t ");
         reportTime = true;
       }
       
-    if(NodeID_latch == radio.SENDERID) { //only the same sender that initiated the latch is able to release it
-      latch_timeout_start = millis(); //set start time for timeout
-
       /*=== UN-LATCH ==*/
       if(radio.DATALEN == 1 && radio.DATA[0] == 'r') { //send an r to release the reciever
         DEBUG("r ");
@@ -186,13 +188,13 @@ void loop() {
     DEBUGln("     : Y0\tY1\tY2\tY3\tY4\tY5\tY6\tY7");
     DEBUG("wts  : ");
     for(int i = 0; i < 8; i++) {
-      DEBUG(float(thePayload.w[i])/10000.0); //this is computationally expensive
-      DEBUG(",\t");
+      DEBUG(thePayload.w[i]/10); //grams
+      DEBUG(", ");
     }
     DEBUGln();DEBUG("temps: ");
     for(int i = 0; i < 8; i++) {
       DEBUG(thePayload.t[i]/100);
-      DEBUG(",\t");
+      DEBUG(", ");
     }
     DEBUGln();
     DEBUG(" temp: "); DEBUGln(thePayload.board_temp);
