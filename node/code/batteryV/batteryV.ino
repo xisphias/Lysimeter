@@ -34,7 +34,7 @@ void setup() {
   Serial.begin(115200); // Initialize the serial port
 
   pinMode(BAT_EN, OUTPUT); // Set excitation
-  pinMode(BAT_V, INPUT); 
+  pinMode(BAT_V, INPUT);
   digitalWrite(BAT_EN, LOW);
   pinMode(LED, OUTPUT); //led
 
@@ -46,7 +46,7 @@ void loop() {
   battery_voltage = get_battery_voltage(); //NOTE: THIS IS NOT TESTED. MAKE SURE IT WORKS
   Serial.print("Bat V: ");
   Serial.println(float(battery_voltage)/100.0);
- 
+
 delay(5000);
 
 }
@@ -65,12 +65,10 @@ int get_battery_voltage() {
     Serial.print(readings);Serial.print(" , ");
   }
   readings /= 3;
-  v = (3.3) * ((readings)/1023.0) * ((bat_div_R1)/bat_div_R2) * 100.0; //Calculate battery voltage
+ v = (3.3) * ((readings)/1023.0) * ((bat_div_R1)/bat_div_R2) * 100.0; //Calculate battery voltage
   Serial.print("batV ADC:");Serial.println(readings);
   Serial.println(v/100.0);
   digitalWrite(BAT_EN, LOW);
   digitalWrite(LED, LOW);
   return int(v);
 }
-
-

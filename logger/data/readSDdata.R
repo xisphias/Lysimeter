@@ -13,3 +13,7 @@ ggplot(dat[,],aes(x=DateTime,y=y1g))+geom_line()
 ggplot(dat,aes(x=DateTime,y=y1g))+geom_line()+geom_line(aes(y=y2g),colour=2)
 ggplot(dat,aes(x=DateTime,y=y1tC))+geom_line()+geom_line(aes(y=y2tC),color=2)
 tail(dat)
+
+100 * ((14700+3820) * readings * (3.3/1023)) / 3820
+(14700+3820)*1022*3.3/1023
+100*(((14700+3820)/1023.0)*(1022*3.3))/3820
