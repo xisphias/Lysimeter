@@ -46,8 +46,8 @@ void setup()
   // Set up the select pins as outputs:
   for (int i=0; i<3; i++)
   {
-    pinMode(selectPins[i], OUTPUT);
-    digitalWrite(selectPins[i], HIGH);
+    pinMode(muxSelectPins[i], OUTPUT);
+    digitalWrite(muxSelectPins[i], HIGH);
   }
   pinMode(zInput, INPUT); // Set up Z as an input
   pinMode(eX, OUTPUT); // Set excitation
@@ -87,8 +87,8 @@ void selectMuxPin(byte pin)
   for (int i=0; i<3; i++)
   {
     if (pin & (1<<i))
-      digitalWrite(selectPins[i], HIGH);
+      digitalWrite(muxSelectPins[i], HIGH);
     else
-      digitalWrite(selectPins[i], LOW);
+      digitalWrite(muxSelectPins[i], LOW);
   }
 }

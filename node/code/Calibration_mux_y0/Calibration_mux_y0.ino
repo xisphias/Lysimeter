@@ -41,8 +41,8 @@
 HX711 scale(DOUT, CLK);
 Thermistor temp(7);
 
-float calibration_factor = 52298.5;
-float zero_factor = -2200;
+float calibration_factor = 54509;//54672; //52298.5;
+float zero_factor = -4160; //24570;//-23350;//-2200;
 //float calibration_factor = 53388.5;//53865.5; //52564.50; //52496.50; //52686.50; //45736.5; //48745; //-7050 worked for my 440lb max scale setup
 //float zero_factor = -8760; //-14860; //-13133; //-156; //23167;
 const int zOutput = 3.3; 

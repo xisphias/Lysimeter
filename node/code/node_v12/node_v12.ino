@@ -193,9 +193,9 @@ void loop() {
 	Serial.print("- Sleeping for "); Serial.print(SLEEP_SECONDS); Serial.print(" seconds"); Serial.println();
 	Serial.flush();
 	radio.sleep();
-	for(uint8_t i = 0; i < SLEEP_INTERVAL; i++)
-		Sleepy::loseSomeTime(SLEEP_MS);
-//delay(1000);
+//	for(uint8_t i = 0; i < SLEEP_INTERVAL; i++)
+//		Sleepy::loseSomeTime(SLEEP_MS);
+delay(1000);
 	/*==============|| Wakes Up Here! ||==============*/
 }
 
@@ -232,26 +232,31 @@ int get_board_temp() {
 
 int get_battery_voltage() {
   int readings = 0;
+<<<<<<< HEAD
+  int v = 0;
+=======
   float v = 0;
 	float LSB = 3.3/1023;
 	float bV = 0;
 
+>>>>>>> 1c6411e00e615bde5d6a6a88b4e82e6813773cfc
   digitalWrite(BAT_EN, HIGH);
-  Serial.println(v);
-  Serial.print(readings);Serial.print(" , ");
   delay(10);
   for (byte i=0; i<3; i++)
   {
     readings += analogRead(BAT_V);
-    Serial.print(readings);Serial.print(" , ");
   }
   readings /= 3;
+<<<<<<< HEAD
+  v = int(100.0 * (((bat_div_R1+bat_div_R2)/1023.0) * readings * 3.3) / bat_div_R2); //Calculate battery voltage
+=======
 	v = readings * LSB;
 	bV = ((bat_div_R1+bat_div_R2) * v)/bat_div_R2;
 	bV *= 100.0;
   // v = (3.3) * (readings/1023.0) * (bat_div_R1/bat_div_R2) * 100.0; //Calculate battery voltage
   Serial.print("batV ADC:");Serial.println(readings);
   Serial.println(bV/(100.0));
+>>>>>>> 1c6411e00e615bde5d6a6a88b4e82e6813773cfc
   digitalWrite(BAT_EN, LOW);
   return int(bV);
 }
@@ -400,6 +405,11 @@ bool getTime()
 	}
 	return true;
 }
+
+//if(millis() > timeout_start + timeout) {
+//    DEBUGln("Timed Out");
+//  }
+
 /**
  * Requests a response from the Datalogger. For checking that the Datalogger is online
  * before sending data to it. It also latches this sensor to the datalogger until a 'r' is sent
