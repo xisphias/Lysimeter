@@ -1,0 +1,6143 @@
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496503110
+rcv 112, 1 byte/s from node 1: 1: p 2259908
+latch to 1
+snd > [1] 1
+rcv 70, 58 byte/s from node 1: [1] 
+@: 1496503110
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45665.00,	15977.00,	-3952.00,	-3940.00,	-3958.00,	-3957.00,	
+temps: 24,	24,	24,	25,	0,	0,	0,	0,	
+ temp: 25
+ battery voltage: 12
+ cnt: 2
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496503189
+rcv 112, 1 byte/s from node 2: 2: p 2338343
+latch to 2
+snd > [2] 1
+rcv 149, 58 byte/s from node 2: [2] 
+@: 1496503189
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05,	0.07,	-5071.00,	-5042.00,	-5053.00,	-5061.00,	-11558.00,	-5173.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 19
+ battery voltage: 12
+ cnt: 2
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496503235
+rcv 112, 1 byte/s from node 3: 3: p 2385132
+latch to 3
+snd > [3] 1
+rcv 195, 58 byte/s from node 3: [3] 
+@: 1496503235
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.04,	0.09,	-4289.00,	-4284.00,	-4164.00,	-4637.00,	-4161.00,	-4164.00,	
+temps: 0,	0,	0,	0,	0,	0,	0,	0,	
+ temp: 22
+ battery voltage: 12
+ cnt: 2
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
++++++++++++++++++++++++++++++++++++++
+-- Datalogger for Lysimeter System --
+-- SD Present, +++++++++++++++++++++++++++++++++++++
+-- Datalogger for Lysimeter System --
+-- SD Present, +++++++++++++++++++++++++++++++++++++
+-- Datalogger for Lysimeter System --
+-- SD Present, +++++++++++++++++++++++++++++++++++++
+-- Datalogger for Lysimeter System --
+-- SD Present, initialized, file write, OK!
+-- Time is 1496503320
+-- Arduino RFM69HCW Transmitter
+-- Network Address: 100.0
+-- RFM69_ATC Enabled (Auto Transmission Control)
+-- Transmitting at 433000000
+==========================
+rcv 112, 1 byte/s from node 1: 1: p 9283
+latch to 1
+snd > [1] 1
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496503330
+rcv 112, 1 byte/s from node 1: 1: p 34962
+latch to 1
+snd > [1] 1
+rcv 34, 58 byte/s from node 1: [1] 
+@: 1496503330
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65,	3.48,	-45743.00,	15975.00,	-3957.00,	-3956.00,	-3953.00,	-3955.00,	
+temps: 24,	24,	25,	25,	0,	0,	0,	0,	
+ temp: 25
+ battery voltage: 12
+ cnt: 1
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
++++++++++++++++++++++++++++++++++++++
+-- Datalogger for Lysimeter System --
+-- SD Present, initialized, file write, OK!
+-- Time is 1496503418
+-- Arduino RFM69HCW Transmitter
+-- Network Address: 100.0
+-- RFM69_ATC Enabled (Auto Transmission Control)
+-- Transmitting at 433000000
+==========================
++++++++++++++++++++++++++++++++++++++
+-- Datalogger for Lysimeter System --
+-- SD Present, initialized, file write, OK!
+-- Time is 1496503426
+-- Arduino RFM69HCW Transmitter
+-- Network Address: 100.0
+-- RFM69_ATC Enabled (Auto Transmission Control)
+-- Transmitting at 433000000
+==========================
++++++++++++++++++++++++++++++++++++++
+-- Datalogger for Lysimeter System --
+-- SD Present, initialized, file write, OK!
+-- Time is 1496503433
+-- Arduino RFM69HCW Transmitter
+-- Network Address: 100.0
+-- RFM69_ATC Enabled (Auto Transmission Control)
+-- Transmitting at 433000000
+==========================
+rcv 112, 1 byte/s from node 1: 1: p 12393
+latch to 1
+snd > [1] 1
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496503497
+rcv 112, 1 byte/s from node 1: 1: p 38072
+latch to 1
+snd > [1] 1
+rcv 201, 58 byte/s from node 1: [1] 
+@: 1496503497
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3.65, 3.48, -45727.00, 15964.00, -3944.00, -3942.00, -3951.00, -3965.00, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 1
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496503537
+rcv 112, 1 byte/s from node 2: 2: p 77284
+latch to 2
+snd > [2] 1
+rcv 241, 58 byte/s from node 2: [2] 
+@: 1496503537
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -0.05, 0.07, -5053.00, -5057.00, -5051.00, -5055.00, -5039.00, -5057.00, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 3
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496503587
+rcv 112, 1 byte/s from node 1: 1: p 31551
+latch to 1
+snd > [1] 1
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496503672
+rcv 112, 1 byte/s from node 1: 1: p 57230
+latch to 1
+snd > [1] 1
+rcv 120, 58 byte/s from node 1: [1] 
+@: 1496503672
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3646, 3479, -45726000, 15987000, -3951000, -3953000, -3947000, -3954000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 1
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 112, 1 byte/s from node 4: 4: p 290541
+latch to 4
+snd > [4] 1
+rcv 97, 58 byte/s from node 4: [4] 
+@: 1496503905
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4152000, -4154000, -4144000, -4143000, -4151000, -4142000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 4
+sd - writing to 100_4.csv
+rcv 114, 1 byte/s from node 4: r unlatched
+
+rcv 116, 1 byte/s from node 4: t 4: not latched
+snd > [4] 1496503932
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496503938
+rcv 112, 1 byte/s from node 5: 5: p 301865
+latch to 5
+snd > [5] 1
+rcv 108, 58 byte/s from node 5: [5] 
+@: 1496503916
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5251000, -5251000, -5249000, -5265000, -5252000, -5255000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 2
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496503943
+rcv 112, 1 byte/s from node 4: 4: p 317756
+latch to 4
+snd > [4] 1
+rcv 124, 58 byte/s from node 4: [4] 
+@: 1496503932
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4139000, -4140000, -4148000, -4142000, -4146000, -4150000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 5
+sd - writing to 100_4.csv
+rcv 114, 1 byte/s from node 4: r unlatched
+
+rcv 116, 1 byte/s from node 4: t 4: not latched
+snd > [4] 1496503959
+rcv 112, 1 byte/s from node 3: 3: p 322922
+latch to 3
+snd > [3] 1
+rcv 130, 58 byte/s from node 3: [3] 
+@: 1496503938
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4160000, -4148000, -4147000, -4152000, -4161000, -4155000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 4
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 112, 1 byte/s from node 5: 5: p 328871
+latch to 5
+snd > [5] 1
+rcv 135, 58 byte/s from node 5: [5] 
+@: 1496503943
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5264000, -5254000, -5250000, -5265000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 3
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496503970
+rcv 112, 1 byte/s from node 4: 4: p 344971
+latch to 4
+snd > [4] 1
+rcv 151, 58 byte/s from node 4: [4] 
+@: 1496503959
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4145000, -4147000, -4146000, -4132000, -4146000, -4144000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 6
+sd - writing to 100_4.csv
+rcv 114, 1 byte/s from node 4: r unlatched
+
+rcv 116, 1 byte/s from node 4: t 4: not latched
+snd > [4] 1496503986
+rcv 112, 1 byte/s from node 5: 5: p 355876
+latch to 5
+snd > [5] 1
+rcv 162, 58 byte/s from node 5: [5] 
+@: 1496503970
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5255000, -5256000, -5258000, -5264000, -5262000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 4
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496503997
+rcv 112, 1 byte/s from node 4: 4: p 372185
+latch to 4
+snd > [4] 1
+rcv 178, 58 byte/s from node 4: [4] 
+@: 1496503986
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4141000, -4146000, -4141000, -4137000, -4161000, -4143000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 7
+sd - writing to 100_4.csv
+Latch Timed Out
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496504014
+rcv 116, 1 byte/s from node 4: t 4: not latched
+snd > [4] 1496504014
+rcv 112, 1 byte/s from node 5: 5: p 382883
+latch to 5
+snd > [5] 1
+rcv 189, 58 byte/s from node 5: [5] 
+@: 1496503997
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5257000, -5248000, -5255000, -5253000, -5260000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 5
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] Failed . . . no ack
+rcv 112, 1 byte/s from node 1: 1: p 399354
+latch to 1
+snd > [1] 1
+rcv 112, 1 byte/s from node 4: 4: failed, already latched to 1
+4: not latched
+rcv 206, 58 byte/s from node 1: [1] 
+@: 1496504014
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3645, 3478, -45662000, 15926000, -3951000, -3941000, -3964000, -3949000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 2
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 112, 1 byte/s from node 5: 5: p 410039
+latch to 5
+snd > [5] 1
+rcv 189, 58 byte/s from node 5: [5] 
+@: 1496503997
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5259000, -5255000, -5251000, -5254000, -5252000, -5261000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 6
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496504051
+rcv 112, 1 byte/s from node 5: 5: p 437045
+latch to 5
+snd > [5] 1
+rcv 243, 58 byte/s from node 5: [5] 
+@: 1496504051
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5246000, -5255000, -5256000, -5254000, -5263000, -5257000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 7
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496504078
+rcv 112, 1 byte/s from node 5: 5: p 464050
+latch to 5
+snd > [5] 1
+rcv 14, 58 byte/s from node 5: [5] 
+@: 1496504078
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5258000, -5265000, -5257000, -5270000, -5254000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 8
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496504105
+rcv 112, 1 byte/s from node 5: 5: p 491058
+latch to 5
+snd > [5] 1
+rcv 41, 58 byte/s from node 5: [5] 
+@: 1496504105
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5263000, -5251000, -5250000, -5262000, -5255000, -5258000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 9
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496504132
+rcv 112, 1 byte/s from node 5: 5: p 518078
+latch to 5
+snd > [5] 1
+rcv 68, 58 byte/s from node 5: [5] 
+@: 1496504132
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5251000, -5242000, -5268000, -5254000, -5265000, -5256000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 10
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496504159
+rcv 112, 1 byte/s from node 5: 5: p 545082
+latch to 5
+snd > [5] 1
+rcv 95, 58 byte/s from node 5: [5] 
+@: 1496504159
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5258000, -5262000, -5265000, -5265000, -5259000, -5260000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 11
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496504186
+rcv 112, 1 byte/s from node 5: 5: p 572088
+latch to 5
+snd > [5] 1
+rcv 122, 58 byte/s from node 5: [5] 
+@: 1496504186
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5256000, -5245000, -5255000, -5266000, -5249000, -5258000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 12
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496504213
+rcv 116, 1 byte/s from node 2: t 2: not latched
+snd > [2] 1496504233
+rcv 112, 1 byte/s from node 5: 5: p 599093
+latch to 5
+snd > [5] 1
+rcv 149, 58 byte/s from node 5: [5] 
+@: 1496504213
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5265000, -5251000, -5269000, -5260000, -5261000, -5251000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 13
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496504240
+rcv 112, 1 byte/s from node 2: 2: p 618116
+latch to 2
+snd > [2] 1
+rcv 169, 58 byte/s from node 2: [2] 
+@: 1496504233
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -54, 69, -5069000, -5055000, -5059000, -5060000, -5050000, -5058000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 5
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2: r unlatched
+
+rcv 112, 1 byte/s from node 5: 5: p 626100
+latch to 5
+snd > [5] 1
+rcv 176, 58 byte/s from node 5: [5] 
+@: 1496504240
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5249000, -5258000, -5254000, -5250000, -5260000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 14
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496504267
+rcv 116, 1 byte/s from node 3: t 3: not latched
+snd > [3] 1496504289
+rcv 112, 1 byte/s from node 5: 5: p 653107
+latch to 5
+snd > [5] 1
+rcv 203, 58 byte/s from node 5: [5] 
+@: 1496504267
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5248000, -5261000, -5253000, -5259000, -5243000, -5255000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 15
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496504294
+rcv 112, 1 byte/s from node 3: 3: p 674233
+latch to 3
+snd > [3] 1
+rcv 225, 58 byte/s from node 3: [3] 
+@: 1496504289
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4140000, -4146000, -4136000, -4163000, -4154000, -4149000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 5
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3: r unlatched
+
+rcv 112, 1 byte/s from node 5: 5: p 680112
+latch to 5
+snd > [5] 1
+rcv 230, 58 byte/s from node 5: [5] 
+@: 1496504294
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5263000, -5256000, -5252000, -5262000, -5264000, -5262000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 16
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496504321
+rcv 112, 1 byte/s from node 5: 5: p 707118
+latch to 5
+snd > [5] 1
+rcv 1, 58 byte/s from node 5: [5] 
+@: 1496504321
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5246000, -5255000, -5240000, -5252000, -5251000, -5257000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 17
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496504348
+rcv 116, 1 byte/s from node 1: t 1: not latched
+snd > [1] 1496504355
+rcv 112, 1 byte/s from node 5: 5: p 734123
+latch to 5
+snd > [5] 1
+rcv 28, 58 byte/s from node 5: [5] 
+@: 1496504348
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5268000, -5244000, -5246000, -5261000, -5251000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 18
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496504375
+rcv 112, 1 byte/s from node 1: 1: p 740458
+latch to 1
+snd > [1] 1
+rcv 35, 58 byte/s from node 1: [1] 
+@: 1496504355
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3645, 3478, -45671001, 15937000, -3950000, -3957000, -3945000, -3952000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 3
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1: r unlatched
+
+rcv 112, 1 byte/s from node 5: 5: p 761131
+latch to 5
+snd > [5] 1
+rcv 55, 58 byte/s from node 5: [5] 
+@: 1496504375
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5249000, -5252000, -5255000, -5250000, -5252000, -5256000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 19
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5: r unlatched
+
+rcv 116, 1 byte/s from node 5: t 5: not latched
+snd > [5] 1496504402
+rcv 112, 1 byte/s from node 4 [RX_RSSI:-47]: 4: p 15898
+latch to 4
+snd > [4] 1
+rcv 114, 1 byte/s from node 4 [RX_RSSI:-47]: r unlatched
+
+rcv 116, 1 byte/s from node 4 [RX_RSSI:-47]: t  - - - - - - - - - 
+4: not latched
+snd > [4] 1496504469
+rcv 112, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 28813
+latch to 5
+snd > [5] 1
+rcv 136, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496504456
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5254000, -5244000, -5254000, -5263000, -5249000, -5256000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 22
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv 116, 1 byte/s from node 5 [RX_RSSI:-50]: t  - - - - - - - - - 
+5: not latched
+snd > [5] 1496504483
+rcv 112, 1 byte/s from node 4 [RX_RSSI:-47]: 4: p 41608
+latch to 4
+snd > [4] 1
+rcv 149, 58 byte/s from node 4 [RX_RSSI:-47]: [4] 
+@: 1496504469
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4138000, -4149000, -4126000, -4147000, -4140000, -4157000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 27
+ battery voltage: 12
+ cnt: 1
+sd - writing to 100_4.csv
+rcv 114, 1 byte/s from node 4 [RX_RSSI:-48]: r unlatched
+
+rcv 116, 1 byte/s from node 4 [RX_RSSI:-48]: t  - - - - - - - - - 
+4: not latched
+snd > [4] 1496504496
+rcv 112, 1 byte/s from node 5 [RX_RSSI:-49]: 5: p 55832
+latch to 5
+snd > [5] 1
+rcv 163, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496504483
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5249000, -5253000, -5244000, -5251000, -5267000, -5261000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 23
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv 116, 1 byte/s from node 5 [RX_RSSI:-50]: t  - - - - - - - - - 
+5: not latched
+snd > [5] 1496504510
+rcv 112, 1 byte/s from node 4 [RX_RSSI:-48]: 4: p 68836
+latch to 4
+snd > [4] 1
+rcv 176, 58 byte/s from node 4 [RX_RSSI:-48]: [4] 
+@: 1496504496
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4132000, -4152000, -4139000, -4141000, -4145000, -4155000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 2
+sd - writing to 100_4.csv
+rcv 114, 1 byte/s from node 4 [RX_RSSI:-47]: r unlatched
+
+rcv 116, 1 byte/s from node 4 [RX_RSSI:-49]: t  - - - - - - - - - 
+4: not latched
+snd > [4] 1496504523
+rcv 112, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 82850
+latch to 5
+snd > [5] 1
+rcv 190, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496504510
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5250000, -5256000, -5264000, -5249000, -5264000, -5252000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 24
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv 116, 1 byte/s from node 5 [RX_RSSI:-50]: t  - - - - - - - - - 
+5: not latched
+snd > [5] 1496504537
+rcv 112, 1 byte/s from node 4 [RX_RSSI:-50]: 4: p 96064
+latch to 4
+snd > [4] 1
+rcv 203, 58 byte/s from node 4 [RX_RSSI:-50]: [4] 
+@: 1496504523
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4146000, -4146000, -4133000, -4139000, -4139000, -4142000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 3
+sd - writing to 100_4.csv
+rcv 114, 1 byte/s from node 4 [RX_RSSI:-50]: r unlatched
+
+rcv 116, 1 byte/s from node 4 [RX_RSSI:-50]: t  - - - - - - - - - 
+4: not latched
+snd > [4] 1496504551
+rcv 112, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 109872
+latch to 5
+snd > [5] 1
+rcv 217, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496504537
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5259000, -5246000, -5265000, -5260000, -5252000, -5250000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 25
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv 116, 1 byte/s from node 5 [RX_RSSI:-50]: t  - - - - - - - - - 
+5: not latched
+snd > [5] 1496504564
+rcv 112, 1 byte/s from node 4 [RX_RSSI:-50]: 4: p 123291
+latch to 4
+snd > [4] 1
+rcv 231, 58 byte/s from node 4 [RX_RSSI:-50]: [4] 
+@: 1496504551
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4138000, -4152000, -4149000, -4150000, -4130000, -4142000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 24
+ battery voltage: 12
+ cnt: 4
+sd - writing to 100_4.csv
+rcv 114, 1 byte/s from node 4 [RX_RSSI:-50]: r unlatched
+
+rcv 116, 1 byte/s from node 4 [RX_RSSI:-50]: t  - - - - - - - - - 
+4: not latched
+snd > [4] 1496504578
+rcv 116, 1 byte/s from node 2 [RX_RSSI:-27]: t  - - - - - - - - - 
+2: not latched
+snd > [2] 1496504581
+rcv 112, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 136892
+latch to 5
+snd > [5] 1
+rcv 244, 58 byte/s from node 5 [RX_RSSI:-50]: [5] 
+@: 1496504564
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5261000, -5246000, -5263000, -5264000, -5258000, -5262000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 26
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv 116, 1 byte/s from node 5 [RX_RSSI:-50]: t  - - - - - - - - - 
+5: not latched
+snd > [5] 1496504591
+rcv 112, 1 byte/s from node 4 [RX_RSSI:-50]: 4: p 150520
+latch to 4
+snd > [4] 1
+rcv 2, 58 byte/s from node 4 [RX_RSSI:-51]: [4] 
+@: 1496504578
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4143000, -4138000, -4145000, -4137000, -4140000, -4158000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 24
+ battery voltage: 12
+ cnt: 5
+sd - writing to 100_4.csv
+rcv 114, 1 byte/s from node 4 [RX_RSSI:-52]: r unlatched
+
+rcv 116, 1 byte/s from node 4 [RX_RSSI:-52]: t  - - - - - - - - - 
+4: not latched
+snd > [4] 1496504605
+rcv 112, 1 byte/s from node 2 [RX_RSSI:-29]: 2: p 153020
+latch to 2
+snd > [2] 1
+rcv 5, 58 byte/s from node 2 [RX_RSSI:-24]: [2] 
+@: 1496504581
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -54, 69, -5053000, -5056000, -5054000, -5052000, -5068000, -5066000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 6
+sd - writing to 100_2.csv
+rcv 114, 1 byte/s from node 2 [RX_RSSI:-28]: r unlatched
+
+rcv 112, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 163960
+latch to 5
+snd > [5] 1
+rcv 15, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496504591
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5253000, -5257000, -5251000, -5262000, -5252000, -5250000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 27
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv 116, 1 byte/s from node 5 [RX_RSSI:-50]: t  - - - - - - - - - 
+5: not latched
+snd > [5] 1496504618
+rcv 112, 1 byte/s from node 4 [RX_RSSI:-49]: 4: p 177748
+latch to 4
+snd > [4] 1
+rcv 29, 58 byte/s from node 4 [RX_RSSI:-51]: [4] 
+@: 1496504605
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4154000, -4138000, -4134000, -4153000, -4146000, -4151000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 24
+ battery voltage: 12
+ cnt: 6
+sd - writing to 100_4.csv
+rcv 114, 1 byte/s from node 4 [RX_RSSI:-50]: r unlatched
+
+rcv 116, 1 byte/s from node 4 [RX_RSSI:-51]: t  - - - - - - - - - 
+4: not latched
+snd > [4] 1496504632
+rcv 112, 1 byte/s from node 5 [RX_RSSI:-41]: 5: p 181469
+latch to 5
+snd > [5] 1
+rcv 114, 1 byte/s from node 5 [RX_RSSI:-41]: r unlatched
+
+rcv 116, 1 byte/s from node 5 [RX_RSSI:-41]: t  - - - - - - - - - 
+5: not latched
+snd > [5] 1496504635
+rcv 112, 1 byte/s from node 4 [RX_RSSI:-47]: 4: p 181864
+latch to 4
+snd > [4] 1
+rcv 114, 1 byte/s from node 4 [RX_RSSI:-47]: r unlatched
+
+rcv 116, 1 byte/s from node 4 [RX_RSSI:-47]: t  - - - - - - - - - 
+4: not latched
+snd > [4] 1496504635
+rcv 116, 1 byte/s from node 3 [RX_RSSI:-29]: t  - - - - - - - - - 
+3: not latched
+snd > [3] 1496504640
+rcv 112, 1 byte/s from node 5 [RX_RSSI:-41]: 5: p 207014
+latch to 5
+snd > [5] 1
+rcv 59, 58 byte/s from node 5 [RX_RSSI:-41]: [5] 
+@: 1496504635
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5253000, -5253000, -5261000, -5267000, -5255000, -5270000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 1
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5 [RX_RSSI:-42]: r unlatched
+
+rcv 112, 1 byte/s from node 4 [RX_RSSI:-48]: 4: p 207574
+latch to 4
+snd > [4] 1
+rcv 59, 58 byte/s from node 4 [RX_RSSI:-48]: [4] 
+@: 1496504635
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4138000, -4155000, -4142000, -4151000, -4134000, -4142000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 24
+ battery voltage: 12
+ cnt: 1
+sd - writing to 100_4.csv
+rcv 114, 1 byte/s from node 4 [RX_RSSI:-48]: r unlatched
+
+rcv 116, 1 byte/s from node 5 [RX_RSSI:-42]: t  - - - - - - - - - 
+5: not latched
+snd > [5] 1496504661
+rcv 116, 1 byte/s from node 4 [RX_RSSI:-48]: t  - - - - - - - - - 
+4: not latched
+snd > [4] 1496504662
+rcv 112, 1 byte/s from node 3 [RX_RSSI:-27]: 3: p 212194
+latch to 3
+snd > [3] 1
+rcv 64, 58 byte/s from node 3 [RX_RSSI:-22]: [3] 
+@: 1496504640
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4150000, -4149000, -4157000, -4147000, -4145000, -4144000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 6
+sd - writing to 100_3.csv
+rcv 114, 1 byte/s from node 3 [RX_RSSI:-28]: r unlatched
+
+rcv 112, 1 byte/s from node 5 [RX_RSSI:-42]: 5: p 234033
+latch to 5
+snd > [5] 1
+rcv 85, 58 byte/s from node 5 [RX_RSSI:-41]: [5] 
+@: 1496504661
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5256000, -5244000, -5252000, -5262000, -5252000, -5263000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 2
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5 [RX_RSSI:-42]: r unlatched
+
+rcv 112, 1 byte/s from node 4 [RX_RSSI:-48]: 4: p 234802
+latch to 4
+snd > [4] 1
+rcv 86, 58 byte/s from node 4 [RX_RSSI:-48]: [4] 
+@: 1496504662
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4139000, -4139000, -4148000, -4143000, -4138000, -4147000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 24
+ battery voltage: 12
+ cnt: 2
+sd - writing to 100_4.csv
+rcv 114, 1 byte/s from node 4 [RX_RSSI:-48]: r unlatched
+
+rcv 116, 1 byte/s from node 5 [RX_RSSI:-43]: t  - - - - - - - - - 
+5: not latched
+snd > [5] 1496504688
+rcv 116, 1 byte/s from node 4 [RX_RSSI:-49]: t  - - - - - - - - - 
+4: not latched
+snd > [4] 1496504689
+rcv 116, 1 byte/s from node 1 [RX_RSSI:-28]: t  - - - - - - - - - 
+1: not latched
+snd > [1] 1496504695
+rcv 112, 1 byte/s from node 5 [RX_RSSI:-43]: 5: p 261053
+latch to 5
+snd > [5] 1
+rcv 112, 58 byte/s from node 5 [RX_RSSI:-42]: [5] 
+@: 1496504688
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5265000, -5253000, -5250000, -5255000, -5260000, -5252000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 3
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5 [RX_RSSI:-43]: r unlatched
+
+rcv 112, 1 byte/s from node 4 [RX_RSSI:-49]: 4: p 262031
+latch to 4
+snd > [4] 1
+rcv 113, 58 byte/s from node 4 [RX_RSSI:-49]: [4] 
+@: 1496504689
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4145000, -4138000, -4144000, -4144000, -4133000, -4149000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 24
+ battery voltage: 12
+ cnt: 3
+sd - writing to 100_4.csv
+rcv 114, 1 byte/s from node 4 [RX_RSSI:-48]: r unlatched
+
+rcv 116, 1 byte/s from node 5 [RX_RSSI:-43]: t  - - - - - - - - - 
+5: not latched
+snd > [5] 1496504716
+rcv 116, 1 byte/s from node 4 [RX_RSSI:-49]: t  - - - - - - - - - 
+4: not latched
+snd > [4] 1496504716
+rcv 112, 1 byte/s from node 1 [RX_RSSI:-29]: 1: p 268138
+latch to 1
+snd > [1] 1
+rcv 119, 58 byte/s from node 1 [RX_RSSI:-20]: [1] 
+@: 1496504695
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3646, 3479, -45708000, 15961000, -3967000, -3937000, -3954000, -3946000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 24
+ battery voltage: 12
+ cnt: 4
+sd - writing to 100_1.csv
+rcv 114, 1 byte/s from node 1 [RX_RSSI:-28]: r unlatched
+
+rcv 112, 1 byte/s from node 5 [RX_RSSI:-43]: 5: p 288074
+latch to 5
+snd > [5] 1
+rcv 140, 58 byte/s from node 5 [RX_RSSI:-43]: [5] 
+@: 1496504716
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5252000, -5257000, -5264000, -5261000, -5256000, -5257000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 4
+sd - writing to 100_5.csv
+rcv 114, 1 byte/s from node 5 [RX_RSSI:-44]: r unlatched
+
+rcv 112, 1 byte/s from node 4 [RX_RSSI:-49]: 4: p 289260
+latch to 4
+snd > [4] 1
+rcv 116, 1 byte/s from node 5 [RX_RSSI:-44]: t  - - - - - - - - - 
+5: not latched
+snd > [5] 1496504743
+rcv 140, 58 byte/s from node 4 [RX_RSSI:-50]: [4] 
+@: 1496504716
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4150000, -4142000, -4144000, -4139000, -4140000, -4147000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 24
+ battery voltage: 12
+ cnt: 4
+sd - writing to 100_4.csv
+rcv 114, 1 byte/s from node 4 [RX_RSSI:-50]: r unlatched
+
+rcv 116, 1 byte/s from node 4 [RX_RSSI:-50]: t  - - - - - - - - - 
+4: not latched
+snd > [4] 1496504744
+rcv p, 1 byte/s from node 5 [RX_RSSI:-46]: 5: p 48051
+latch to 5
+snd > [5] 1
+rcv Ý, 58 byte/s from node 5 [RX_RSSI:-46]: [5] 
+@: 1496504797
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5260000, -5256000, -5261000, -5265000, -5270000, -5246000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 7
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-47]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-47]: t 5: not latched
+snd > [5] 1496504824
+rcv p, 1 byte/s from node 4 [RX_RSSI:-52]: 4: p 49881
+latch to 4
+snd > [4] 1
+rcv ß, 58 byte/s from node 4 [RX_RSSI:-52]: [4] 
+@: 1496504799
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4149000, -4146000, -4145000, -4154000, -4142000, -4144000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 7
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-53]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-53]: t 4: not latched
+snd > [4] 1496504826
+rcv p, 1 byte/s from node 5 [RX_RSSI:-47]: 5: p 75070
+latch to 5
+snd > [5] 1
+rcv ø, 58 byte/s from node 5 [RX_RSSI:-48]: [5] 
+@: 1496504824
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5254000, -5262000, -5256000, -5259000, -5259000, -5270000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 8
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-49]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-49]: t 5: not latched
+snd > [5] 1496504851
+rcv p, 1 byte/s from node 4 [RX_RSSI:-54]: 4: p 77108
+latch to 4
+snd > [4] 1
+rcv ú, 58 byte/s from node 4 [RX_RSSI:-52]: [4] 
+@: 1496504826
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4138000, -4138000, -4147000, -4137000, -4138000, -4140000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 8
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-54]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-54]: t 4: not latched
+snd > [4] 1496504853
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 102087
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-49]: [5] 
+@: 1496504851
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5260000, -5263000, -5254000, -5245000, -5266000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 9
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496504878
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 104334
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496504853
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4147000, -4136000, -4143000, -4145000, -4152000, -4152000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 9
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-55]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496504880
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 129105
+latch to 5
+snd > [5] 1
+rcv ., 58 byte/s from node 5 [RX_RSSI:-50]: [5] 
+@: 1496504878
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5255000, -5252000, -5252000, -5250000, -5249000, -5260000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 10
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-49]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496504905
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 131562
+latch to 4
+snd > [4] 1
+rcv 0, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496504880
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4141000, -4153000, -4146000, -4139000, -4145000, -4149000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 10
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-55]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496504907
+rcv t, 1 byte/s from node 2 [RX_RSSI:-28]: t 2: not latched
+snd > [2] 1496504929
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 156165
+latch to 5
+snd > [5] 1
+rcv I, 58 byte/s from node 5 [RX_RSSI:-50]: [5] 
+@: 1496504905
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5253000, -5253000, -5259000, -5267000, -5257000, -5266000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 11
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-49]: t 5: not latched
+snd > [5] 1496504932
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 158792
+latch to 4
+snd > [4] 1
+rcv K, 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496504907
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4153000, -4140000, -4144000, -4144000, -4151000, -4145000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 11
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-55]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496504935
+rcv p, 1 byte/s from node 2 [RX_RSSI:-28]: 2: p 179714
+latch to 2
+snd > [2] 1
+rcv a, 58 byte/s from node 2 [RX_RSSI:-25]: [2] 
+@: 1496504929
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -54, 69, -5060000, -5058000, -5057000, -5044000, -5057000, -5053000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 7
+sd - writing to 100_2.csv
+rcv r, 1 byte/s from node 2 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 183184
+latch to 5
+snd > [5] 1
+rcv d, 58 byte/s from node 5 [RX_RSSI:-49]: [5] 
+@: 1496504932
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5258000, -5255000, -5257000, -5249000, -5251000, -5247000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 12
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-49]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] Failed . . . no ack
+rcv p, 1 byte/s from node 4 [RX_RSSI:-54]: 4: p 186017
+latch to 4
+snd > [4] 1
+rcv g, 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496504935
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4132000, -4132000, -4145000, -4144000, -4151000, -4138000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 12
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-55]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496504962
+rcv p, 1 byte/s from node 5 [RX_RSSI:-49]: 5: p 210288
+latch to 5
+snd > [5] 1
+rcv d, 58 byte/s from node 5 [RX_RSSI:-50]: [5] 
+@: 1496504932
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5260000, -5260000, -5268000, -5263000, -5264000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 13
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496504986
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 213245
+latch to 4
+snd > [4] 1
+rcv ‚, 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496504962
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4136000, -4136000, -4143000, -4141000, -4146000, -4148000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 13
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-55]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496504989
+rcv t, 1 byte/s from node 3 [RX_RSSI:-29]: t 3: not latched
+snd > [3] 1496504991
+rcv p, 1 byte/s from node 5 [RX_RSSI:-49]: 5: p 237306
+latch to 5
+snd > [5] 1
+rcv š, 58 byte/s from node 5 [RX_RSSI:-49]: [5] 
+@: 1496504986
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5260000, -5260000, -5265000, -5269000, -5256000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 14
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505013
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 240501
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496504989
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4143000, -4144000, -4141000, -4142000, -4157000, -4140000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 14
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-55]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496505016
+rcv p, 1 byte/s from node 3 [RX_RSSI:-28]: 3: p 241972
+latch to 3
+snd > [3] 1
+rcv Ÿ, 58 byte/s from node 3 [RX_RSSI:-25]: [3] 
+@: 1496504991
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4143000, -4159000, -4160000, -4151000, -4139000, -4143000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 7
+sd - writing to 100_3.csv
+rcv r, 1 byte/s from node 3 [RX_RSSI:-28]: r unlatched
+
+rcv t, 1 byte/s from node 1 [RX_RSSI:-29]: t 1: not latched
+snd > [1] 1496505036
+rcv p, 1 byte/s from node 5 [RX_RSSI:-49]: 5: p 264341
+latch to 5
+snd > [5] Failed . . . no ack
+Latch Timed Out
+rcv t, 1 byte/s from node 5 [RX_RSSI:-49]: t 5: not latched
+snd > [5] 1496505040
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 267729
+latch to 4
+snd > [4] 1
+rcv ¸, 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496505016
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4138000, -4148000, -4138000, -4148000, -4125000, -4135000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 15
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-55]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496505044
+rcv p, 1 byte/s from node 1 [RX_RSSI:-28]: 1: p 287613
+latch to 1
+snd > [1] 1
+rcv Ì, 58 byte/s from node 1 [RX_RSSI:-22]: [1] 
+@: 1496505036
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3643, 3479, -45708998, 16008000, -3962000, -3951000, -3950000, -3952000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 24
+ battery voltage: 12
+ cnt: 5
+sd - writing to 100_1.csv
+rcv r, 1 byte/s from node 1 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-49]: 5: p 291585
+latch to 5
+snd > [5] 1
+rcv á, 58 byte/s from node 5 [RX_RSSI:-49]: [5] 
+@: 1496505313
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5251000, -5256000, -5259000, -5262000, -5261000, -5255000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 15
+sd - writing to 100_5.csv
+rcv Ð, 58 byte/s from node 5 [RX_RSSI:-50]: [5] 
+@: 1496505040
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5254000, -5259000, -5251000, -5260000, -5256000, -5267000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 16
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505067
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 294957
+latch to 4
+snd > [4] 1
+rcv Ô, 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496505044
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4134000, -4138000, -4156000, -4139000, -4149000, -4138000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 16
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-55]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505071
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 318707
+latch to 5
+snd > [5] 1
+rcv ë, 58 byte/s from node 5 [RX_RSSI:-49]: [5] 
+@: 1496505067
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5264000, -5253000, -5254000, -5258000, -5264000, -5260000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 17
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505094
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 322185
+latch to 4
+snd > [4] 1
+rcv ï, 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496505071
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4156000, -4154000, -4142000, -4137000, -4135000, -4142000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 17
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496505098
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 345725
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505094
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5256000, -5258000, -5256000, -5264000, -5267000, -5256000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 18
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505122
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 349413
+latch to 4
+snd > [4] Failed . . . no ack
+Latch Timed Out
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496505125
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 372745
+latch to 5
+snd > [5] 1
+rcv ", 58 byte/s from node 5 [RX_RSSI:-50]: [5] 
+@: 1496505122
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5248000, -5258000, -5260000, -5269000, -5262000, -5263000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 19
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505149
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 376905
+latch to 4
+snd > [4] 1
+rcv 6, 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496505398
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4150000, -4139000, -4142000, -4148000, -4150000, -4146000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 18
+sd - writing to 100_4.csv
+rcv %, 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496505125
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4142000, -4147000, -4142000, -4135000, -4146000, -4146000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 19
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-55]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496505153
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 399764
+latch to 5
+snd > [5] 1
+rcv =, 58 byte/s from node 5 [RX_RSSI:-50]: [5] 
+@: 1496505149
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5264000, -5264000, -5259000, -5258000, -5258000, -5267000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 20
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505176
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 404235
+latch to 4
+snd > [4] 1
+rcv A, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496505153
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4145000, -4146000, -4142000, -4143000, -4156000, -4151000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 20
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496505180
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 426784
+latch to 5
+snd > [5] 1
+rcv X, 58 byte/s from node 5 [RX_RSSI:-50]: [5] 
+@: 1496505176
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5264000, -5264000, -5257000, -5246000, -5253000, -5260000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 21
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505203
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 431462
+latch to 4
+snd > [4] 1
+rcv \, 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496505180
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4142000, -4134000, -4142000, -4146000, -4142000, -4142000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 21
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-55]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496505207
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 453801
+latch to 5
+snd > [5] 1
+rcv s, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505203
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5275000, -5259000, -5260000, -5261000, -5255000, -5254000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 22
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505230
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 458690
+latch to 4
+snd > [4] 1
+rcv w, 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496505207
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4137000, -4154000, -4144000, -4153000, -4140000, -4143000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 22
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496505234
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 480823
+latch to 5
+snd > [5] 1
+rcv Ž, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505230
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5240000, -5262000, -5257000, -5274000, -5261000, -5263000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 23
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] Failed . . . no ack
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 485917
+latch to 4
+snd > [4] 1
+rcv ’, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496505234
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4147000, -4134000, -4130000, -4142000, -4147000, -4140000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 23
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505262
+rcv t, 1 byte/s from node 2 [RX_RSSI:-29]: t 2: not latched
+snd > [2] 1496505277
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 507927
+latch to 5
+snd > [5] Failed . . . no ack
+Latch Timed Out
+rcv t, 1 byte/s from node 5 [RX_RSSI:-49]: t 5: not latched
+snd > [5] 1496505284
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 513143
+latch to 4
+snd > [4] 1
+rcv ®, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505262
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4137000, -4141000, -4141000, -4150000, -4143000, -4142000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 24
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505289
+rcv p, 1 byte/s from node 2 [RX_RSSI:-30]: 2: p 527976
+latch to 2
+snd > [2] 1
+rcv ½, 58 byte/s from node 2 [RX_RSSI:-28]: [2] 
+@: 1496505277
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -54, 69, -5046000, -5047000, -5050000, -5055000, -5036000, -5056000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 8
+sd - writing to 100_2.csv
+rcv r, 1 byte/s from node 2 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 535041
+latch to 5
+snd > [5] 1
+rcv Ä, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505284
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5252000, -5260000, -5260000, -5263000, -5249000, -5261000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 25
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505311
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 540370
+latch to 4
+snd > [4] 1
+rcv É, 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496505289
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4143000, -4142000, -4140000, -4142000, -4146000, -4129000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 25
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-54]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496505316
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 562060
+latch to 5
+snd > [5] 1
+rcv ß, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505311
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5255000, -5257000, -5277000, -5266000, -5263000, -5248000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 26
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505338
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 567598
+latch to 4
+snd > [4] 1
+rcv ä, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496505316
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4148000, -4133000, -4129000, -4128000, -4141000, -4136000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 26
+sd - writing to 100_4.csv
+rcv t, 1 byte/s from node 3 [RX_RSSI:-28]: t 3: not latched
+snd > [3] 1496505342
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505343
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 589077
+latch to 5
+snd > [5] 1
+rcv ú, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505338
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5261000, -5251000, -5258000, -5264000, -5260000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 27
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505365
+rcv p, 1 byte/s from node 3 [RX_RSSI:-28]: 3: p 593388
+latch to 3
+snd > [3] 1
+rcv þ, 58 byte/s from node 3 [RX_RSSI:-25]: [3] 
+@: 1496505342
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4147000, -4146000, -4148000, -4148000, -4149000, -4152000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 8
+sd - writing to 100_3.csv
+rcv r, 1 byte/s from node 3 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 594880
+latch to 4
+snd > [4] 1
+rcv ÿ, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505343
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4136000, -4144000, -4143000, -4142000, -4146000, -4155000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 27
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505371
+rcv t, 1 byte/s from node 1 [RX_RSSI:-29]: t 1: not latched
+snd > [1] 1496505377
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 616095
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505365
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5266000, -5266000, -5258000, -5256000, -5254000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 28
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505392
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 622108
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496505371
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4133000, -4141000, -4144000, -4146000, -4148000, -4154000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 28
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505398
+rcv p, 1 byte/s from node 1 [RX_RSSI:-28]: 1: p 628680
+latch to 1
+snd > [1] 1
+rcv !, 58 byte/s from node 1 [RX_RSSI:-23]: [1] 
+@: 1496505377
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3646, 3478, -45728998, 15964000, -3957000, -3944000, -3952000, -3944000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 24
+ battery voltage: 12
+ cnt: 6
+sd - writing to 100_1.csv
+rcv r, 1 byte/s from node 1 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 643113
+latch to 5
+snd > [5] 1
+rcv 0, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505392
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5261000, -5256000, -5253000, -5266000, -5256000, -5261000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 29
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505419
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 649338
+latch to 4
+snd > [4] 1
+rcv 6, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496505398
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4131000, -4138000, -4144000, -4140000, -4139000, -4147000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 29
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505425
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 670131
+latch to 5
+snd > [5] 1
+rcv K, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505419
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5264000, -5260000, -5258000, -5269000, -5262000, -5263000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 30
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505446
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 676566
+latch to 4
+snd > [4] 1
+rcv Q, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505425
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4144000, -4137000, -4138000, -4142000, -4136000, -4150000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 30
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505452
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 697148
+latch to 5
+snd > [5] 1
+rcv f, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505446
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5272000, -5261000, -5244000, -5257000, -5254000, -5250000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 31
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505473
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 703794
+latch to 4
+snd > [4] 1
+rcv l, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496505452
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4142000, -4134000, -4143000, -4143000, -4146000, -4152000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 31
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505479
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 724166
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505473
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5258000, -5272000, -5248000, -5265000, -5254000, -5262000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 32
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505500
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 731072
+latch to 4
+snd > [4] 1
+rcv ‡, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505479
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4145000, -4150000, -4134000, -4145000, -4132000, -4142000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 32
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505507
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 751183
+latch to 5
+snd > [5] 1
+rcv œ, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505500
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5259000, -5259000, -5252000, -5257000, -5259000, -5261000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 33
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505527
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 758298
+latch to 4
+snd > [4] 1
+rcv £, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505507
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4143000, -4151000, -4136000, -4143000, -4147000, -4142000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 33
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505534
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 778201
+latch to 5
+snd > [5] 1
+rcv ·, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505527
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5261000, -5250000, -5246000, -5265000, -5268000, -5263000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 34
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505554
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 785526
+latch to 4
+snd > [4] 1
+rcv ¾, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505534
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4148000, -4139000, -4142000, -4158000, -4144000, -4143000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 34
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505561
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 805218
+latch to 5
+snd > [5] 1
+rcv Ò, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505554
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5270000, -5263000, -5265000, -5254000, -5248000, -5257000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 35
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505581
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 812753
+latch to 4
+snd > [4] 1
+rcv Ù, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496505561
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4136000, -4148000, -4140000, -4144000, -4151000, -4135000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 35
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505588
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 832236
+latch to 5
+snd > [5] 1
+rcv í, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505581
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5259000, -5245000, -5263000, -5265000, -5256000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 36
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505608
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 839982
+latch to 4
+snd > [4] 1
+rcv ô, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496505588
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4145000, -4146000, -4133000, -4141000, -4144000, -4139000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 36
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496505616
+rcv t, 1 byte/s from node 2 [RX_RSSI:-29]: t 2: not latched
+snd > [2] 1496505626
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 859323
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505608
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5260000, -5263000, -5251000, -5259000, -5261000, -5260000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 37
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505635
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 867263
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505616
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4151000, -4147000, -4128000, -4146000, -4151000, -4134000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 37
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505643
+rcv p, 1 byte/s from node 2 [RX_RSSI:-29]: 2: p 876236
+latch to 2
+snd > [2] 1
+rcv , 58 byte/s from node 2 [RX_RSSI:-28]: [2] 
+@: 1496505626
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -54, 69, -5053000, -5057000, -5050000, -5053000, -5050000, -5055000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 9
+sd - writing to 100_2.csv
+rcv r, 1 byte/s from node 2 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 886341
+latch to 5
+snd > [5] Failed . . . no ack
+Latch Timed Out
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505662
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 894491
+latch to 4
+snd > [4] 1
+rcv +, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505643
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4147000, -4142000, -4137000, -4133000, -4135000, -4150000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 38
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505670
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 913585
+latch to 5
+snd > [5] 1
+rcv O, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505935
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5251000, -5256000, -5254000, -5260000, -5256000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 38
+sd - writing to 100_5.csv
+rcv >, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505662
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5245000, -5250000, -5258000, -5260000, -5263000, -5250000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 39
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505689
+rcv t, 1 byte/s from node 3 [RX_RSSI:-29]: t 3: not latched
+snd > [3] 1496505693
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 921719
+latch to 4
+snd > [4] 1
+rcv F, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505670
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4145000, -4144000, -4151000, -4150000, -4142000, -4135000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 39
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505697
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 940707
+latch to 5
+snd > [5] 1
+rcv Y, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505689
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5259000, -5261000, -5257000, -5254000, -5256000, -5261000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 40
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505716
+rcv t, 1 byte/s from node 1 [RX_RSSI:-29]: t 1: not latched
+snd > [1] 1496505718
+rcv p, 1 byte/s from node 3 [RX_RSSI:-28]: 3: p 944795
+latch to 3
+snd > [3] 1
+rcv ], 58 byte/s from node 3 [RX_RSSI:-25]: [3] 
+@: 1496505693
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4141000, -4153000, -4149000, -4148000, -4161000, -4147000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 9
+sd - writing to 100_3.csv
+rcv r, 1 byte/s from node 3 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 948945
+latch to 4
+snd > [4] 1
+rcv a, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505697
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4143000, -4143000, -4148000, -4149000, -4141000, -4154000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 40
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505724
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 967726
+latch to 5
+snd > [5] 1
+rcv t, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505716
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5254000, -5251000, -5253000, -5263000, -5262000, -5257000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 41
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505743
+rcv p, 1 byte/s from node 1 [RX_RSSI:-27]: 1: p 969709
+latch to 1
+snd > [1] 1
+rcv v, 58 byte/s from node 1 [RX_RSSI:-24]: [1] 
+@: 1496505718
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3646, 3478, -45748000, 15953000, -3949000, -3942000, -3954000, -3945000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 7
+sd - writing to 100_1.csv
+rcv r, 1 byte/s from node 1 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 976174
+latch to 4
+snd > [4] 1
+rcv |, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505724
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4141000, -4130000, -4137000, -4140000, -4138000, -4145000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 41
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505752
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 994744
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505743
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5262000, -5262000, -5260000, -5264000, -5250000, -5264000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 42
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505770
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 1003402
+latch to 4
+snd > [4] 1
+rcv ˜, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505752
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4144000, -4150000, -4140000, -4154000, -4147000, -4151000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 42
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505779
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1021762
+latch to 5
+snd > [5] 1
+rcv ª, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505770
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5264000, -5261000, -5260000, -5261000, -5256000, -5251000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 43
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505797
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1030629
+latch to 4
+snd > [4] 1
+rcv ³, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505779
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4139000, -4139000, -4134000, -4135000, -4147000, -4144000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 43
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496505806
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1048780
+latch to 5
+snd > [5] 1
+rcv Å, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505797
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5249000, -5264000, -5257000, -5255000, -5277000, -5272000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 44
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505824
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 1057856
+latch to 4
+snd > [4] 1
+rcv Î, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505806
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4151000, -4133000, -4145000, -4142000, -4143000, -4140000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 44
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496505833
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1075796
+latch to 5
+snd > [5] 1
+rcv à, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505824
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5256000, -5249000, -5253000, -5263000, -5270000, -5257000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 45
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505851
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1085083
+latch to 4
+snd > [4] 1
+rcv é, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505833
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4142000, -4138000, -4148000, -4139000, -4130000, -4147000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 45
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505860
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1102815
+latch to 5
+snd > [5] 1
+rcv û, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505851
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5258000, -5260000, -5268000, -5262000, -5256000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 46
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505878
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1112309
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505860
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4141000, -4138000, -4133000, -4140000, -4136000, -4135000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 46
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505888
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1129832
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505878
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5260000, -5261000, -5259000, -5266000, -5252000, -5263000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 47
+sd - writing to 100_5.csv
+Latch Timed Out
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505905
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1139537
+latch to 4
+snd > [4] 1
+rcv  , 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496505888
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4133000, -4132000, -4145000, -4158000, -4139000, -4155000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 47
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505915
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1156896
+latch to 5
+snd > [5] 1
+rcv 1, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505905
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5256000, -5266000, -5250000, -5252000, -5262000, -5266000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 48
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505932
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1166807
+latch to 4
+snd > [4] 1
+rcv ;, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505915
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4141000, -4148000, -4139000, -4134000, -4137000, -4134000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 48
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496505942
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1183916
+latch to 5
+snd > [5] 1
+rcv L, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505932
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5255000, -5260000, -5248000, -5269000, -5256000, -5262000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 49
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496505959
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1194034
+latch to 4
+snd > [4] 1
+rcv V, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496505942
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4137000, -4143000, -4145000, -4153000, -4143000, -4141000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 49
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496505969
+rcv t, 1 byte/s from node 2 [RX_RSSI:-29]: t 2: not latched
+snd > [2] 1496505974
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1210936
+latch to 5
+snd > [5] 1
+rcv g, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505959
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5261000, -5263000, -5264000, -5267000, -5265000, -5256000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 50
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496505986
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1221261
+latch to 4
+snd > [4] 1
+rcv q, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505969
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4136000, -4138000, -4141000, -4144000, -4133000, -4129000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 50
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496505997
+rcv p, 1 byte/s from node 2 [RX_RSSI:-29]: 2: p 1224540
+latch to 2
+snd > [2] 1
+rcv v, 58 byte/s from node 2 [RX_RSSI:-27]: [2] 
+@: 1496505974
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -54, 69, -5054000, -5054000, -5055000, -5059000, -5070000, -5074000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 10
+sd - writing to 100_2.csv
+rcv r, 1 byte/s from node 2 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1237953
+latch to 5
+snd > [5] 1
+rcv ‚, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496505986
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5262000, -5265000, -5270000, -5268000, -5265000, -5244000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 51
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506013
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 1248488
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496505997
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4145000, -4146000, -4149000, -4147000, -4145000, -4136000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 51
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506024
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1264970
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506013
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5260000, -5251000, -5266000, -5257000, -5255000, -5260000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 52
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496506040
+rcv t, 1 byte/s from node 3 [RX_RSSI:-29]: t 3: not latched
+snd > [3] 1496506045
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 1275715
+latch to 4
+snd > [4] 1
+rcv ¨, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506024
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4144000, -4158000, -4133000, -4147000, -4136000, -4132000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 52
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506051
+rcv t, 1 byte/s from node 1 [RX_RSSI:-28]: t 1: not latched
+snd > [1] 1496506059
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1291987
+latch to 5
+snd > [5] 1
+rcv ¸, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506040
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5255000, -5252000, -5263000, -5250000, -5265000, -5264000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 53
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506067
+rcv p, 1 byte/s from node 3 [RX_RSSI:-29]: 3: p 1296214
+latch to 3
+snd > [3] 1
+rcv ½, 58 byte/s from node 3 [RX_RSSI:-24]: [3] 
+@: 1496506045
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4162000, -4161000, -4160000, -4148000, -4151000, -4157000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 10
+sd - writing to 100_3.csv
+rcv r, 1 byte/s from node 3 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1302944
+latch to 4
+snd > [4] 1
+rcv Ã, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506051
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4144000, -4153000, -4150000, -4137000, -4136000, -4147000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 53
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496506078
+rcv p, 1 byte/s from node 1 [RX_RSSI:-28]: 1: p 1310734
+latch to 1
+snd > [1] 1
+rcv Ë, 58 byte/s from node 1 [RX_RSSI:-25]: [1] 
+@: 1496506059
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3645, 3479, -45702000, 15969000, -3964000, -3955000, -3951000, -3963000, 
+temps: 24, 24, 24, 25, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 8
+sd - writing to 100_1.csv
+rcv r, 1 byte/s from node 1 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1319007
+latch to 5
+snd > [5] 1
+rcv Ó, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506067
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5255000, -5261000, -5260000, -5256000, -5256000, -5260000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 54
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506094
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1330172
+latch to 4
+snd > [4] 1
+rcv Þ, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506078
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4155000, -4143000, -4135000, -4142000, -4149000, -4142000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 54
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506105
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1346053
+latch to 5
+snd > [5] 1
+rcv î, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506094
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5256000, -5262000, -5251000, -5271000, -5260000, -5261000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 55
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506121
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 1357399
+latch to 4
+snd > [4] 1
+rcv ù, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506105
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4139000, -4140000, -4145000, -4143000, -4146000, -4142000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 55
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506133
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1373070
+latch to 5
+snd > [5] 1
+rcv 	, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506121
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5251000, -5243000, -5246000, -5264000, -5260000, -5253000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 56
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506148
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1384628
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506133
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4140000, -4151000, -4152000, -4145000, -4150000, -4145000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 56
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506160
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1400089
+latch to 5
+snd > [5] 1
+rcv $, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506148
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5261000, -5263000, -5261000, -5247000, -5248000, -5266000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 57
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506175
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1411856
+latch to 4
+snd > [4] 1
+rcv 0, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506160
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4147000, -4151000, -4137000, -4142000, -4136000, -4144000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 57
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506187
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1427106
+latch to 5
+snd > [5] 1
+rcv ?, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506175
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5271000, -5263000, -5252000, -5256000, -5271000, -5270000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 58
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506202
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1439084
+latch to 4
+snd > [4] 1
+rcv K, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506187
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4148000, -4145000, -4150000, -4142000, -4160000, -4150000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 58
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506214
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1454127
+latch to 5
+snd > [5] 1
+rcv Z, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506202
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5265000, -5260000, -5256000, -5255000, -5242000, -5263000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 59
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] Failed . . . no ack
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1466312
+latch to 4
+snd > [4] 1
+rcv f, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506214
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4150000, -4140000, -4148000, -4149000, -4135000, -4159000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 59
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506241
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1481231
+latch to 5
+snd > [5] 1
+rcv Z, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506202
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5259000, -5250000, -5248000, -5254000, -5265000, -5274000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 60
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506256
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1493540
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506241
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4145000, -4149000, -4143000, -4139000, -4135000, -4134000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 60
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506269
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1508248
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506256
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5265000, -5261000, -5262000, -5268000, -5264000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 61
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506283
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1520769
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506269
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4140000, -4132000, -4142000, -4144000, -4141000, -4150000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 61
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506296
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1535265
+latch to 5
+snd > [5] 1
+rcv «, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506283
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5269000, -5247000, -5259000, -5258000, -5263000, -5266000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 62
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506310
+rcv t, 1 byte/s from node 2 [RX_RSSI:-29]: t 2: not latched
+snd > [2] 1496506322
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1547998
+latch to 4
+snd > [4] 1
+rcv ¸, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506296
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4140000, -4149000, -4136000, -4142000, -4150000, -4147000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 62
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506323
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1562284
+latch to 5
+snd > [5] 1
+rcv Æ, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506310
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5253000, -5245000, -5262000, -5262000, -5269000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 63
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506337
+rcv p, 1 byte/s from node 2 [RX_RSSI:-30]: 2: p 1572822
+latch to 2
+snd > [2] 1
+rcv Ò, 58 byte/s from node 2 [RX_RSSI:-27]: [2] 
+@: 1496506322
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -54, 69, -5053000, -5066000, -5058000, -5060000, -5050000, -5062000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 11
+sd - writing to 100_2.csv
+rcv r, 1 byte/s from node 2 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1575225
+latch to 4
+snd > [4] 1
+rcv Ó, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506323
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4146000, -4137000, -4151000, -4144000, -4154000, -4149000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 63
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506350
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1589302
+latch to 5
+snd > [5] Failed . . . no ack
+Latch Timed Out
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496506365
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1602453
+latch to 4
+snd > [4] 1
+rcv î, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506350
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4140000, -4141000, -4146000, -4160000, -4152000, -4146000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 64
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506378
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1616574
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506637
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5252000, -5259000, -5254000, -5263000, -5260000, -5255000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 64
+sd - writing to 100_5.csv
+rcv ý, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506365
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5264000, -5259000, -5257000, -5263000, -5250000, -5260000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 65
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506392
+rcv t, 1 byte/s from node 3 [RX_RSSI:-29]: t 3: not latched
+snd > [3] 1496506396
+rcv t, 1 byte/s from node 1 [RX_RSSI:-29]: t 1: not latched
+snd > [1] 1496506400
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1629682
+latch to 4
+snd > [4] 1
+rcv 
+, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506378
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4145000, -4139000, -4150000, -4144000, -4157000, -4148000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 65
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506405
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1643696
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506392
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5260000, -5261000, -5266000, -5256000, -5261000, -5256000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 66
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506419
+rcv p, 1 byte/s from node 3 [RX_RSSI:-29]: 3: p 1647626
+latch to 3
+snd > [3] 1
+rcv , 58 byte/s from node 3 [RX_RSSI:-25]: [3] 
+@: 1496506396
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4155000, -4150000, -4137000, -4146000, -4149000, -4151000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 11
+sd - writing to 100_3.csv
+rcv r, 1 byte/s from node 3 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 1 [RX_RSSI:-28]: 1: p 1651764
+latch to 1
+snd > [1] 1
+rcv  , 58 byte/s from node 1 [RX_RSSI:-26]: [1] 
+@: 1496506400
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3646, 3478, -45743001, 15957000, -3950000, -3947000, -3948000, -3943000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 24
+ battery voltage: 12
+ cnt: 9
+sd - writing to 100_1.csv
+rcv r, 1 byte/s from node 1 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1656908
+latch to 4
+snd > [4] 1
+rcv %, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506405
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4144000, -4146000, -4150000, -4154000, -4152000, -4134000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 66
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506432
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1670714
+latch to 5
+snd > [5] 1
+rcv 3, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506419
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5264000, -5255000, -5261000, -5266000, -5250000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 67
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506446
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1684136
+latch to 4
+snd > [4] 1
+rcv @, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506432
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4142000, -4143000, -4147000, -4144000, -4140000, -4144000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 67
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506459
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1697731
+latch to 5
+snd > [5] 1
+rcv N, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506446
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5251000, -5250000, -5262000, -5259000, -5251000, -5257000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 68
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506473
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 1711366
+latch to 4
+snd > [4] 1
+rcv [, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506459
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4148000, -4146000, -4143000, -4152000, -4147000, -4152000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 68
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506486
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1724748
+latch to 5
+snd > [5] 1
+rcv i, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506473
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5252000, -5249000, -5266000, -5253000, -5261000, -5262000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 69
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496506500
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1738594
+latch to 4
+snd > [4] 1
+rcv v, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506486
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4156000, -4156000, -4136000, -4142000, -4150000, -4147000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 69
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496506514
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1751767
+latch to 5
+snd > [5] 1
+rcv „, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506500
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5249000, -5259000, -5253000, -5264000, -5254000, -5264000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 70
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506527
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1765823
+latch to 4
+snd > [4] 1
+rcv ’, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506514
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4156000, -4144000, -4148000, -4149000, -4152000, -4141000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 70
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506541
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1778785
+latch to 5
+snd > [5] 1
+rcv Ÿ, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506527
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5248000, -5266000, -5261000, -5259000, -5268000, -5249000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 71
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496506554
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 1793050
+latch to 4
+snd > [4] 1
+rcv ­, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506541
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4147000, -4153000, -4138000, -4144000, -4149000, -4139000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 71
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496506568
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1805802
+latch to 5
+snd > [5] 1
+rcv º, 58 byte/s from node 5 [RX_RSSI:-52]: [5] 
+@: 1496506554
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5256000, -5258000, -5259000, -5263000, -5260000, -5250000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 72
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506581
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1820278
+latch to 4
+snd > [4] 1
+rcv È, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506568
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4147000, -4147000, -4141000, -4148000, -4144000, -4138000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 72
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506595
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1832820
+latch to 5
+snd > [5] 1
+rcv Õ, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506581
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5268000, -5267000, -5255000, -5256000, -5265000, -5258000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 73
+sd - writing to 100_5.csv
+Latch Timed Out
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506608
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1847507
+latch to 4
+snd > [4] 1
+rcv ã, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506595
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4146000, -4148000, -4130000, -4143000, -4134000, -4145000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 73
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506622
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1859870
+latch to 5
+snd > [5] 1
+rcv ð, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506608
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5266000, -5258000, -5256000, -5262000, -5255000, -5252000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 74
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506635
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 1874736
+latch to 4
+snd > [4] 1
+rcv þ, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506622
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4145000, -4141000, -4132000, -4139000, -4146000, -4138000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 74
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506650
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 1886888
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506635
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5256000, -5261000, -5269000, -5263000, -5259000, -5269000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 75
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506662
+rcv t, 1 byte/s from node 2 [RX_RSSI:-29]: t 2: not latched
+snd > [2] 1496506670
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1901963
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506650
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4137000, -4157000, -4153000, -4155000, -4153000, -4152000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 75
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496506677
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1913909
+latch to 5
+snd > [5] 1
+rcv &, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506662
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5265000, -5265000, -5256000, -5262000, -5260000, -5260000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 76
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496506689
+rcv p, 1 byte/s from node 2 [RX_RSSI:-29]: 2: p 1921124
+latch to 2
+snd > [2] 1
+rcv ., 58 byte/s from node 2 [RX_RSSI:-27]: [2] 
+@: 1496506670
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -54, 69, -5066000, -5054000, -5054000, -5053000, -5062000, -5055000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 12
+sd - writing to 100_2.csv
+rcv r, 1 byte/s from node 2 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1929192
+latch to 4
+snd > [4] 1
+rcv 5, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506677
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4142000, -4155000, -4156000, -4137000, -4140000, -4147000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 76
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506704
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1940926
+latch to 5
+snd > [5] 1
+rcv A, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506689
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5256000, -5258000, -5253000, -5266000, -5258000, -5251000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 77
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506716
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1956420
+latch to 4
+snd > [4] 1
+rcv P, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506704
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4163000, -4130000, -4148000, -4141000, -4145000, -4135000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 77
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506731
+rcv t, 1 byte/s from node 1 [RX_RSSI:-28]: t 1: not latched
+snd > [1] 1496506740
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1967945
+latch to 5
+snd > [5] 1
+rcv \, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506716
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5270000, -5258000, -5256000, -5259000, -5266000, -5257000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 78
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506743
+rcv t, 1 byte/s from node 3 [RX_RSSI:-28]: t 3: not latched
+snd > [3] 1496506747
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 1983647
+latch to 4
+snd > [4] 1
+rcv k, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506731
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4143000, -4139000, -4143000, -4143000, -4144000, -4139000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 78
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506759
+rcv p, 1 byte/s from node 1 [RX_RSSI:-28]: 1: p 1992791
+latch to 1
+snd > [1] 1
+rcv t, 58 byte/s from node 1 [RX_RSSI:-26]: [1] 
+@: 1496506740
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3646, 3478, -45724998, 15939000, -3951000, -3954000, -3946000, -3941000, 
+temps: 24, 24, 24, 25, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 10
+sd - writing to 100_1.csv
+rcv r, 1 byte/s from node 1 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 1994963
+latch to 5
+snd > [5] 1
+rcv w, 58 byte/s from node 5 [RX_RSSI:-52]: [5] 
+@: 1496506743
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5266000, -5273000, -5255000, -5255000, -5274000, -5257000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 79
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506770
+rcv p, 1 byte/s from node 3 [RX_RSSI:-29]: 3: p 1999041
+latch to 3
+snd > [3] 1
+rcv {, 58 byte/s from node 3 [RX_RSSI:-24]: [3] 
+@: 1496506747
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4164000, -4160000, -4156000, -4154000, -4149000, -4144000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 12
+sd - writing to 100_3.csv
+rcv r, 1 byte/s from node 3 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2010875
+latch to 4
+snd > [4] 1
+rcv ‡, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506759
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4139000, -4148000, -4158000, -4155000, -4134000, -4140000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 79
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506786
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2021983
+latch to 5
+snd > [5] 1
+rcv ’, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506770
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5258000, -5253000, -5276000, -5257000, -5247000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 80
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506797
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2038105
+latch to 4
+snd > [4] 1
+rcv ¢, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506786
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4145000, -4132000, -4152000, -4152000, -4142000, -4142000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 80
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506813
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2049042
+latch to 5
+snd > [5] 1
+rcv ­, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506797
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5260000, -5259000, -5254000, -5252000, -5267000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 81
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506824
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 2065332
+latch to 4
+snd > [4] 1
+rcv ½, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506813
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4140000, -4161000, -4148000, -4153000, -4146000, -4162000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 81
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506840
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2076060
+latch to 5
+snd > [5] 1
+rcv È, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506824
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5260000, -5262000, -5254000, -5267000, -5264000, -5270000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 82
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506851
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2092560
+latch to 4
+snd > [4] 1
+rcv Ø, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506840
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4152000, -4142000, -4148000, -4141000, -4146000, -4143000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 82
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506867
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2103078
+latch to 5
+snd > [5] 1
+rcv ã, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506851
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5253000, -5261000, -5260000, -5252000, -5257000, -5260000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 83
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506878
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2119788
+latch to 4
+snd > [4] 1
+rcv ó, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506867
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4145000, -4144000, -4154000, -4141000, -4156000, -4141000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 83
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506895
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 2130098
+latch to 5
+snd > [5] 1
+rcv þ, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506878
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5256000, -5260000, -5254000, -5262000, -5256000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 84
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506905
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2147015
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506895
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4144000, -4143000, -4142000, -4145000, -4152000, -4151000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 84
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506922
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2157218
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506905
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5256000, -5264000, -5256000, -5255000, -5255000, -5264000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 85
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506932
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2174243
+latch to 4
+snd > [4] 1
+rcv *, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496506922
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4147000, -4146000, -4141000, -4141000, -4142000, -4158000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 85
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496506949
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2184239
+latch to 5
+snd > [5] 1
+rcv 4, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506932
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5262000, -5250000, -5266000, -5268000, -5269000, -5258000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 86
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496506959
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2201472
+latch to 4
+snd > [4] 1
+rcv E, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506949
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4157000, -4146000, -4157000, -4163000, -4136000, -4151000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 86
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496506976
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 2211256
+latch to 5
+snd > [5] 1
+rcv O, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496506959
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5250000, -5255000, -5256000, -5261000, -5261000, -5261000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 87
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496506986
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2228701
+latch to 4
+snd > [4] 1
+rcv `, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496506976
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4146000, -4140000, -4140000, -4155000, -4141000, -4154000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 87
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496507003
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 2238274
+latch to 5
+snd > [5] 1
+rcv j, 58 byte/s from node 5 [RX_RSSI:-50]: [5] 
+@: 1496506986
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5265000, -5245000, -5270000, -5254000, -5255000, -5258000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 88
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507013
+rcv t, 1 byte/s from node 2 [RX_RSSI:-29]: t 2: not latched
+snd > [2] 1496507018
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2255929
+latch to 4
+snd > [4] 1
+rcv {, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496507003
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4151000, -4158000, -4143000, -4153000, -4143000, -4149000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 88
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496507031
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2265291
+latch to 5
+snd > [5] 1
+rcv …, 58 byte/s from node 5 [RX_RSSI:-50]: [5] 
+@: 1496507013
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5270000, -5254000, -5263000, -5253000, -5252000, -5265000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 89
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507040
+rcv p, 1 byte/s from node 2 [RX_RSSI:-29]: 2: p 2269368
+latch to 2
+snd > [2] 1
+rcv Š, 58 byte/s from node 2 [RX_RSSI:-28]: [2] 
+@: 1496507018
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -54, 69, -5062000, -5060000, -5053000, -5060000, -5066000, -5058000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 13
+sd - writing to 100_2.csv
+rcv r, 1 byte/s from node 2 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2283157
+latch to 4
+snd > [4] 1
+rcv —, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496507031
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4149000, -4142000, -4137000, -4153000, -4141000, -4140000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 89
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496507058
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 2292310
+latch to 5
+snd > [5] 1
+rcv  , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507040
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5260000, -5260000, -5254000, -5252000, -5254000, -5265000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 90
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507067
+rcv t, 1 byte/s from node 1 [RX_RSSI:-28]: t 1: not latched
+snd > [1] 1496507081
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2310384
+latch to 4
+snd > [4] 1
+rcv ², 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496507058
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4140000, -4145000, -4152000, -4142000, -4136000, -4155000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 90
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496507085
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2319326
+latch to 5
+snd > [5] 1
+rcv », 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507067
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5262000, -5265000, -5261000, -5258000, -5260000, -5262000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 91
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507094
+rcv t, 1 byte/s from node 3 [RX_RSSI:-29]: t 3: not latched
+snd > [3] 1496507098
+rcv p, 1 byte/s from node 1 [RX_RSSI:-29]: 1: p 2333822
+latch to 1
+snd > [1] 1
+rcv É, 58 byte/s from node 1 [RX_RSSI:-26]: [1] 
+@: 1496507081
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3645, 3478, -45751001, 15951000, -3959000, -3953000, -3952000, -3939000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 24
+ battery voltage: 12
+ cnt: 11
+sd - writing to 100_1.csv
+rcv r, 1 byte/s from node 1 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 2337654
+latch to 4
+snd > [4] 1
+rcv Í, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507085
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4148000, -4149000, -4146000, -4151000, -4143000, -4144000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 91
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496507112
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 2346342
+latch to 5
+snd > [5] 1
+rcv Ö, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507094
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5263000, -5251000, -5255000, -5262000, -5270000, -5260000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 92
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507121
+rcv p, 1 byte/s from node 3 [RX_RSSI:-28]: 3: p 2350455
+latch to 3
+snd > [3] 1
+rcv Ú, 58 byte/s from node 3 [RX_RSSI:-25]: [3] 
+@: 1496507098
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4155000, -4158000, -4142000, -4151000, -4153000, -4151000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 13
+sd - writing to 100_3.csv
+rcv r, 1 byte/s from node 3 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 2364880
+latch to 4
+snd > [4] 1
+rcv è, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507112
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4151000, -4149000, -4137000, -4157000, -4148000, -4148000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 92
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496507140
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2373425
+latch to 5
+snd > [5] 1
+rcv ñ, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507121
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5262000, -5263000, -5259000, -5261000, -5253000, -5246000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 93
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507148
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2392107
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507140
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4144000, -4140000, -4150000, -4145000, -4156000, -4138000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 93
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507167
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 2400442
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507148
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5253000, -5262000, -5250000, -5258000, -5255000, -5255000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 94
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507175
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2419332
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507167
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4151000, -4154000, -4147000, -4152000, -4139000, -4143000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 94
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496507194
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2427458
+latch to 5
+snd > [5] 1
+rcv ', 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507175
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5253000, -5260000, -5259000, -5266000, -5270000, -5262000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 95
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507202
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2446559
+latch to 4
+snd > [4] 1
+rcv :, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507194
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4135000, -4144000, -4150000, -4144000, -4144000, -4143000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 95
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496507221
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2454475
+latch to 5
+snd > [5] 1
+rcv B, 58 byte/s from node 5 [RX_RSSI:-50]: [5] 
+@: 1496507202
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5265000, -5266000, -5264000, -5255000, -5255000, -5265000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 96
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507229
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2473787
+latch to 4
+snd > [4] 1
+rcv U, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496507221
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4152000, -4150000, -4149000, -4147000, -4151000, -4155000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 96
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507248
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 2481543
+latch to 5
+snd > [5] 1
+rcv ], 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507229
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5258000, -5251000, -5266000, -5255000, -5270000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 97
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507256
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2501014
+latch to 4
+snd > [4] 1
+rcv p, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496507248
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4141000, -4137000, -4152000, -4141000, -4153000, -4150000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 97
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496507276
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 2508560
+latch to 5
+snd > [5] 1
+rcv x, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507256
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5256000, -5262000, -5254000, -5263000, -5260000, -5262000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 98
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507283
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2528241
+latch to 4
+snd > [4] 1
+rcv Œ, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507276
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4144000, -4147000, -4143000, -4144000, -4139000, -4151000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 98
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507303
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2535577
+latch to 5
+snd > [5] 1
+rcv “, 58 byte/s from node 5 [RX_RSSI:-52]: [5] 
+@: 1496507283
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5266000, -5262000, -5259000, -5258000, -5260000, -5253000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 99
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507310
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2555469
+latch to 4
+snd > [4] 1
+rcv §, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507303
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4141000, -4156000, -4139000, -4144000, -4158000, -4145000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 99
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496507330
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2562613
+latch to 5
+snd > [5] 1
+rcv ®, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507310
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5264000, -5261000, -5245000, -5259000, -5252000, -5266000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 100
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507337
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2582696
+latch to 4
+snd > [4] 1
+rcv Â, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496507330
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4149000, -4139000, -4144000, -4137000, -4130000, -4136000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 100
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507357
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 2589630
+latch to 5
+snd > [5] 1
+rcv É, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507337
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5250000, -5247000, -5255000, -5256000, -5252000, -5257000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 101
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507364
+rcv t, 1 byte/s from node 2 [RX_RSSI:-29]: t 2: not latched
+snd > [2] 1496507366
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2609922
+latch to 4
+snd > [4] 1
+rcv Ý, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507357
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4147000, -4145000, -4136000, -4146000, -4145000, -4145000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 101
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507384
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 2616650
+latch to 5
+snd > [5] 1
+rcv ä, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507364
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5261000, -5265000, -5267000, -5266000, -5262000, -5258000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 102
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv p, 1 byte/s from node 2 [RX_RSSI:-29]: 2: p 2617632
+latch to 2
+snd > [2] 1
+rcv æ, 58 byte/s from node 2 [RX_RSSI:-28]: [2] 
+@: 1496507366
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -54, 69, -5056000, -5053000, -5055000, -5047000, -5053000, -5065000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 14
+sd - writing to 100_2.csv
+rcv r, 1 byte/s from node 2 [RX_RSSI:-29]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496507391
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 2637148
+latch to 4
+snd > [4] 1
+rcv ø, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496507384
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4142000, -4139000, -4135000, -4137000, -4142000, -4139000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 102
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496507412
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 2643667
+latch to 5
+snd > [5] 1
+rcv ÿ, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507391
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5260000, -5257000, -5258000, -5261000, -5247000, -5266000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 103
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507418
+rcv t, 1 byte/s from node 1 [RX_RSSI:-29]: t 1: not latched
+snd > [1] 1496507422
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 2664374
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507412
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4143000, -4137000, -4147000, -4140000, -4140000, -4128000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 103
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507439
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2670728
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507418
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5259000, -5254000, -5264000, -5266000, -5279000, -5248000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 104
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507445
+rcv p, 1 byte/s from node 1 [RX_RSSI:-29]: 1: p 2674863
+latch to 1
+snd > [1] 1
+rcv , 58 byte/s from node 1 [RX_RSSI:-26]: [1] 
+@: 1496507422
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3644, 3478, -45668998, 16042000, -3949000, -3949000, -3942000, -3953000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 12
+sd - writing to 100_1.csv
+rcv r, 1 byte/s from node 1 [RX_RSSI:-29]: r unlatched
+
+rcv t, 1 byte/s from node 3 [RX_RSSI:-29]: t 3: not latched
+snd > [3] 1496507450
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 2691600
+latch to 4
+snd > [4] 1
+rcv /, 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496507439
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4146000, -4151000, -4144000, -4144000, -4145000, -4145000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 104
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-55]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496507466
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 2697746
+latch to 5
+snd > [5] 1
+rcv 5, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507445
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5264000, -5260000, -5256000, -5260000, -5262000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 105
+sd - writing to 100_5.csv
+Latch Timed Out
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507472
+rcv p, 1 byte/s from node 3 [RX_RSSI:-27]: 3: p 2701885
+latch to 3
+snd > [3] 1
+rcv :, 58 byte/s from node 3 [RX_RSSI:-27]: [3] 
+@: 1496507450
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4143000, -4154000, -4148000, -4161000, -4141000, -4155000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 14
+sd - writing to 100_3.csv
+rcv r, 1 byte/s from node 3 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 2718827
+latch to 4
+snd > [4] 1
+rcv J, 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496507466
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4134000, -4144000, -4132000, -4130000, -4156000, -4154000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 105
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-55]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496507493
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 2724797
+latch to 5
+snd > [5] 1
+rcv P, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507472
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5258000, -5253000, -5246000, -5257000, -5257000, -5255000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 106
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496507499
+rcv p, 1 byte/s from node 4 [RX_RSSI:-55]: 4: p 2746053
+latch to 4
+snd > [4] 1
+rcv e, 58 byte/s from node 4 [RX_RSSI:-55]: [4] 
+@: 1496507493
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4136000, -4142000, -4146000, -4143000, -4138000, -4135000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 106
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-55]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-55]: t 4: not latched
+snd > [4] 1496507521
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 2751813
+latch to 5
+snd > [5] Failed . . . no ack
+Latch Timed Out
+rcv t, 1 byte/s from node 5 [RX_RSSI:-50]: t 5: not latched
+snd > [5] 1496507527
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 2773279
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507521
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4146000, -4139000, -4148000, -4152000, -4152000, -4141000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 107
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507548
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2779098
+latch to 5
+snd > [5] 1
+rcv —, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507799
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5275000, -5252000, -5265000, -5256000, -5249000, -5254000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 107
+sd - writing to 100_5.csv
+rcv ‡, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507527
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5243000, -5255000, -5263000, -5252000, -5267000, -5260000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 108
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-50]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507554
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 2800506
+latch to 4
+snd > [4] 1
+rcv œ, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507548
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4139000, -4141000, -4144000, -4152000, -4145000, -4143000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 108
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507575
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2806218
+latch to 5
+snd > [5] 1
+rcv ¢, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507554
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5252000, -5253000, -5252000, -5256000, -5252000, -5246000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 109
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-52]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507581
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2827732
+latch to 4
+snd > [4] 1
+rcv ·, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507575
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4137000, -4139000, -4138000, -4155000, -4142000, -4146000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 109
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496507602
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2833236
+latch to 5
+snd > [5] 1
+rcv ½, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507581
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5243000, -5248000, -5259000, -5265000, -5260000, -5247000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 110
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507608
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2854960
+latch to 4
+snd > [4] 1
+rcv Ò, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507602
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4145000, -4135000, -4143000, -4135000, -4140000, -4144000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 110
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507629
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2860254
+latch to 5
+snd > [5] 1
+rcv Ø, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507608
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5262000, -5243000, -5257000, -5253000, -5246000, -5258000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 111
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507635
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 2882186
+latch to 4
+snd > [4] 1
+rcv í, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507629
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4137000, -4143000, -4141000, -4141000, -4139000, -4130000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 111
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507657
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2887271
+latch to 5
+snd > [5] 1
+rcv ó, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507635
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5255000, -5260000, -5268000, -5266000, -5248000, -5250000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 112
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507662
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 2909412
+latch to 4
+snd > [4] 1
+rcv 	, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507657
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4141000, -4137000, -4145000, -4141000, -4144000, -4144000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 112
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507684
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2914290
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-52]: [5] 
+@: 1496507662
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5258000, -5248000, -5247000, -5250000, -5251000, -5253000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 113
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507689
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2936638
+latch to 4
+snd > [4] 1
+rcv $, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507684
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4148000, -4140000, -4140000, -4138000, -4129000, -4147000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 113
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507711
+rcv t, 1 byte/s from node 2 [RX_RSSI:-29]: t 2: not latched
+snd > [2] 1496507714
+rcv p, 1 byte/s from node 5 [RX_RSSI:-52]: 5: p 2941306
+latch to 5
+snd > [5] 1
+rcv ), 58 byte/s from node 5 [RX_RSSI:-52]: [5] 
+@: 1496507689
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5259000, -5252000, -5265000, -5261000, -5247000, -5249000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 114
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-52]: t 5: not latched
+snd > [5] 1496507716
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 2963863
+latch to 4
+snd > [4] 1
+rcv ?, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507711
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4143000, -4142000, -4154000, -4137000, -4130000, -4145000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 114
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507738
+rcv p, 1 byte/s from node 2 [RX_RSSI:-29]: 2: p 2965875
+latch to 2
+snd > [2] 1
+rcv B, 58 byte/s from node 2 [RX_RSSI:-27]: [2] 
+@: 1496507714
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -54, 69, -5047000, -5056000, -5071000, -5062000, -5055000, -5057000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 15
+sd - writing to 100_2.csv
+rcv r, 1 byte/s from node 2 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2968325
+latch to 5
+snd > [5] 1
+rcv D, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507716
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5250000, -5250000, -5247000, -5240000, -5245000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 115
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507743
+rcv t, 1 byte/s from node 1 [RX_RSSI:-29]: t 1: not latched
+snd > [1] 1496507763
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 2991091
+latch to 4
+snd > [4] 1
+rcv Z, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507738
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4148000, -4140000, -4147000, -4139000, -4147000, -4140000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 115
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507765
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 2995343
+latch to 5
+snd > [5] 1
+rcv _, 58 byte/s from node 5 [RX_RSSI:-52]: [5] 
+@: 1496507743
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5263000, -5250000, -5250000, -5264000, -5256000, -5267000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 116
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-52]: t 5: not latched
+snd > [5] 1496507770
+rcv p, 1 byte/s from node 1 [RX_RSSI:-29]: 1: p 3015896
+latch to 1
+snd > [1] 1
+rcv s, 58 byte/s from node 1 [RX_RSSI:-26]: [1] 
+@: 1496507763
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3646, 3479, -45716000, 15966000, -3950000, -3965000, -3949000, -3945000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 13
+sd - writing to 100_1.csv
+rcv r, 1 byte/s from node 1 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3018319
+latch to 4
+snd > [4] 1
+rcv u, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507765
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4150000, -4129000, -4146000, -4158000, -4146000, -4137000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 116
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496507793
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3022360
+latch to 5
+snd > [5] 1
+rcv z, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507770
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5254000, -5248000, -5257000, -5263000, -5254000, -5261000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 117
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507797
+rcv t, 1 byte/s from node 3 [RX_RSSI:-28]: t 3: not latched
+snd > [3] 1496507801
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3045548
+latch to 4
+snd > [4] 1
+rcv ‘, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507793
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4130000, -4143000, -4156000, -4154000, -4148000, -4144000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 117
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507820
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3049397
+latch to 5
+snd > [5] 1
+rcv •, 58 byte/s from node 5 [RX_RSSI:-52]: [5] 
+@: 1496507797
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5242000, -5253000, -5258000, -5253000, -5245000, -5247000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 118
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507824
+rcv p, 1 byte/s from node 3 [RX_RSSI:-29]: 3: p 3053320
+latch to 3
+snd > [3] 1
+rcv ™, 58 byte/s from node 3 [RX_RSSI:-25]: [3] 
+@: 1496507801
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4164000, -4156000, -4143000, -4156000, -4158000, -4167000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 15
+sd - writing to 100_3.csv
+rcv r, 1 byte/s from node 3 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3072776
+latch to 4
+snd > [4] 1
+rcv ¬, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507820
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4147000, -4144000, -4130000, -4134000, -4133000, -4137000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 118
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507847
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3076414
+latch to 5
+snd > [5] 1
+rcv °, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507824
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5251000, -5246000, -5254000, -5256000, -5256000, -5252000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 119
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507851
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3100004
+latch to 4
+snd > [4] 1
+rcv Ç, 58 byte/s from node 4 [RX_RSSI:-58]: [4] 
+@: 1496507847
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4142000, -4133000, -4145000, -4150000, -4155000, -4135000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 119
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507874
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3103431
+latch to 5
+snd > [5] 1
+rcv Ë, 58 byte/s from node 5 [RX_RSSI:-52]: [5] 
+@: 1496507851
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5253000, -5252000, -5252000, -5260000, -5235000, -5256000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 120
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507878
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 3127234
+latch to 4
+snd > [4] 1
+rcv â, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507874
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4136000, -4144000, -4145000, -4133000, -4141000, -4142000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 120
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507901
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3130450
+latch to 5
+snd > [5] 1
+rcv æ, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507878
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5254000, -5245000, -5259000, -5264000, -5252000, -5252000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 121
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507905
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 3154460
+latch to 4
+snd > [4] 1
+rcv ý, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496507901
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4132000, -4140000, -4145000, -4135000, -4137000, -4146000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 121
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507929
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3157469
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-52]: [5] 
+@: 1496507905
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5258000, -5246000, -5259000, -5253000, -5257000, -5252000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 122
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507932
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 3181737
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507929
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4138000, -4130000, -4151000, -4143000, -4135000, -4137000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 122
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507956
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3184486
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507932
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5249000, -5242000, -5267000, -5256000, -5262000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 123
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507959
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3208964
+latch to 4
+snd > [4] 1
+rcv 4, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507956
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4135000, -4151000, -4141000, -4149000, -4138000, -4149000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 123
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496507983
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 3211503
+latch to 5
+snd > [5] 1
+rcv 7, 58 byte/s from node 5 [RX_RSSI:-52]: [5] 
+@: 1496507959
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5242000, -5258000, -5254000, -5254000, -5245000, -5251000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 124
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496507986
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3236190
+latch to 4
+snd > [4] 1
+rcv O, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496507983
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4152000, -4150000, -4138000, -4141000, -4142000, -4138000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 124
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508010
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 3238521
+latch to 5
+snd > [5] 1
+rcv R, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496507986
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5244000, -5246000, -5242000, -5257000, -5258000, -5243000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 125
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496508013
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 3263416
+latch to 4
+snd > [4] 1
+rcv j, 58 byte/s from node 4 [RX_RSSI:-58]: [4] 
+@: 1496508010
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4155000, -4147000, -4155000, -4154000, -4141000, -4146000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 125
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508038
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3265582
+latch to 5
+snd > [5] 1
+rcv m, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496508013
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5251000, -5248000, -5253000, -5241000, -5259000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 126
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496508040
+rcv t, 1 byte/s from node 2 [RX_RSSI:-29]: t 2: not latched
+snd > [2] 1496508062
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3290643
+latch to 4
+snd > [4] 1
+rcv †, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508038
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4141000, -4139000, -4149000, -4143000, -4153000, -4152000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 126
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508065
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3292600
+latch to 5
+snd > [5] 1
+rcv ˆ, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496508040
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5252000, -5255000, -5260000, -5265000, -5242000, -5246000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 127
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496508067
+rcv p, 1 byte/s from node 2 [RX_RSSI:-29]: 2: p 3314188
+latch to 2
+snd > [2] 1
+rcv ž, 58 byte/s from node 2 [RX_RSSI:-28]: [2] 
+@: 1496508062
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -54, 69, -5065000, -5051000, -5066000, -5054000, -5063000, -5058000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 16
+sd - writing to 100_2.csv
+rcv r, 1 byte/s from node 2 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 3317872
+latch to 4
+snd > [4] 1
+rcv ¡, 58 byte/s from node 4 [RX_RSSI:-56]: [4] 
+@: 1496508065
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4145000, -4138000, -4139000, -4148000, -4155000, -4139000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 127
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508092
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3319618
+latch to 5
+snd > [5] 1
+rcv £, 58 byte/s from node 5 [RX_RSSI:-52]: [5] 
+@: 1496508067
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5241000, -5250000, -5254000, -5254000, -5257000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 128
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496508094
+rcv t, 1 byte/s from node 1 [RX_RSSI:-28]: t 1: not latched
+snd > [1] 1496508104
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 3345099
+latch to 4
+snd > [4] 1
+rcv ¼, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508092
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4146000, -4134000, -4146000, -4144000, -4146000, -4134000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 128
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508119
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3346638
+latch to 5
+snd > [5] 1
+rcv ¾, 58 byte/s from node 5 [RX_RSSI:-52]: [5] 
+@: 1496508094
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5251000, -5256000, -5255000, -5256000, -5260000, -5253000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 129
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496508121
+rcv p, 1 byte/s from node 1 [RX_RSSI:-29]: 1: p 3356937
+latch to 1
+snd > [1] 1
+rcv È, 58 byte/s from node 1 [RX_RSSI:-25]: [1] 
+@: 1496508104
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3646, 3478, -45726000, 15946000, -3955000, -3951000, -3942000, -3949000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 14
+sd - writing to 100_1.csv
+rcv r, 1 byte/s from node 1 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3372327
+latch to 4
+snd > [4] 1
+rcv ×, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508119
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4144000, -4134000, -4142000, -4144000, -4147000, -4131000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 42
+ battery voltage: 12
+ cnt: 129
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508146
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5: p 3373657
+latch to 5
+snd > [5] 1
+rcv Ù, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496508121
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5264000, -5251000, -5261000, -5256000, -5247000, -5255000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 130
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496508148
+rcv t, 1 byte/s from node 3 [RX_RSSI:-28]: t 3: not latched
+snd > [3] 1496508152
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3399553
+latch to 4
+snd > [4] 1
+rcv ò, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508146
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4147000, -4146000, -4145000, -4157000, -4144000, -4146000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 130
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-52]: 5: p 3400677
+latch to 5
+snd > [5] 1
+rcv ô, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496508148
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5245000, -5244000, -5244000, -5256000, -5249000, -5246000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 131
+sd - writing to 100_5.csv
+rcv t, 1 byte/s from node 4 [RX_RSSI:-58]: t 4: not latched
+snd > [4] 1496508174
+Latch Timed Out
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496508175
+rcv p, 1 byte/s from node 3 [RX_RSSI:-29]: 3: p 3404734
+latch to 3
+snd > [3] 1
+rcv ø, 58 byte/s from node 3 [RX_RSSI:-25]: [3] 
+@: 1496508152
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4157000, -4153000, -4142000, -4155000, -4156000, -4154000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 16
+sd - writing to 100_3.csv
+rcv r, 1 byte/s from node 3 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 3426879
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508174
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4136000, -4139000, -4136000, -4141000, -4140000, -4139000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 131
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3427768
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496508175
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5259000, -5245000, -5248000, -5249000, -5254000, -5250000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 132
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496508201
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496508202
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3454106
+latch to 4
+snd > [4] 1
+rcv ), 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508201
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4145000, -4129000, -4144000, -4140000, -4141000, -4140000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 132
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3454786
+latch to 5
+snd > [5] 1
+rcv *, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496508202
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5251000, -5248000, -5248000, -5248000, -5259000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 133
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508228
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496508229
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 3481332
+latch to 4
+snd > [4] 1
+rcv D, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508228
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4151000, -4149000, -4145000, -4139000, -4146000, -4144000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 133
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3481804
+latch to 5
+snd > [5] 1
+rcv E, 58 byte/s from node 5 [RX_RSSI:-51]: [5] 
+@: 1496508229
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5253000, -5253000, -5246000, -5250000, -5249000, -5247000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 134
+sd - writing to 100_5.csv
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508255
+Latch Timed Out
+rcv t, 1 byte/s from node 5 [RX_RSSI:-52]: t 5: not latched
+snd > [5] 1496508256
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3508557
+latch to 4
+snd > [4] 1
+rcv _, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508255
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4141000, -4149000, -4135000, -4149000, -4134000, -4133000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 134
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-51]: 5: p 3508866
+latch to 5
+snd > [5] 1
+rcv `, 58 byte/s from node 5 [RX_RSSI:-52]: [5] 
+@: 1496508256
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5248000, -5260000, -5241000, -5254000, -5249000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 135
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-51]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508283
+rcv t, 1 byte/s from node 5 [RX_RSSI:-51]: t 5: not latched
+snd > [5] 1496508283
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3535783
+latch to 4
+snd > [4] 1
+rcv p, 1 byte/s from node 5 [RX_RSSI:-50]: 5:  - - - failed, already latched to 4
+5: not latched
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508310
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3562995
+latch to 4
+snd > [4] 1
+rcv –, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508310
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4146000, -4145000, -4140000, -4146000, -4144000, -4143000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 136
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508337
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 3590222
+latch to 4
+snd > [4] 1
+rcv ±, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508337
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4141000, -4150000, -4147000, -4158000, -4140000, -4132000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 137
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508364
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 3617448
+latch to 4
+snd > [4] 1
+rcv Ì, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508364
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4139000, -4149000, -4147000, -4132000, -4129000, -4145000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 138
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508391
+rcv t, 1 byte/s from node 2 [RX_RSSI:-29]: t 2: not latched
+snd > [2] 1496508410
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3644674
+latch to 4
+snd > [4] 1
+rcv ç, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508391
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4146000, -4136000, -4131000, -4151000, -4151000, -4139000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 139
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508419
+rcv p, 1 byte/s from node 2 [RX_RSSI:-29]: 2: p 3662505
+latch to 2
+snd > [2] 1
+rcv ú, 58 byte/s from node 2 [RX_RSSI:-28]: [2] 
+@: 1496508410
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -54, 69, -5058000, -5064000, -5051000, -5061000, -5062000, -5062000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 17
+sd - writing to 100_2.csv
+rcv r, 1 byte/s from node 2 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3671901
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508419
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4145000, -4136000, -4145000, -4130000, -4146000, -4131000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 140
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-58]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508446
+rcv p, 1 byte/s from node 1 [RX_RSSI:-28]: 1: p 3698069
+latch to 1
+snd > [1] 1
+rcv È, 58 byte/s from node 1 [RX_RSSI:-26]: [1] 
+@: 1496508104
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3646, 3478, -45738000, 15942000, -3962000, -3946000, -3948000, -3953000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 15
+sd - writing to 100_1.csv
+rcv r, 1 byte/s from node 1 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3699144
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508446
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4140000, -4139000, -4145000, -4137000, -4136000, -4156000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 141
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508473
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 3726370
+latch to 4
+snd > [4] 1
+rcv 9, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508473
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4138000, -4139000, -4156000, -4139000, -4144000, -4145000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 142
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508500
+rcv t, 1 byte/s from node 3 [RX_RSSI:-29]: t 3: not latched
+snd > [3] 1496508503
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3753597
+latch to 4
+snd > [4] 1
+rcv T, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508500
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4137000, -4142000, -4138000, -4146000, -4136000, -4141000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 143
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508528
+rcv p, 1 byte/s from node 3 [RX_RSSI:-29]: 3: p 3756169
+latch to 3
+snd > [3] 1
+rcv W, 58 byte/s from node 3 [RX_RSSI:-26]: [3] 
+@: 1496508503
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4148000, -4159000, -4155000, -4154000, -4150000, -4164000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 17
+sd - writing to 100_3.csv
+rcv r, 1 byte/s from node 3 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3780827
+latch to 4
+snd > [4] 1
+rcv p, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508528
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4146000, -4141000, -4149000, -4137000, -4143000, -4149000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 144
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508555
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3808054
+latch to 4
+snd > [4] 1
+rcv ‹, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508555
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4140000, -4126000, -4144000, -4153000, -4150000, -4140000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 145
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508582
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 3835281
+latch to 4
+snd > [4] 1
+rcv ¦, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508582
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4149000, -4147000, -4149000, -4151000, -4135000, -4144000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 146
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508609
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 3862509
+latch to 4
+snd > [4] 1
+rcv Á, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508609
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4147000, -4137000, -4155000, -4150000, -4134000, -4143000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 147
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496508636
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3889736
+latch to 4
+snd > [4] 1
+rcv Ü, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508636
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4130000, -4147000, -4141000, -4143000, -4150000, -4138000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 148
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508664
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 3916962
+latch to 4
+snd > [4] 1
+rcv ø, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508664
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4149000, -4142000, -4138000, -4143000, -4144000, -4139000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 149
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508691
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3944293
+latch to 4
+snd > [4] 1
+rcv , 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508691
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4144000, -4144000, -4144000, -4160000, -4154000, -4145000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 150
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496508718
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3971521
+latch to 4
+snd > [4] 1
+rcv ., 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508718
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -36, 86, -4152000, -4155000, -4144000, -4143000, -4140000, -4134000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 151
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508745
+rcv t, 1 byte/s from node 2 [RX_RSSI:-29]: t 2: not latched
+snd > [2] 1496508758
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 3998749
+latch to 4
+snd > [4] 1
+rcv I, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508745
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4150000, -4135000, -4134000, -4144000, -4151000, -4150000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 152
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508773
+rcv p, 1 byte/s from node 2 [RX_RSSI:-29]: 2: p 4010762
+latch to 2
+snd > [2] 1
+rcv V, 58 byte/s from node 2 [RX_RSSI:-27]: [2] 
+@: 1496508758
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -54, 69, -5067000, -5067000, -5056000, -5047000, -5059000, -5062000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 19
+ battery voltage: 12
+ cnt: 18
+sd - writing to 100_2.csv
+rcv r, 1 byte/s from node 2 [RX_RSSI:-29]: r unlatched
+
+rcv t, 1 byte/s from node 1 [RX_RSSI:-29]: t 1: not latched
+snd > [1] 1496508786
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 4025978
+latch to 4
+snd > [4] 1
+rcv e, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508773
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4139000, -4137000, -4154000, -4144000, -4139000, -4152000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 153
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-57]: t 4: not latched
+snd > [4] 1496508800
+rcv p, 1 byte/s from node 1 [RX_RSSI:-29]: 1: p 4039109
+latch to 1
+snd > [1] 1
+rcv r, 58 byte/s from node 1 [RX_RSSI:-25]: [1] 
+@: 1496508786
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3646, 3478, -45752998, 15955000, -3942000, -3945000, -3953000, -3951000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 16
+sd - writing to 100_1.csv
+rcv r, 1 byte/s from node 1 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 4 [RX_RSSI:-57]: 4: p 4053207
+latch to 4
+snd > [4] 1
+rcv €, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508800
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4140000, -4153000, -4144000, -4137000, -4149000, -4146000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 154
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-56]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496508827
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4: p 4080435
+latch to 4
+snd > [4] 1
+rcv ›, 58 byte/s from node 4 [RX_RSSI:-57]: [4] 
+@: 1496508827
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4144000, -4151000, -4141000, -4145000, -4145000, -4153000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 23
+ battery voltage: 12
+ cnt: 155
+sd - writing to 100_4.csv
+rcv r, 1 byte/s from node 4 [RX_RSSI:-57]: r unlatched
+
+rcv t, 1 byte/s from node 4 [RX_RSSI:-56]: t 4: not latched
+snd > [4] 1496508854
+rcv t, 1 byte/s from node 3 [RX_RSSI:-28]: t 3: not latched
+snd > [3] 1496508855
+rcv p, 1 byte/s from node 3 [RX_RSSI:-28]: 3: p 4107599
+latch to 3
+snd > [3] 1
+rcv p, 1 byte/s from node 4 [RX_RSSI:-56]: 4:  - - - failed, already latched to 3
+4: not latched
+rcv ·, 58 byte/s from node 3 [RX_RSSI:-26]: [3] 
+@: 1496508855
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4162000, -4152000, -4156000, -4151000, -4149000, -4146000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 18
+sd - writing to 100_3.csv
+rcv r, 1 byte/s from node 3 [RX_RSSI:-28]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-42]: 5: p 4332423
+latch to 5
+snd > [5] 1
+rcv r, 1 byte/s from node 5 [RX_RSSI:-41]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-42]: t 5: not latched
+snd > [5] 1496509105
+rcv t, 1 byte/s from node 2 [RX_RSSI:-29]: t 2: not latched
+snd > [2] 1496509106
+rcv t, 1 byte/s from node 1 [RX_RSSI:-29]: t 1: not latched
+snd > [1] 1496509127
+rcv p, 1 byte/s from node 5 [RX_RSSI:-41]: 5: p 4357912
+latch to 5
+snd > [5] 1
+rcv ±, 58 byte/s from node 5 [RX_RSSI:-41]: [5] 
+@: 1496509105
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5249000, -5255000, -5277000, -5254000, -5247000, -5252000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 28
+ battery voltage: 12
+ cnt: 1
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-42]: r unlatched
+
+rcv p, 1 byte/s from node 2 [RX_RSSI:-30]: 2: p 4359055
+latch to 2
+snd > [2] 1
+rcv t, 1 byte/s from node 5 [RX_RSSI:-42]: t 5: not latched
+snd > [5] 1496509131
+rcv r, 1 byte/s from node 2 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 1 [RX_RSSI:-28]: 1: p 4380146
+latch to 1
+snd > [1] 1
+rcv Ç, 58 byte/s from node 1 [RX_RSSI:-28]: [1] 
+@: 1496509127
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : 3643, 3478, -45696998, 15949000, -3957000, -3941000, -3946000, -3944000, 
+temps: 24, 24, 25, 25, 0, 0, 0, 0, 
+ temp: 24
+ battery voltage: 12
+ cnt: 17
+sd - writing to 100_1.csv
+rcv r, 1 byte/s from node 1 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-43]: 5: p 4385063
+latch to 5
+snd > [5] 1
+rcv Ë, 58 byte/s from node 5 [RX_RSSI:-43]: [5] 
+@: 1496509131
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5263000, -5253000, -5261000, -5254000, -5260000, -5254000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 26
+ battery voltage: 12
+ cnt: 2
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-43]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-43]: t 5: not latched
+snd > [5] 1496509159
+rcv p, 1 byte/s from node 5 [RX_RSSI:-43]: 5: p 4412083
+latch to 5
+snd > [5] 1
+rcv ç, 58 byte/s from node 5 [RX_RSSI:-43]: [5] 
+@: 1496509159
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5257000, -5258000, -5250000, -5254000, -5254000, -5261000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 3
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-43]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-44]: t 5: not latched
+snd > [5] 1496509186
+rcv t, 1 byte/s from node 3 [RX_RSSI:-29]: t 3: not latched
+snd > [3] 1496509206
+rcv p, 1 byte/s from node 5 [RX_RSSI:-44]: 5: p 4439102
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-44]: [5] 
+@: 1496509186
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5253000, -5255000, -5255000, -5252000, -5262000, -5241000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 4
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-44]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-44]: t 5: not latched
+snd > [5] 1496509213
+rcv p, 1 byte/s from node 3 [RX_RSSI:-28]: 3: p 4459073
+latch to 3
+snd > [3] 1
+rcv , 58 byte/s from node 3 [RX_RSSI:-25]: [3] 
+@: 1496509206
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -37, 86, -4158000, -4147000, -4147000, -4144000, -4160000, -4158000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 22
+ battery voltage: 12
+ cnt: 19
+sd - writing to 100_3.csv
+rcv r, 1 byte/s from node 3 [RX_RSSI:-29]: r unlatched
+
+rcv p, 1 byte/s from node 5 [RX_RSSI:-45]: 5: p 4466120
+latch to 5
+snd > [5] 1
+rcv , 58 byte/s from node 5 [RX_RSSI:-46]: [5] 
+@: 1496509213
+     : Y0	Y1	Y2	Y3	Y4	Y5	Y6	Y7
+wts  : -58, 65, -5256000, -5240000, -5259000, -5267000, -5257000, -5239000, 
+temps: 0, 0, 0, 0, 0, 0, 0, 0, 
+ temp: 25
+ battery voltage: 12
+ cnt: 5
+sd - writing to 100_5.csv
+rcv r, 1 byte/s from node 5 [RX_RSSI:-45]: r unlatched
+
+rcv t, 1 byte/s from node 5 [RX_RSSI:-47]: t 5: not latched
+snd > [5] 1496509240

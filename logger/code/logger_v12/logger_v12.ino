@@ -98,7 +98,8 @@ void loop() {
   bool ping = false;
 
   if (radio.receiveDone()) { //if recieve packets from sensor...
-    DEBUG("rcv ");DEBUG(radio.DATA[0]);DEBUG(", ");DEBUG(radio.DATALEN); DEBUG(" byte/s from node "); DEBUG(radio.SENDERID); DEBUG(": ");
+    DEBUG("rcv ");DEBUG(char(radio.DATA[0]));DEBUG(", ");DEBUG(radio.DATALEN); DEBUG(" byte/s from node "); DEBUG(radio.SENDERID); 
+    DEBUG(" [RX_RSSI:"); DEBUG(radio.RSSI); DEBUG("]");DEBUG(": ");
     lastRequesterNodeID = radio.SENDERID; //SENDERID is the Node ID of the device that sent the packet of data
     rtc.update();
     now = rtc.unixtime(); //record time of this event
@@ -155,13 +156,13 @@ void loop() {
     DEBUGln("     : Y0\tY1\tY2\tY3\tY4\tY5\tY6\tY7");
     DEBUG("wts  : ");
     for(int i = 0; i < 8; i++) {
-      DEBUG(float(thePayload.w[i])/10000.0); //this is computationally expensive
-      DEBUG(",\t");
+      DEBUG(thePayload.w[i]/10); //grams
+      DEBUG(", ");
     }
     DEBUGln();DEBUG("temps: ");
     for(int i = 0; i < 8; i++) {
       DEBUG(thePayload.t[i]/100);
-      DEBUG(",\t");
+      DEBUG(", ");
     }
     DEBUGln();
     DEBUG(" temp: "); DEBUGln(thePayload.board_temp);

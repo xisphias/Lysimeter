@@ -1,3 +1,4 @@
+library(ggplot2)
 # dat<-read.csv("test_20170601_100_9.csv")
 # dat$DateTime<-as.POSIXct(dat$unixtime+(8*60*60), origin="1970-01-01") #corrects for setting rtc to akdt
 # dat<-read.csv("/Volumes/NO NAME/100_1.csv")
@@ -13,4 +14,9 @@ ggplot(dat[-1,],aes(x=DateTime,y=ch1Temp))+geom_line()+geom_line(aes(y=ch2Temp),
 ggplot(dat[-1,],aes(x=DateTime,y=ch1Temp))+geom_line()+geom_line(aes(y=ch2Temp),color=2)
 testdat<-data.frame(xx=1:8,yy=1:8)
 ggplot(testdat,aes(x=xx,y=yy))+geom_point(colour=1:8,size=12)+geom_text(aes(x=xx,y=yy),label=1:8)
+
 tail(dat)
+
+100 * ((14700+3820) * readings * (3.3/1023)) / 3820
+(14700+3820)*1022*3.3/1023
+100*(((14700+3820)/1023.0)*(1022*3.3))/3820
