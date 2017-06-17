@@ -110,6 +110,9 @@ void loop() {
       DEBUG(radio.SENDERID); DEBUG(": ");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/noLatch
 =======
 >>>>>>> origin/noLatch
       DEBUG("p ");
@@ -129,6 +132,7 @@ void loop() {
       DEBUG("["); DEBUG(radio.SENDERID); DEBUGln("] ");
       DEBUG("@: "); DEBUGln(thePayload.time);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       if(NodeID_latch < 0) {
@@ -171,6 +175,8 @@ void loop() {
       }
     } else { DEBUG(radio.SENDERID); DEBUGln(": not latched"); }
 >>>>>>> master
+=======
+>>>>>>> origin/noLatch
 =======
 >>>>>>> origin/noLatch
     if(radio.ACKRequested()){
