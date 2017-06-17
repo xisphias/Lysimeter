@@ -4,6 +4,9 @@ library(ggplot2)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/noLatch
 =======
 >>>>>>> origin/noLatch
 =======
@@ -23,6 +26,7 @@ testdat<-data.frame(xx=1:8,yy=1:8)
 ggplot(testdat,aes(x=xx,y=yy))+geom_point(colour=1:8,size=12)+geom_text(aes(x=xx,y=yy),label=1:8)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 dat<-read.csv("/Volumes/NO NAME/100_1.csv")
 dat<-read.csv("/Volumes/NO NAME/100_2.csv")
@@ -36,6 +40,9 @@ ggplot(dat[,],aes(x=DateTime,y=y1g))+geom_line()
 ggplot(dat,aes(x=DateTime,y=y1g))+geom_line()+geom_line(aes(y=y2g),colour=2)
 ggplot(dat,aes(x=DateTime,y=y1tC))+geom_line()+geom_line(aes(y=y2tC),color=2)
 >>>>>>> master
+=======
+
+>>>>>>> origin/noLatch
 =======
 
 >>>>>>> origin/noLatch

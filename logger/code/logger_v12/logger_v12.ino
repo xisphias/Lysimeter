@@ -111,6 +111,9 @@ void loop() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/noLatch
 =======
 >>>>>>> origin/noLatch
 =======
@@ -132,6 +135,7 @@ void loop() {
       DEBUG("["); DEBUG(radio.SENDERID); DEBUGln("] ");
       DEBUG("@: "); DEBUGln(thePayload.time);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -175,6 +179,8 @@ void loop() {
       }
     } else { DEBUG(radio.SENDERID); DEBUGln(": not latched"); }
 >>>>>>> master
+=======
+>>>>>>> origin/noLatch
 =======
 >>>>>>> origin/noLatch
 =======
