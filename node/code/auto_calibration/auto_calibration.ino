@@ -51,7 +51,7 @@ const int eX = A5; //Thermister excitation voltage
 
 float calibration_factor = 54509;//54672; //52298.5;
 float zero_factor = 7200;//-4160; //24570;//-23350;//-2200;
-int weight = 3418;
+int weight = 3900; //3418;
 bool zero = true;
 bool cali = false;
 int pin = 0;
@@ -67,7 +67,8 @@ void setup() {
   digitalWrite(6, LOW); //enable mux
   pinMode(zInput, INPUT); // Set up Z as an input
   pinMode(eX, OUTPUT); // Set excitation
-  digitalWrite(eX, LOW);
+  //digitalWrite(eX, LOW);
+  digitalWrite(eX, HIGH); //turn on thermister
   Serial.println("HX711 calibration mux sketch ch1 y0");
   Serial.println("Remove all weight from scale");
   Serial.println("After readings begin, place known weight on scale");
@@ -94,12 +95,14 @@ void loop() {
     scale.set_scale();
     scale.set_offset(zero_factor);
     scale.set_scale(calibration_factor); //Adjust to this calibration factor
-  Serial.println("scale ready");
+  Serial.print("scale ready \t");
+  int reading = temp.getTemp();  
+  Serial.println(String(reading) + "C\t");
      Serial.print("--calibration_factor: ");
      Serial.print(calibration_factor);
      Serial.print("-- zero: ");
      Serial.println(zero_factor);
-     
+ 
   if(Serial.available())
     {
       char temp = Serial.read();

@@ -109,15 +109,6 @@ void loop() {
     if(radio.DATALEN == 1 && radio.DATA[0] == 'p') {
       DEBUG(radio.SENDERID); DEBUG(": ");
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/noLatch
-=======
->>>>>>> origin/noLatch
-=======
->>>>>>> origin/noLatch
       DEBUG("p ");
       ping = true;
     }
@@ -135,9 +126,6 @@ void loop() {
       DEBUG("["); DEBUG(radio.SENDERID); DEBUGln("] ");
       DEBUG("@: "); DEBUGln(thePayload.time);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
       if(NodeID_latch < 0) {
         DEBUG("p ");
@@ -179,12 +167,6 @@ void loop() {
       }
     } else { DEBUG(radio.SENDERID); DEBUGln(": not latched"); }
 >>>>>>> master
-=======
->>>>>>> origin/noLatch
-=======
->>>>>>> origin/noLatch
-=======
->>>>>>> origin/noLatch
     if(radio.ACKRequested()){
       radio.sendACK();
     }
