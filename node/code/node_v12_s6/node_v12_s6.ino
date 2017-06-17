@@ -13,13 +13,13 @@
 /****************************************************************************/
 /***********************    DON'T FORGET TO SET ME    ***********************/
 /****************************************************************************/
-#define NODEID    3 //Node Address
+#define NODEID    6 //Node Address
 #define NETWORKID 100 //Network to communicate on
 /****************************************************************************/
 
 #define GATEWAYID 0 //Address of datalogger/reciever
 #define FREQUENCY RF69_433MHZ
-#define ATC_RSSI -70 //ideal Signal Strength of trasmission
+//#define ATC_RSSI -70 //ideal Signal Strength of trasmission
 #define ACK_WAIT_TIME 100 // # of ms to wait for an ack
 #define ACK_RETRIES 10 // # of attempts before giving up
 #define DOUT  8
@@ -40,8 +40,8 @@ const int bat_div_R2 = 3820;
 const uint8_t scaleNmeasurements = 10; //no times to measure load cell for average
 const int muxSelectPins[3] = {3, 4, 5}; // S0~3, S1~4, S2~5
 // Define calibration for LC   Y0   , Y1  , Y2  , Y3  , Y4  , Y5  , Y6  , Y8  }
-long calibration_factor[8] = {52298,53388,   1,  1,  1,  1,  1,  1};
-long zero_factor[8] =        {-2200,-8760,   1,  1,  1,  1,  1,  1};
+long calibration_factor[8] = {55677,54420,55283,53967,54686,55428,1,1};
+long zero_factor[8] =        {-26980,-20036,5404,7616,-11304,7065,1,1};
 uint16_t count = 0; //measurement number
 uint16_t EEPROM_ADDR = 5; //Start of data storage in EEPROM
 
@@ -109,16 +109,16 @@ void setup() {
 	radio.initialize(FREQUENCY,NODEID,NETWORKID);
 	radio.setHighPower();
 	radio.encrypt(null);
-	radio.enableAutoPower(ATC_RSSI);
+	//radio.enableAutoPower(ATC_RSSI);
 	Serial.print("-- Network Address: "); Serial.print(NETWORKID); Serial.print("."); Serial.println(NODEID);
   //	 Ping the datalogger. If it is alive, it will respond with a 1
 	while(!ping()) {
 		Serial.println("Failed to Setup ping");
-		//If datalogger doesn't respond, Blink, wait 5 seconds, and try again
+		//If datalogger doesn't respond, Blink, wait 60 seconds, and try again
 		radio.sleep();
 		Serial.flush();
 		Blink(100,5);
-		Sleepy::loseSomeTime(5000);
+		Sleepy::loseSomeTime(60000);
 	}
 	Serial.println("-- Datalogger Available");
 }
@@ -193,9 +193,9 @@ void loop() {
 	Serial.print("- Sleeping for "); Serial.print(SLEEP_SECONDS); Serial.print(" seconds"); Serial.println();
 	Serial.flush();
 	radio.sleep();
-//	for(uint8_t i = 0; i < SLEEP_INTERVAL; i++)
-//		Sleepy::loseSomeTime(SLEEP_MS);
-delay(1000);
+	for(uint8_t i = 0; i < SLEEP_INTERVAL; i++)
+		Sleepy::loseSomeTime(SLEEP_MS);
+//delay(1000);
 	/*==============|| Wakes Up Here! ||==============*/
 }
 
@@ -232,31 +232,26 @@ int get_board_temp() {
 
 int get_battery_voltage() {
   int readings = 0;
-<<<<<<< HEAD
-  int v = 0;
-=======
   float v = 0;
 	float LSB = 3.3/1023;
 	float bV = 0;
 
->>>>>>> 1c6411e00e615bde5d6a6a88b4e82e6813773cfc
   digitalWrite(BAT_EN, HIGH);
+  Serial.println(v);
+  Serial.print(readings);Serial.print(" , ");
   delay(10);
   for (byte i=0; i<3; i++)
   {
     readings += analogRead(BAT_V);
+    Serial.print(readings);Serial.print(" , ");
   }
   readings /= 3;
-<<<<<<< HEAD
-  v = int(100.0 * (((bat_div_R1+bat_div_R2)/1023.0) * readings * 3.3) / bat_div_R2); //Calculate battery voltage
-=======
 	v = readings * LSB;
 	bV = ((bat_div_R1+bat_div_R2) * v)/bat_div_R2;
 	bV *= 100.0;
   // v = (3.3) * (readings/1023.0) * (bat_div_R1/bat_div_R2) * 100.0; //Calculate battery voltage
   Serial.print("batV ADC:");Serial.println(readings);
   Serial.println(bV/(100.0));
->>>>>>> 1c6411e00e615bde5d6a6a88b4e82e6813773cfc
   digitalWrite(BAT_EN, LOW);
   return int(bV);
 }
@@ -405,11 +400,6 @@ bool getTime()
 	}
 	return true;
 }
-
-//if(millis() > timeout_start + timeout) {
-//    DEBUGln("Timed Out");
-//  }
-
 /**
  * Requests a response from the Datalogger. For checking that the Datalogger is online
  * before sending data to it. It also latches this sensor to the datalogger until a 'r' is sent

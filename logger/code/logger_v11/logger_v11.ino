@@ -1,10 +1,3 @@
-/**
- * TODO:
- * Test.
- *
- *
- */
-
 
 #include <Arduino.h> //built in
 #include <SPI.h> //built in
