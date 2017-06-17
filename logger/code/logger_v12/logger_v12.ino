@@ -1,13 +1,10 @@
 /**
  * TODO:
- * Check to make sure it compilies
- * Correct the pin mappings
- * Test.
+ * fix the ping/ts hang
+ *
  *
  *
  */
-
-
 #include <Arduino.h> //built in
 #include <SPI.h> //built in
 #include <RFM69_ATC.h>//https://www.github.com/lowpowerlab/rfm69
@@ -17,7 +14,7 @@
 #define NETWORKID     100
 #define NODEID 0 //Address on Network
 #define FREQUENCY RF69_433MHZ //hardware frequency of Radio
-#define ATC_RSSI -70 //ideal signal strength
+//#define ATC_RSSI -70 //ideal signal strength
 #define ACK_WAIT_TIME 100 // # of ms to wait for an ack
 #define ACK_RETRIES 10 // # of attempts before giving up
 #define SERIAL_BAUD 115200 //connection speed
