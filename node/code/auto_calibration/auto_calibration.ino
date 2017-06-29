@@ -51,7 +51,7 @@ const int eX = A5; //Thermister excitation voltage
 
 float calibration_factor = 55411;//54672; //52298.5;
 float zero_factor = 1270;//-4160; //24570;//-23350;//-2200;
-int weight = 4560; //3900; //3418;
+int weight = 4310; //3900; //3418;
 bool zero = true;
 bool cali = false;
 int pin = 0;

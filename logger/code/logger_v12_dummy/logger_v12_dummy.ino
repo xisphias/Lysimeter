@@ -7,6 +7,7 @@
 */
 #include <Arduino.h> //built in
 #include <SPI.h> //built in
+#include <RFM69.h>
 #include <RFM69_ATC.h>//https://www.github.com/lowpowerlab/rfm69
 #include <SparkFunDS3234RTC.h> //https://github.com/kinasmith/SparkFun_DS3234_RTC_Arduino_Library
 #include "SdFat.h" //https://github.com/greiman/SdFat
@@ -14,9 +15,10 @@
 #define NETWORKID     100
 #define NODEID 0 //Address on Network
 #define FREQUENCY RF69_433MHZ //hardware frequency of Radio
-//#define ATC_RSSI -70 //ideal signal strength
-#define ACK_WAIT_TIME 100 // # of ms to wait for an ack
-#define ACK_RETRIES 10 // # of attempts before giving up
+#define IS_RFM69HW    //uncomment only for RFM69HW! 
+#define ATC_RSSI -70 //ideal signal strength
+#define ACK_WAIT_TIME 200 // # of ms to wait for an ack
+#define ACK_RETRIES 3 // # of attempts before giving up
 #define SERIAL_BAUD 115200 //connection speed
 #define RFM69_CS 10 //RFM69 CS pin
 #define LED 9 //LED pin
@@ -25,7 +27,7 @@
 //#define CARD_DETECT 6 //Pin to detect presence of SD card
 //#define INTERRUPT_PIN 2 // DeadOn RTC SQW/interrupt pin (optional)
 
-#define SERIAL_EN //Comment this out to remove Serial comms and save a few kb's of space
+//#define SERIAL_EN //Comment this out to remove Serial comms and save a few kb's of space
 #ifdef SERIAL_EN
 #define DEBUG(input)   {Serial.print(input); delay(1);}
 #define DEBUGln(input) {Serial.println(input); delay(1);}
@@ -37,9 +39,12 @@
 #endif
 
 /*==============|| RFM69 ||==============*/
-RFM69_ATC radio; //Declare Radio
+#ifdef ATC_RSSI
+  RFM69_ATC radio;
+#else
+  RFM69 radio;
+#endif//Declare Radio
 byte lastRequesterNodeID = NODEID; //Last Sensor to communicate with this device
-
 
 /*==============|| DS3231_RTC ||==============*/
 uint32_t now; //Holder for Current Time
@@ -69,9 +74,9 @@ Payload thePayload;
 
 
 void setup() {
-#ifdef SERIAL_EN
+//#ifdef SERIAL_EN
   Serial.begin(SERIAL_BAUD);
-#endif
+//#endif
   DEBUGln("+++++++++++++++++++++++++++++++++++++");
   DEBUGln("-- Datalogger for Lysimeter System --");
   pinMode(LED, OUTPUT); //Set LED to output
@@ -84,6 +89,8 @@ void setup() {
 
 bool tsdelay = false;
 bool pingdelay = false;
+bool ack = true;
+unsigned long codeTime = 0;
 
 void loop() {
   /*
@@ -99,15 +106,21 @@ void loop() {
   bool writeData = false;
   bool reportTime = false;
   bool ping = false;
-
+  unsigned long rcvTime = 0;
   if (radio.receiveDone()) { //if recieve packets from sensor...
+    rcvTime = millis();
+//    if (radio.ACKRequested()) {
+//      DEBUG(" .sending ack. ");
+//      DEBUG(millis()-rcvTime);DEBUG("ms ");
+//      radio.sendACK();
+//    }
     DEBUG("rcv "); DEBUG(char(radio.DATA[0])); DEBUG(", "); DEBUG(radio.DATALEN); DEBUG(" byte/s from node "); DEBUG(radio.SENDERID); DEBUG(": ");
+    DEBUG(" [RX:"); DEBUG(radio.RSSI); DEBUG("]");
     lastRequesterNodeID = radio.SENDERID; //SENDERID is the Node ID of the device that sent the packet of data
     //rtc.update();
     //now = rtc.unixtime(); //record time of this event
-    now = millis() / 1000;
+    now = 1000000000 + int(millis() / 1000);
     theTimeStamp.timestamp = now; //and save it to the global variable
-
     /*=== PING ==*/
     if (radio.DATALEN == 1 && radio.DATA[0] == 'p') {
       DEBUG(radio.SENDERID); DEBUG(": ");
@@ -129,40 +142,19 @@ void loop() {
       DEBUG("@: "); DEBUGln(thePayload.time);
     }
     if (radio.ACKRequested()) {
+      DEBUG(" .sending ack. ");
+      DEBUG(millis()-rcvTime);DEBUG("ms ");
+      Serial.println("ack");
       radio.sendACK();
     }
     Blink(LED, 5);
   }
 
   /*=== DO THE RESPONSES TO THE MESSAGES ===*/
-  if (Serial.available())
-  {
-    char temp = Serial.read();
-    if (temp == 't') {
-      if (!tsdelay) {
-        tsdelay = true;
-        Serial.println("ts delayed");
-      } else {
-        tsdelay = false;
-        Serial.println("ts normal");
-      }
-    }
-    if (temp == 'p') {
-      if (!pingdelay) {
-        pingdelay = true;
-        Serial.println("ping delayed");
-      } else {
-        pingdelay = false;
-        Serial.println("ping normal");
-      }
-    }
-    if (temp == 'd')
-      delay(5000);
-  }
   //Sends the time to the sensor that requested it
   if (reportTime) {
+    Serial.println(now);
     DEBUG("snd > "); DEBUG('['); DEBUG(lastRequesterNodeID); DEBUG("] ");
-    if (tsdelay) delay(5000);
     if (radio.sendWithRetry(lastRequesterNodeID, (const void*)(&theTimeStamp), sizeof(theTimeStamp), ACK_RETRIES, ACK_WAIT_TIME)) {
       DEBUGln(theTimeStamp.timestamp);
     } else {
@@ -171,31 +163,33 @@ void loop() {
   }
   //sends a response back to confirm that the datalogger is alive
   if (ping) {
-    DEBUG("snd > "); DEBUG('['); DEBUG(lastRequesterNodeID); DEBUG("] ");
-    if (pingdelay) delay(5000);
-    if (radio.sendWithRetry(lastRequesterNodeID, (const void*)(1), sizeof(1), ACK_RETRIES, ACK_WAIT_TIME)) {
-      DEBUGln("1");
-    } else {
-      DEBUGln("Failed . . . no ack");
-    }
+    Serial.println("ping");
+//    DEBUG("snd > "); DEBUG('['); DEBUG(lastRequesterNodeID); DEBUG("] ");
+//    if (radio.sendWithRetry(lastRequesterNodeID, (const void*)(1), sizeof(1), ACK_RETRIES, ACK_WAIT_TIME)) {
+//      DEBUGln("1");
+//    } else {
+//      DEBUGln("Failed . . . no ack");
+//    }
   }
   //write recieved data to the SD Card
   if (writeData) {
+    Serial.println(thePayload.count);
+    Serial.println(thePayload.battery_voltage);
     //Print out values that were recieved here, where there is time to kill
     DEBUGln("     : Y0\tY1\tY2\tY3\tY4\tY5\tY6\tY7");
     DEBUG("wts  : ");
     for (int i = 0; i < 8; i++) {
-      DEBUG(float(thePayload.w[i]) / 10000.0); //this is computationally expensive
+      DEBUG(thePayload.w[i]); //this is computationally expensive
       DEBUG(",\t");
     }
     DEBUGln(); DEBUG("temps: ");
     for (int i = 0; i < 8; i++) {
-      DEBUG(thePayload.t[i] / 100);
+      DEBUG(thePayload.t[i]);
       DEBUG(",\t");
     }
     DEBUGln();
     DEBUG(" temp: "); DEBUGln(thePayload.board_temp);
-    DEBUG(" battery voltage: "); DEBUGln(thePayload.battery_voltage / 100);
+    DEBUG(" battery voltage: "); DEBUGln(thePayload.battery_voltage);
     DEBUG(" cnt: "); DEBUG(thePayload.count);
     DEBUGln();
 
@@ -264,10 +258,21 @@ void initRadio()
   DEBUGln("-- Arduino RFM69HCW Transmitter");
   //Now initialise the radio
   bool check = radio.initialize(FREQUENCY, NODEID, NETWORKID);
+  
   if (check)
   {
+//    //set radio rate to 1.2k
+//    radio.writeReg(0x03,0x68);
+//    radio.writeReg(0x04,0x2B);
+    //set radio rate to 4.8k
+    radio.writeReg(0x03,0x1A);
+    radio.writeReg(0x04,0x0B);
+//    radio.writeReg(0x03,0x0D); //set baud to 9.6k
+//    radio.writeReg(0x04,0x05);
     DEBUG("-- Network Address: "); DEBUG(NETWORKID); DEBUG("."); DEBUGln(NODEID);
-    radio.setHighPower();    // Only for RFM69HCW & HW!
+    #ifdef IS_RFM69HW 
+      radio.setHighPower();
+    #endif
     //radio.setPowerLevel(31); // power output ranges from 0 (5dBm) to 31 (20dBm)
     radio.encrypt(NULL);
     // radio.encrypt(ENCRYPTKEY);

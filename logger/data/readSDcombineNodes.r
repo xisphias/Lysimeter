@@ -3,8 +3,9 @@ library(reshape2)
 library(zoo)
 library(caTools)
 library(plyr)
-detach(unload=TRUE,"package:dplyr")
-datDir<-"/Users/jac/Documents/projects/plantWater/lysim/Lysimeter/logger/data/20170618/"
+#detach(unload=TRUE,"package:dplyr")
+datDir<-"/Users/jac/Documents/projects/plantWater/lysim/Lysimeter/logger/data/20170628/"
+datDir<-"C:/Users/Owner/Documents/GitHub/Lysimeter/logger/data/20170628/"
 datFiles<-grep(".csv",list.files(datDir),value=TRUE)
 setwd(datDir)
 nNodes<-length(datFiles)
@@ -51,10 +52,11 @@ head(Dat2)
 Dat2a<-arrange(Dat2,NodeID,ch,DateTime)
 head(Dat2a)
 Dat3<-ddply(Dat2a,.(NodeID,ch),mutate,rm20min=rollapply(data=Kg,width=4,FUN=mean,fill=0,align="right"),rm1hr=rollapply(data=rm20min,width=3,FUN=mean,fill=0,align="right"),rm1day=rollapply(data=rm1hr,width=24,FUN=mean,fill=NA,align="right"))
+Dat3<-ddply(Dat2a,.(NodeID,ch),mutate,rm20min=0,rm1hr=0,rm1day=0)
 Dat3$hrDiff<-c(NA,diff(Dat3$rm1hr))
 head(Dat3);tail(Dat3)
 
-ggplot(Dat3,aes(x=DateTime,y=BatV))+geom_line()+ylim(12,13)+facet_wrap(~NodeID)
+ggplot(Dat3[Dat3$DateTime>"2017-06-21",],aes(x=DateTime,y=BatV))+geom_line()+ylim(12,13)+facet_wrap(~NodeID)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
 ggplot(Dat3,aes(x=DateTime,y=BoardTemp))+geom_line()+ylim(-10,25)+facet_wrap(~NodeID)
 
 ggplot(Dat3,aes(x=DateTime,y=diffKg))+geom_line()+ylim(-0.1,0.1)+facet_grid(ch~NodeID)
