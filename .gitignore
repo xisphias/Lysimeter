@@ -2,3 +2,5 @@
 .Rproj.user
 
 *.Rproj
+logger/data/.Rhistory
+logger/data/.RData
