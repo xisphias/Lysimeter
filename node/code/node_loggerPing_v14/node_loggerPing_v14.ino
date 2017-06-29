@@ -33,6 +33,10 @@
 #define BAT_V A6
 #define LED 9
 
+unsigned long timeout_start = 0; //holder for timeout counter
+int timeout = 5000; //time in milsec to wait for ping/ts response
+byte Retries = 1;  //times to try ping and timestamp before giving up
+
 ISR(WDT_vect) {
   Sleepy::watchdogEvent(); // set watchdog for Sleepy
 }
@@ -87,13 +91,25 @@ void setup() {
 void loop() {
   Blink(500, 1);
   //Gets current time at start of measurement cycle. Stores in global theTimeStamp struct
-  if (!getTime()) { //Gets time from datalogger and stores in Global Variable
-    Serial.println("time - No Response from Datalogger");
-    // If the node gets no response the next measurement cycle will have the same timestamp
-    // as the last cycle. Could also set the timestamp here to a flag value...
+  bool gotTime = false;
+  for (int i = 0; i < Retries; i++) {
+    Serial.print("Timestamp request: "); Serial.println(i);
+    gotTime = getTime();
+    if (gotTime) {
+      i = Retries;
+      Serial.print(" [RX:"); Serial.print(radio.RSSI); Serial.print("]");
+    }
   }
-  Serial.println();
-  if (ping()) {
+  if (!gotTime) { 
+    Serial.println("time - No Response from Datalogger");
+    }
+  bool gotPing = false;
+  for (int i = 0; i < Retries; i++) {
+    Serial.print("Ping request: "); Serial.println(i);
+    gotPing = ping();
+    if (gotPing) i = Retries;
+  }
+  if (gotPing) {
     //If the Datalogger is listening and available to recieve data
     Serial.print("- Datalogger Available ");
   } else {
@@ -150,13 +166,13 @@ bool getTime()
       else {
         digitalWrite(LED, LOW); //turn off LED
         //Blink(200, 5);
-        DEBUGln("failed . . . received not timestamp");
+        Serial.println("failed . . . received not timestamp");
         return false;
       }
       if (radio.ACKRequested()) radio.sendACK();
     }
     if (millis() > timeout_start + timeout) { //it is possible that you could get the time and timeout, but only in the edge case
-      DEBUGln(" ...timestamp timeout");
+      Serial.println(" ...timestamp timeout");
       return false;
     }
   }
@@ -174,7 +190,7 @@ bool ping()
   Serial.print("ping - ");
   if (radio.sendWithRetry(GATEWAYID, "p", 1, ACK_RETRIES, ACK_WAIT_TIME)) {
     Serial.println(" > p");
-    return = true;
+    return true;
   }
   else {
     Serial.println("failed: no ack");
