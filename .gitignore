@@ -1,9 +1,7 @@
 .DS_Store
 .Rproj.user
-
+*.Rhistory
 *.Rproj
-logger/data/.Rapp.history
+*.RData
+*.history
 logger/data/.Rhistory
-logger/data/.Rhistory
-logger/data/.Rhistory
-logger/code/logger_v12/logger_v12.ino
