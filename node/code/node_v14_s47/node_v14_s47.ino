@@ -20,9 +20,10 @@
 
 #define GATEWAYID 0 //Address of datalogger/reciever
 #define FREQUENCY RF69_433MHZ
+#define IS_RFM69HW    //uncomment only for RFM69HW! 
 #define ATC_RSSI -70 //ideal Signal Strength of trasmission
-#define ACK_WAIT_TIME 100 // # of ms to wait for an ack
-#define ACK_RETRIES 10 // # of attempts before giving up
+#define ACK_WAIT_TIME 200 // # of ms to wait for an ack
+#define ACK_RETRIES 5 // # of attempts before giving up
 #define DOUT  8
 #define CLK  7
 #define zOutput 3.3
@@ -31,27 +32,36 @@
 #define BAT_EN A0
 #define BAT_V A6
 #define LED 9
-//battery voltage divider. Measure and set these values manually
-//#define bat_div_R1 14700
-//#define bat_div_R2 3820
+
+//#define SERIAL_EN //Comment this out to remove Serial comms and save a few kb's of space
+#ifdef SERIAL_EN
+#define DEBUG(input)   {Serial.print(input); delay(1);}
+#define DEBUGln(input) {Serial.println(input); delay(1);}
+#define DEBUGFlush() { Serial.flush(); }
+#else
+#define DEBUG(input);
+#define DEBUGln(input);
+#define DEBUGFlush();
+#endif
 
 //battery voltage divider. Measure and set these values manually
 const int bat_div_R1 = 14700;
 const int bat_div_R2 = 3820;
-const uint8_t scaleNmeasurements = 1; //no times to measure load cell for average
+const uint8_t scaleNmeasurements = 80; //no times to measure load cell for average
 const int muxSelectPins[3] = {3, 4, 5}; // S0~3, S1~4, S2~5
 // Define calibration for LC   Y0   , Y1  , Y2  , Y3  , Y4  , Y5  , Y6  , Y8  }
-long calibration_factor[8] = {55411,55293,1,1,1,1,1,1};
-long zero_factor[8] =        {1270,-16155,1,1,1,1,1,1};
+long calibration_factor[8] = {54004,57228,55087,53939,54166,54772,56301,53976};
+long zero_factor[8] =        {36576,-13038,-492,-22636,-13376,-11023,-19119,-18178};
 uint16_t count = 0; //measurement number
 uint16_t EEPROM_ADDR = 5; //Start of data storage in EEPROM
 
 /*==============|| TIMING ||==============*/
-const uint8_t SLEEP_INTERVAL = 1; //sleep time in minutes
+const uint8_t SLEEP_INTERVAL = 8; //sleep time in minutes 
+// 80 measurements * 8 ~ 120 sec, 40 ~ 56sec + 12 sec other stuff
 const uint16_t SLEEP_MS = 60000; //one minute in milliseconds
 const uint32_t SLEEP_SECONDS = SLEEP_INTERVAL * (SLEEP_MS / 1000); //Sleep interval in seconds
 unsigned long timeout_start = 0; //holder for timeout counter
-int timeout = 1000; //time in milsec to wait for ping/ts response
+int timeout = 5000; //time in milsec to wait for ping/ts response
 byte Retries = 1;  //times to try ping and timestamp before giving up
 int cycletime = 0; //counter for measurment time to add to sleeptime
 
@@ -60,7 +70,11 @@ Thermistor temp(7);
 ISR(WDT_vect) {
   Sleepy::watchdogEvent(); // set watchdog for Sleepy
 }
-RFM69_ATC radio; //Declare radio (using Automatic Power Adjustments)
+#ifdef ATC_RSSI
+  RFM69_ATC radio;
+#else
+  RFM69 radio;
+#endif //Declare radio (using Automatic Power Adjustments)
 
 /*==============|| DATA ||==============*/
 //Data structure for transmitting the Timestamp from datalogger to sensor (4 bytes)
@@ -109,24 +123,37 @@ void setup() {
   scale.set_offset(zero_factor[0]);
   //scale.tare();  //Reset the scale to 0
   //long zero_factor = scale.read_average(10); //Get a baseline reading
-  //Serial.print("Zero factor: "); Serial.println(zero_factor); //This can be used to remove the need to tare the scale. Useful in permanent scale projects.
+  //DEBUG("Zero factor: "); DEBUGln(zero_factor); //This can be used to remove the need to tare the scale. Useful in permanent scale projects.
 
   //Setup Radio
   radio.initialize(FREQUENCY, NODEID, NETWORKID);
-  radio.setHighPower();
+    //set radio rate to 4.8k
+    radio.writeReg(0x03,0x1A);
+    radio.writeReg(0x04,0x0B);
+    //set baud to 9.6k
+//  radio.writeReg(0x03,0x0D); 
+//  radio.writeReg(0x04,0x05);
+    //set radio rate to 1.2k
+//  radio.writeReg(0x03,0x68);
+//  radio.writeReg(0x04,0x2B);
+  #ifdef IS_RFM69HW 
+    radio.setHighPower();
+  #endif
   radio.encrypt(null);
-  radio.enableAutoPower(ATC_RSSI);
-  Serial.print("-- Network Address: "); Serial.print(NETWORKID); Serial.print("."); Serial.println(NODEID);
-  //	 Ping the datalogger. If it is alive, it will respond with a 1
+  #ifdef ATC_RSSI
+    radio.enableAutoPower(ATC_RSSI);
+   #endif
+  DEBUG("-- Network Address: "); DEBUG(NETWORKID); DEBUG("."); DEBUGln(NODEID);
+  //   Ping the datalogger. If it is alive, it will respond with a 1
   while (!ping()) {
-    Serial.println("Failed to Setup ping");
+    DEBUGln("Failed to setup ping");
     //If datalogger doesn't respond, Blink, wait x seconds, and try again
     radio.sleep();
     Serial.flush();
-    Blink(100, 5);
-    Sleepy::loseSomeTime(5000);
+    Sleepy::loseSomeTime(1000);
+    Blink(20, 5);
   }
-  Serial.println("-- Datalogger Available");
+  DEBUGln("-- Datalogger Available");
 }
 
 void loop() {
@@ -134,28 +161,32 @@ void loop() {
   unsigned long starttime = millis();
   bool gotTime = false;
   for (int i = 0; i < Retries; i++) {
-    Serial.print("Timestamp request: "); Serial.println(i);
+    DEBUG("Timestamp request: "); DEBUGln(i);
     gotTime = getTime();
-    if (gotTime) i = Retries;
+    if (gotTime) {
+      i = Retries;
+      Serial.print(" [RX:"); Serial.print(radio.RSSI); Serial.print("]");
+    }
   }
   if (!gotTime) { //Gets time from datalogger and stores in Global Variable
-    Serial.println("time - No Response from Datalogger");
+    DEBUGln("time - No Response from Datalogger");
+    Blink(100,2);
     // If the node gets no response the next measurement cycle will have the same timestamp
     // as the last cycle. Could also set the timestamp here to a flag value...
   }
   count++;
-  Serial.print("- Measurement...");Serial.println(count);
-  Blink(50, 3);
+  DEBUG("- Measurement...");DEBUGln(count);
+  Blink(20, 3);
   thisPayload.count = count;
   thisPayload.battery_voltage = get_battery_voltage();
-  Serial.print("Bat V: ");
-  Serial.println(float(thisPayload.battery_voltage) / 100.0);
+  DEBUG("Bat V: ");
+  DEBUGln(float(thisPayload.battery_voltage) / 100.0);
   thisPayload.board_temp = get_board_temp();
-  Serial.print("Board TempC: ");
-  Serial.println(thisPayload.board_temp);
+  DEBUG("Board TempC: ");
+  DEBUGln(thisPayload.board_temp);
   //   Print the header:
-  Serial.println("ch1\t\tch2\t\tch3\t\tch4\t\tch5\t\tch6\t\tch7\t\tch8");
-  Serial.println("---\t\t---\t\t---\t\t---\t\t---\t\t---\t\t---\t\t---");
+  DEBUGln("ch1\t\tch2\t\tch3\t\tch4\t\tch5\t\tch6\t\tch7\t\tch8");
+  DEBUGln("---\t\t---\t\t---\t\t---\t\t---\t\t---\t\t---\t\t---");
   for (uint8_t i = 0; i < 8; i++)
   {
     selectMuxPin(i); // Select one at a time
@@ -166,63 +197,76 @@ void loop() {
     thisPayload.t[i] = int(temp.getTemp() * 100); // need to check thermistor resistance on cable
     digitalWrite(eX, LOW);
 
-    Serial.print(float(thisPayload.w[i]) / 10000.0, 4);
-    Serial.print("kg ");
-    Serial.print(float(thisPayload.t[i]) / 100.0, 1);
-    Serial.print(".C ");
+    DEBUG(float(thisPayload.w[i]) / 10000.0);
+    DEBUG("kg ");
+    DEBUG(float(thisPayload.t[i]) / 100.0);
+    DEBUG(".C ");
   }
-  Serial.println();
+  DEBUGln();
 //  unsigned long onemeasure = millis();
 //  measureWeight(7);
-//  Serial.print("onemeasure: ");Serial.println((millis() - onemeasure)/1000);
+//  DEBUG("onemeasure: ");DEBUGln((millis() - onemeasure)/1000);
   bool gotPing = false;
   for (int i = 0; i < Retries; i++) {
-    Serial.print("Ping request: "); Serial.println(i);
+    DEBUG("Ping request: "); DEBUGln(i);
     gotPing = ping();
     if (gotPing) i = Retries;
   }
   cycletime = int((millis()-starttime)/1000);
-  Serial.print("measurement cycle time: ");Serial.println(cycletime);
+  DEBUG("measurement cycle time: ");DEBUGln(cycletime);
   if (gotPing) {
     //If the Datalogger is listening and available to recieve data
-    Serial.println("- Datalogger Available");
+    DEBUGln("- Datalogger Available");
     //Check to see if there is data waiting to be sent
     thisPayload.time = theTimeStamp.timestamp; //set payload time to current time
-    //Serial.println(EEPROM.read(5));
+    //DEBUGln(EEPROM.read(5));
     if (EEPROM.read(5) > 0) { //check the first byte of data storage, if there is data, send it all
-      Serial.println("- Stored Data Available, Sending...");
+      DEBUGln("- Stored Data Available, Sending...");
       sendStoredEEPROMData();
     }
     if (EEPROM.read(5) == 0) { //Make sure there is no data stored, then send the measurement that was just taken
-      Serial.print("- No Stored Data, Sending ");
+      DEBUG("- No Stored Data, Sending ");
       digitalWrite(LED, HIGH); //turn on LED
+      starttime = millis();
       if (radio.sendWithRetry(GATEWAYID, (const void*)(&thisPayload), sizeof(thisPayload)), ACK_RETRIES, ACK_WAIT_TIME) {
-        Serial.print(sizeof(thisPayload)); Serial.print(" bytes -> ");
-        Serial.print('['); Serial.print(GATEWAYID); Serial.print("] ");
-        Serial.print(thisPayload.time);
+        Serial.println(thisPayload.count);
+        DEBUG("send time: ");DEBUGln(millis()-starttime);
+        DEBUG(sizeof(thisPayload)); DEBUG(" bytes -> ");
+        DEBUG('['); DEBUG(GATEWAYID); DEBUG("] ");
+        DEBUG(thisPayload.time);
         digitalWrite(LED, LOW); //Turn Off LED
-        Blink(300, 1);
+        Blink(100, 1);
       } else {
         digitalWrite(LED, LOW); //Turn Off LED
-        Serial.print("snd - Failed . . . no ack");
-        Blink(200, 2);
+        Serial.println("- send fail");
+        DEBUGln("snd - Failed . . . no ack");
+        DEBUG("- Saving Locally");
+        writeDataToEEPROM(); //save that data to EEPROM
+        Blink(100, 2);
       }
-      Serial.println();
+      DEBUGln();
+    } 
+    else {
+    //If there is no response from the Datalogger while sending the stored data, save
+    DEBUGln("- Datalogger Not Available for EEPROM send, Saving Locally");
+    writeDataToEEPROM(); //save that data to EEPROM
+    Blink(100, 3);
     }
   }
   else {
     //If there is no response from the Datalogger save data locally
-    Serial.println("- Datalogger Not Available, Saving Locally");
+    Serial.println("- ping fail");
+    DEBUGln("- Datalogger Not Available, Saving Locally");
     writeDataToEEPROM(); //save that data to EEPROM
-    Blink(200, 3);
+    Blink(100, 3);
   }
   
-  Serial.print("- Sleeping for "); Serial.print(SLEEP_SECONDS); Serial.print(" seconds"); Serial.println();
+  DEBUG("- Sleeping for "); DEBUG(SLEEP_SECONDS); DEBUG(" seconds"); DEBUGln();
   Serial.flush();
   radio.sleep();
   for (uint8_t i = 0; i < SLEEP_INTERVAL; i++)
     Sleepy::loseSomeTime(SLEEP_MS);
-//  delay(1000);
+//    Sleepy::loseSomeTime(1000);
   /*==============|| Wakes Up Here! ||==============*/
 }
 
@@ -273,9 +317,6 @@ int get_battery_voltage() {
   v = readings * LSB;
   bV = ((bat_div_R1 + bat_div_R2) * v) / bat_div_R2;
   bV *= 100.0;
-  // v = (3.3) * (readings/1023.0) * (bat_div_R1/bat_div_R2) * 100.0; //Calculate battery voltage
-  //  Serial.print("batV ADC:");Serial.println(readings);
-  //  Serial.println(bV/(100.0));
   digitalWrite(BAT_EN, LOW);
   return int(bV);
 }
@@ -287,25 +328,26 @@ int get_battery_voltage() {
    time.
 */
 void sendStoredEEPROMData() {
-  Serial.println("-- Retrieving Stored EEPROM DATA --");
+  DEBUGln("-- Retrieving Stored EEPROM DATA --");
   Data blank; //init blank struct to erase data
   Data theData; //struct to save data in
   Payload tmp; //for temporary holding of data
   /*
-  	The stored time is the time of the last successful transmission,
-  	so we need to add 1 Sleep Interval to the Stored Time to get accurate timestamp
+    The stored time is the time of the last successful transmission,
+    so we need to add 1 Sleep Interval to the Stored Time to get accurate timestamp
   */
   uint8_t storeIndex = 1;
   uint32_t eep_time = 0UL;
+  byte sendRetries = 3;
   EEPROM.get(1, eep_time); //get previously stored time (at address 1)
   EEPROM_ADDR = 1 + sizeof(theTimeStamp.timestamp); //Set to next address
   EEPROM.get(EEPROM_ADDR, theData); //Read in saved data to the Data struct
-  Serial.print(".stored time "); Serial.println(theTimeStamp.timestamp);
-  Serial.println(theData.battery_voltage); //this is where nothing would happen. EEPROM 5 was >0 so we got here, but battery V was 0, so we exited without sending and without clearing the eeprom.
-  while (theData.count > 0) { //while there is data available in the EEPROM // changed to count instead of battery V b/c batV was 0 in theData
+  DEBUG(".stored time "); DEBUGln(theTimeStamp.timestamp);
+  DEBUGln(theData.battery_voltage); //this is where nothing would happen. EEPROM 5 was >0 so we got here, but battery V was 0, so we exited without sending and without clearing the eeprom.
+  while (theData.count > 0 && sendRetries < 10) { //while there is data available in the EEPROM // changed to count instead of battery V b/c batV was 0 in theData
     uint32_t rec_time = eep_time + ((cycletime + SLEEP_SECONDS) * storeIndex); //Calculate the actual recorded time
-    Serial.print(".eep time "); Serial.println(eep_time);
-    Serial.print(".rec time "); Serial.println(rec_time);
+    DEBUG(".eep time "); DEBUGln(eep_time);
+    DEBUG(".rec time "); DEBUGln(rec_time);
     //Save data into the Payload struct
     tmp.time = rec_time;
     tmp.count = theData.count;
@@ -318,35 +360,42 @@ void sendStoredEEPROMData() {
     //Send data to datalogger
     digitalWrite(LED, HIGH); //turn on LED to signal transmission
     if (radio.sendWithRetry(GATEWAYID, (const void*)(&tmp), sizeof(tmp)), ACK_RETRIES, ACK_WAIT_TIME) {
-      Serial.print(".data sent, erasing...");
+      Serial.println("-stored sent");
+      DEBUG(".data sent, erasing...");
       EEPROM.put(EEPROM_ADDR, blank); //If successfully sent, erase that data chunk...
       EEPROM_ADDR += sizeof(theData); //increment to next...
-      Serial.print("reading index "); Serial.println(EEPROM_ADDR);
+      DEBUG("reading index "); DEBUGln(EEPROM_ADDR);
       EEPROM.get(EEPROM_ADDR, theData); // and read in the next saved data...
       storeIndex += 1; //and increment the count of saved values
-      Serial.print(".store index "); Serial.println(storeIndex);
+      DEBUG(".store index "); DEBUGln(storeIndex);
       digitalWrite(LED, LOW);
     } else {
-      //this has never happened...
-      Serial.print(".data send failed, waiting for retry");
-      uint16_t waitTime = random(1000);
-      Blink(100, 5);
+      sendRetries++;
+      Serial.println("-stored send fail");
+      uint16_t waitTime = random(10000);
+      digitalWrite(LED, LOW);
+      DEBUG(".data send failed:"); DEBUG(sendRetries);
+      DEBUG("..waiting for retry for:");
+      DEBUG(waitTime);DEBUGln(" ms");
+      Blink(20, 5);
       radio.sleep();
       Sleepy::loseSomeTime(waitTime);
     }
   }
-  Serial.println(1 + sizeof(theTimeStamp.timestamp));
-  EEPROM_ADDR = 1 + sizeof(theTimeStamp.timestamp); //Reset Index to beginning of EEPROM_ADDR
-  //NOTE: This will front load the fatigue on the EEPROM causing failures of the first indeces
-  //NOTE: first. A good thing to do would be to build in a load balancing system to randomly
-  //NOTE: place data in the EEPROM with pointers to it.
+  if(!(theData.count > 0)) { //only reset if eeprom was erased
+    DEBUGln(1 + sizeof(theTimeStamp.timestamp));
+    EEPROM_ADDR = 1 + sizeof(theTimeStamp.timestamp); //Reset Index to beginning of EEPROM_ADDR
+    //NOTE: This will front load the fatigue on the EEPROM causing failures of the first indeces
+    //NOTE: first. A good thing to do would be to build in a load balancing system to randomly
+    //NOTE: place data in the EEPROM with pointers to it.
+  }
 }
 /**
    Saves sensor readings to EEPROM in case of tranmission failures to the datalogger.
 
 */
 void writeDataToEEPROM() {
-  Serial.println("-- Storing EEPROM DATA --");
+  DEBUGln("-- Storing EEPROM DATA --");
   Data theData; //Data struct to store data to be written to EEPROM
   uint32_t eep_time = 0UL; //place to hold the saved time
   //pull data from Payload to local struct to save
@@ -361,22 +410,22 @@ void writeDataToEEPROM() {
   //update the saved eeprom time to the time of the
   //last successful transaction (if they are different)
   EEPROM.get(1, eep_time);
-  Serial.print(".saved time "); Serial.println(eep_time);
-  Serial.print(".current time "); Serial.println(theTimeStamp.timestamp);
+  DEBUG(".saved time "); DEBUGln(eep_time);
+  DEBUG(".current time "); DEBUGln(theTimeStamp.timestamp);
   if (theTimeStamp.timestamp != eep_time) {
     EEPROM.put(1, theTimeStamp.timestamp);
-    Serial.println(".updated time");
+    DEBUGln(".updated time");
   }
   //check if there is space to save the next reading
   //if there isn't, put the device to sleep forever and prime it
   //so that next time it is started, it will dump all saved data to datalogger
   if (EEPROM_ADDR < EEPROM.length() - sizeof(theData)) {
-    Serial.print(".saving "); Serial.print(sizeof(theData)); Serial.print(" bytes to address "); Serial.println(EEPROM_ADDR);
+    DEBUG(".saving "); DEBUG(sizeof(theData)); DEBUG(" bytes to address "); DEBUGln(EEPROM_ADDR);
     EEPROM.put(EEPROM_ADDR, theData);
     EEPROM_ADDR += sizeof(theData);
   } else { //if there is not room, set INDEX 0 to 255 and sleep forever
     EEPROM.write(0, 255); //this is not used...
-    Serial.println(".eeprom FULL Sleepying For 12 hours");
+    DEBUGln(".eeprom FULL Sleepying For 12 hours");
     Serial.flush();
     radio.sleep();
     //Sleepy::powerDown();
@@ -402,48 +451,44 @@ bool getTime()
   digitalWrite(LED, HIGH); //turn on LED to signal tranmission event
   //Send request for time to the Datalogger
   if (!HANDSHAKE_SENT) {
-    Serial.print("time - ");
-    if (radio.sendWithRetry(GATEWAYID, "t", 1)) { //'t' requests time
-      Serial.print("snd . . ");
+    DEBUG("time - ");
+    if (radio.sendWithRetry(GATEWAYID, "t", 1, ACK_RETRIES, ACK_WAIT_TIME)) { //'t' requests time
+      DEBUG("snd . . ");
       HANDSHAKE_SENT = true;
     }
     else {
       //if there is no response, returns false and exits function
       digitalWrite(LED, LOW); //turn off LED
-      Blink(200, 4);
-      Serial.println("failed . . . no ack");
+     // Blink(200, 4);
+      DEBUGln("failed . . . no ack");
       return false;
     }
   }
   //Wait for the time to be returned from the datalogger
   while (!TIME_RECIEVED && HANDSHAKE_SENT) {
-    if (millis() > timeout_start + timeout) {
-      Serial.println(" ...timestamp timeout");
-      return false;
-    }
     if (radio.receiveDone()) {
       if (radio.DATALEN == sizeof(theTimeStamp)) { //check to make sure it's the right size
         theTimeStamp = *(TimeStamp*)radio.DATA; //save data to global variable
-        Serial.print(" rcv - "); Serial.print('['); Serial.print(radio.SENDERID); Serial.print("] ");
-        Serial.print(theTimeStamp.timestamp); Serial.print(" [RX_RSSI:"); Serial.print(radio.RSSI); Serial.print("]"); Serial.println();
+        DEBUG(" rcv - "); DEBUG('['); DEBUG(radio.SENDERID); DEBUG("] ");
+        DEBUG(theTimeStamp.timestamp); DEBUG(" [RX_RSSI:"); DEBUG(radio.RSSI); DEBUG("]"); DEBUGln();
         TIME_RECIEVED = true;
         digitalWrite(LED, LOW); //turn off LED
       }
       else {
         digitalWrite(LED, LOW); //turn off LED
-        Blink(200, 5);
-        Serial.println("failed . . . received not timestamp");
+        //Blink(200, 5);
+        DEBUGln("failed . . . received not timestamp");
         return false;
       }
       if (radio.ACKRequested()) radio.sendACK();
     }
+    if (millis() > timeout_start + timeout) { //it is possible that you could get the time and timeout, but only in the edge case
+        DEBUGln(" ...timestamp timeout");
+        return false;
+    }
   }
   return true;
 }
-
-//if(millis() > timeout_start + timeout) {
-//    DEBUGln("Timed Out");
-//  }
 
 /**
    Requests a response from the Datalogger. For checking that the Datalogger is online
@@ -454,48 +499,20 @@ bool getTime()
 */
 bool ping()
 {
-  bool PING_SENT = false;
-  bool PING_RECIEVED = false;
-  timeout_start = millis();
   digitalWrite(LED, HIGH); //signal start of communication
-  if (!PING_SENT) { //Send request for status to the Datalogger
-    Serial.print("ping - ");
-    if (radio.sendWithRetry(GATEWAYID, "p", 1)) {
-      Serial.println(" > p");
-      PING_SENT = true;
+   //Send request for status to the Datalogger
+    DEBUG("ping - ");
+    if (radio.sendWithRetry(GATEWAYID, "p", 1, ACK_RETRIES, ACK_WAIT_TIME)) {
+      DEBUGln(" > p");
+      digitalWrite(LED, LOW);
+      return true;
     }
     else {
       digitalWrite(LED, LOW);
-      Blink(200, 6);
-      Serial.println("failed: no ping ack");
+     // Blink(200, 6);
+      DEBUGln("failed: no ping ack");
       return false; //if there is no response, returns false and exits function
     }
-  }
-  Serial.print(" waiting for ping response");
-  while (!PING_RECIEVED && PING_SENT) { //Wait for the ping to be returned
-    if (millis() > timeout_start + timeout) {
-      Serial.println(" ...ping timeout");
-      return false;
-    }
-    if (radio.receiveDone()) {
-      Serial.print(radio.DATA[0]);
-      if (radio.DATALEN == sizeof(1)) { //check to make sure it's the right size
-        Serial.print('['); Serial.print(radio.SENDERID); Serial.print("] > ");
-        Serial.print(radio.DATA[0]); Serial.print(" [RX_RSSI:"); Serial.print(radio.RSSI); Serial.print("]"); Serial.println();
-        PING_RECIEVED = true;
-        digitalWrite(LED, LOW);
-      }
-      else {
-        digitalWrite(LED, LOW); //turn off LED
-        Blink(200, 7);
-        Serial.println("failed . . . received not ping");
-        return false;
-      }
-      if (radio.ACKRequested()) radio.sendACK();
-      return true;
-    }
-
-  }
 }
 
 void Blink(byte DELAY_MS, byte loops) {
