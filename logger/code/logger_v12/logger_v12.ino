@@ -1,13 +1,10 @@
 /**
  * TODO:
- * Check to make sure it compilies
- * Correct the pin mappings
- * Test.
+ * fix the ping/ts hang
+ *
  *
  *
  */
-
-
 #include <Arduino.h> //built in
 #include <SPI.h> //built in
 #include <RFM69_ATC.h>//https://www.github.com/lowpowerlab/rfm69
@@ -17,7 +14,7 @@
 #define NETWORKID     100
 #define NODEID 0 //Address on Network
 #define FREQUENCY RF69_433MHZ //hardware frequency of Radio
-#define ATC_RSSI -70 //ideal signal strength
+//#define ATC_RSSI -70 //ideal signal strength
 #define ACK_WAIT_TIME 100 // # of ms to wait for an ack
 #define ACK_RETRIES 10 // # of attempts before giving up
 #define SERIAL_BAUD 115200 //connection speed
@@ -42,7 +39,7 @@
 /*==============|| RFM69 ||==============*/
 RFM69_ATC radio; //Declare Radio
 byte lastRequesterNodeID = NODEID; //Last Sensor to communicate with this device
-int8_t NodeID_latch = -1; //Listen only to this Sensor #
+
 
 /*==============|| DS3231_RTC ||==============*/
 uint32_t now; //Holder for Current Time
@@ -85,9 +82,6 @@ void setup() {
   DEBUGln("==========================");
 }
 
-uint32_t latch_timeout_start;
-uint32_t latch_timeout = 1000;
-
 void loop() {
   /*
   NOTE: There are a couple interesting things here.
@@ -103,11 +97,6 @@ void loop() {
   bool reportTime = false;
   bool ping = false;
 
-  if(millis() > latch_timeout_start + latch_timeout && NodeID_latch > 0) {
-    NodeID_latch = -1;
-    DEBUGln("Latch Timed Out");
-  }
-
   if (radio.receiveDone()) { //if recieve packets from sensor...
     DEBUG("rcv ");DEBUG(char(radio.DATA[0]));DEBUG(", ");DEBUG(radio.DATALEN); DEBUG(" byte/s from node "); DEBUG(radio.SENDERID); 
     DEBUG(" [RX_RSSI:"); DEBUG(radio.RSSI); DEBUG("]");DEBUG(": ");
@@ -119,6 +108,37 @@ void loop() {
     /*=== PING ==*/
     if(radio.DATALEN == 1 && radio.DATA[0] == 'p') {
       DEBUG(radio.SENDERID); DEBUG(": ");
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/noLatch
+=======
+>>>>>>> origin/noLatch
+=======
+>>>>>>> origin/noLatch
+      DEBUG("p ");
+      ping = true;
+    }
+    /*=== TIME ==*/
+    if(radio.DATALEN == 1 && radio.DATA[0] == 't') {
+      DEBUG("t ");
+      reportTime = true;
+    }
+
+    /*=== PAYLOAD ==*/
+    if (radio.DATALEN == sizeof(thePayload)) {
+      thePayload = *(Payload*)radio.DATA; //assume radio.DATA actually contains our struct and not something else
+      writeData = true;
+      //NOTE: Be careful with too many prints and too much math in here. Do it in the writeData function down below
+      DEBUG("["); DEBUG(radio.SENDERID); DEBUGln("] ");
+      DEBUG("@: "); DEBUGln(thePayload.time);
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       if(NodeID_latch < 0) {
         DEBUG("p ");
         NodeID_latch = radio.SENDERID;
@@ -158,11 +178,19 @@ void loop() {
         DEBUG("@: "); DEBUGln(thePayload.time);
       }
     } else { DEBUG(radio.SENDERID); DEBUGln(": not latched"); }
+>>>>>>> master
+=======
+>>>>>>> origin/noLatch
+=======
+>>>>>>> origin/noLatch
+=======
+>>>>>>> origin/noLatch
     if(radio.ACKRequested()){
       radio.sendACK();
     }
     Blink(LED,5);
   }
+
   /*=== DO THE RESPONSES TO THE MESSAGES ===*/
   //Sends the time to the sensor that requested it
   if(reportTime) {
@@ -201,7 +229,7 @@ void loop() {
     DEBUG(" battery voltage: "); DEBUGln(thePayload.battery_voltage/100);
     DEBUG(" cnt: "); DEBUG(thePayload.count);
     DEBUGln();
-    
+
     File f; //declares a File
     String address = String(String(NETWORKID) + "_" + String(lastRequesterNodeID)); //creates a file name based off of Sender Address
     String fileName = String(address + ".csv"); //Save is a CSV file...because
