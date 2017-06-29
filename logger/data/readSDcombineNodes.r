@@ -1,7 +1,7 @@
 library(ggplot2)
 library(reshape2)
 library(zoo)
-library(caTools)
+#library(caTools)
 library(plyr)
 #detach(unload=TRUE,"package:dplyr")
 datDir<-"/Users/jac/Documents/projects/plantWater/lysim/Lysimeter/logger/data/20170628/"
@@ -52,7 +52,6 @@ head(Dat2)
 Dat2a<-arrange(Dat2,NodeID,ch,DateTime)
 head(Dat2a)
 Dat3<-ddply(Dat2a,.(NodeID,ch),mutate,rm20min=rollapply(data=Kg,width=4,FUN=mean,fill=0,align="right"),rm1hr=rollapply(data=rm20min,width=3,FUN=mean,fill=0,align="right"),rm1day=rollapply(data=rm1hr,width=24,FUN=mean,fill=NA,align="right"))
-Dat3<-ddply(Dat2a,.(NodeID,ch),mutate,rm20min=0,rm1hr=0,rm1day=0)
 Dat3$hrDiff<-c(NA,diff(Dat3$rm1hr))
 head(Dat3);tail(Dat3)
 
