@@ -65,7 +65,7 @@ int get_battery_voltage() {
     Serial.print(readings);Serial.print(" , ");
   }
   readings /= 3;
- v = (3.3) * ((readings)/1023.0) * ((bat_div_R1)/bat_div_R2) * 100.0; //Calculate battery voltage
+  v = (3.3) * ((readings)/1023.0) * ((bat_div_R1)/bat_div_R2) * 100.0; //Calculate battery voltage
   Serial.print("batV ADC:");Serial.println(readings);
   Serial.println(v/100.0);
   digitalWrite(BAT_EN, LOW);
