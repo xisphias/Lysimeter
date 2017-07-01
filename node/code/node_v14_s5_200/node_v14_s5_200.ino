@@ -14,14 +14,14 @@
 /****************************************************************************/
 /***********************    DON'T FORGET TO SET ME    ***********************/
 /****************************************************************************/
-#define NODEID    6 //Node Address
+#define NODEID    5 //Node Address
 #define NETWORKID 200 //Network to communicate on
 /****************************************************************************/
 
 #define GATEWAYID 0 //Address of datalogger/reciever
 #define FREQUENCY RF69_433MHZ
 #define IS_RFM69HW    //uncomment only for RFM69HW! 
-#define ATC_RSSI -70 //ideal Signal Strength of trasmission
+//#define ATC_RSSI -70 //ideal Signal Strength of trasmission
 #define ACK_WAIT_TIME 200 // # of ms to wait for an ack
 #define ACK_RETRIES 5 // # of attempts before giving up
 #define DOUT  8
@@ -50,8 +50,8 @@ const int bat_div_R2 = 3820;
 const uint8_t scaleNmeasurements = 80; //no times to measure load cell for average
 const int muxSelectPins[3] = {3, 4, 5}; // S0~3, S1~4, S2~5
 // Define calibration for LC   Y0   , Y1  , Y2  , Y3  , Y4  , Y5  , Y6  , Y8  }
-long calibration_factor[8] = {55677,54420,55283,53967,54686,55428,1,1};
-long zero_factor[8] =        {-26980,-20036,5404,7616,-11304,7065,1,1};
+long calibration_factor[8] = {54337,55212,54938,53975,54750,54565,1,1};
+long zero_factor[8] =        {26527,27452,6621,23456,-19810,7665,1,1};
 uint16_t count = 0; //measurement number
 uint16_t EEPROM_ADDR = 5; //Start of data storage in EEPROM
 
@@ -62,7 +62,7 @@ const uint16_t SLEEP_MS = 60000; //one minute in milliseconds
 const uint32_t SLEEP_SECONDS = SLEEP_INTERVAL * (SLEEP_MS / 1000); //Sleep interval in seconds
 unsigned long timeout_start = 0; //holder for timeout counter
 int timeout = 5000; //time in milsec to wait for ping/ts response
-byte Retries = 1;  //times to try ping and timestamp before giving up
+byte Retries = 3;  //times to try ping and timestamp before giving up
 int cycletime = 0; //counter for measurment time to add to sleeptime
 
 HX711 scale(DOUT, CLK);
@@ -146,11 +146,12 @@ void setup() {
   DEBUG("-- Network Address: "); DEBUG(NETWORKID); DEBUG("."); DEBUGln(NODEID);
   //   Ping the datalogger. If it is alive, it will respond with a 1
   while (!ping()) {
+    Serial.println("Failed to setup ping");
     DEBUGln("Failed to setup ping");
     //If datalogger doesn't respond, Blink, wait x seconds, and try again
     radio.sleep();
     Serial.flush();
-    Sleepy::loseSomeTime(1000);
+    Sleepy::loseSomeTime(60000);
     Blink(20, 5);
   }
   DEBUGln("-- Datalogger Available");

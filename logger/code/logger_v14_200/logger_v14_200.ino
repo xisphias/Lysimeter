@@ -16,9 +16,9 @@
 #define NODEID 0 //Address on Network
 #define FREQUENCY RF69_433MHZ //hardware frequency of Radio
 #define IS_RFM69HW    //uncomment only for RFM69HW! 
-#define ATC_RSSI -70 //ideal signal strength
+//#define ATC_RSSI -70 //ideal signal strength
 #define ACK_WAIT_TIME 200 // # of ms to wait for an ack
-#define ACK_RETRIES 3 // # of attempts before giving up
+#define ACK_RETRIES 5 // # of attempts before giving up
 #define SERIAL_BAUD 115200 //connection speed
 #define RFM69_CS 10 //RFM69 CS pin
 #define LED 9 //LED pin
@@ -195,7 +195,7 @@ void loop() {
       DEBUGln();
     }
     //And write data to that file
-    DEBUG("sd - writing to "); DEBUG(_fileName); DEBUGln();
+    Serial.print("sd - writing to "); Serial.print(_fileName); Serial.println();
     f.print(NETWORKID); f.print(".");
     f.print(radio.SENDERID); f.print(",");
     f.print(thePayload.time); f.print(",");
@@ -258,7 +258,7 @@ void initRadio()
 		//set baud to 9.6k
 //    radio.writeReg(0x03,0x0D); 
 //    radio.writeReg(0x04,0x05);
-    DEBUG("-- Network Address: "); DEBUG(NETWORKID); DEBUG("."); DEBUGln(NODEID);
+    Serial.print("-- Network Address: "); Serial.print(NETWORKID); Serial.print("."); Serial.println(NODEID);
     #ifdef IS_RFM69HW 
       radio.setHighPower();
     #endif
@@ -267,12 +267,12 @@ void initRadio()
     // radio.encrypt(ENCRYPTKEY);
     // radio.setFrequency(433000000);
 #ifdef ATC_RSSI
-    DEBUGln("-- RFM69_ATC Enabled (Auto Transmission Control)");
+    Serial.println("-- RFM69_ATC Enabled (Auto Transmission Control)");
     radio.enableAutoPower(ATC_RSSI);
 #endif
     DEBUG("-- Transmitting at "); DEBUGln(radio.getFrequency());
   } else {
-    DEBUGln("-- Cannot initialize radio");
+    Serial.println("-- Cannot initialize radio");
   }
 }
 void initRTC()
@@ -302,16 +302,16 @@ void initSDCard()
   digitalWrite(LED, HIGH); //turn LED on to signal start of test
   CARD_PRESENT = digitalRead(CARD_DETECT); //read Card Detect pin
   if(CARD_PRESENT) { //If the Card is inserted correctly...
-    DEBUG("-- SD Present, ");
+    Serial.print("-- SD Present, ");
     if (SD.begin(SD_CS_PIN)) { //Try initializing the Card...
-      DEBUG("initialized, ");
+      Serial.println("initialized, ");
       File f; //declare a File
 //      SPI doesnt like using two spi devices concurrently
 //      rtc.update();
 //      now = rtc.unixtime(); //get current time
       if(f.open("start.txt", FILE_WRITE)) { //Try opening that File
-        DEBUGln("file write, OK!");
-        DEBUG("-- Time is "); DEBUGln(now);
+        Serial.println("file write, OK!");
+        Serial.print("-- Time is "); Serial.println(now);
         //printTime();
         //Print to open File
         f.print("program started at: ");

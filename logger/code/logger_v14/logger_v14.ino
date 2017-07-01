@@ -16,8 +16,8 @@
 #define NODEID 0 //Address on Network
 #define FREQUENCY RF69_433MHZ //hardware frequency of Radio
 #define IS_RFM69HW    //uncomment only for RFM69HW! 
-#define ATC_RSSI -70 //ideal signal strength
-#define ACK_WAIT_TIME 200 // # of ms to wait for an ack
+//#define ATC_RSSI -70 //ideal signal strength
+#define ACK_WAIT_TIME 30 // # of ms to wait for an ack
 #define ACK_RETRIES 3 // # of attempts before giving up
 #define SERIAL_BAUD 115200 //connection speed
 #define RFM69_CS 10 //RFM69 CS pin
@@ -78,7 +78,7 @@ void setup() {
   Serial.begin(SERIAL_BAUD);
 //#endif
   DEBUGln("+++++++++++++++++++++++++++++++++++++");
-  DEBUGln("-- Datalogger for Lysimeter System --");
+  Serial.println("-- Datalogger for Lysimeter System --");
   pinMode(LED, OUTPUT); //Set LED to output
   pinMode(CARD_DETECT, INPUT_PULLUP); //Init. 10k internal Pullup resistor
   initRTC();
@@ -103,22 +103,22 @@ void loop() {
   bool ping = false;
 
   if (radio.receiveDone()) { //if recieve packets from sensor...
-    DEBUG("rcv ");DEBUG(char(radio.DATA[0]));DEBUG(", ");DEBUG(radio.DATALEN); DEBUG(" byte/s from node "); DEBUG(radio.SENDERID); 
-    DEBUG(" [RX_RSSI:"); DEBUG(radio.RSSI); DEBUG("]");DEBUG(": ");
+//    DEBUG("rcv ");DEBUG(char(radio.DATA[0]));DEBUG(", ");DEBUG(radio.DATALEN); DEBUG(" byte/s from node "); DEBUG(radio.SENDERID); 
+//    DEBUG(" [RX_RSSI:"); DEBUG(radio.RSSI); DEBUG("]");DEBUG(": ");
     lastRequesterNodeID = radio.SENDERID; //SENDERID is the Node ID of the device that sent the packet of data
-    rtc.update();
-    now = rtc.unixtime(); //record time of this event
-    theTimeStamp.timestamp = now; //and save it to the global variable
+//    rtc.update();
+//    now = rtc.unixtime(); //record time of this event
+//    theTimeStamp.timestamp = now; //and save it to the global variable
 
     /*=== PING ==*/
     if(radio.DATALEN == 1 && radio.DATA[0] == 'p') {
-      DEBUG(radio.SENDERID); DEBUG(": ");
-      DEBUG("p ");
+//      DEBUG(radio.SENDERID); DEBUG(": ");
+//      DEBUG("p ");
       ping = true;
     }
     /*=== TIME ==*/
     if(radio.DATALEN == 1 && radio.DATA[0] == 't') {
-      DEBUG("t ");
+//      DEBUG("t ");
       reportTime = true;
     }
 
@@ -127,21 +127,27 @@ void loop() {
       thePayload = *(Payload*)radio.DATA; //assume radio.DATA actually contains our struct and not something else
       writeData = true;
       //NOTE: Be careful with too many prints and too much math in here. Do it in the writeData function down below
-      DEBUG("["); DEBUG(radio.SENDERID); DEBUGln("] ");
-      DEBUG("@: "); DEBUGln(thePayload.time);
+//      DEBUG("["); DEBUG(radio.SENDERID); DEBUGln("] ");
+//      DEBUG("@: "); DEBUGln(thePayload.time);
     }
+    DEBUG("rcv ");DEBUG(char(radio.DATA[0]));DEBUG(", ");DEBUG(radio.DATALEN); DEBUG(" byte/s from node "); DEBUG(radio.SENDERID); 
+DEBUG(" [RX:"); DEBUG(radio.RSSI); DEBUGln("]");
     if(radio.ACKRequested()){
 		DEBUG(" .sending ack. ");
-      	DEBUG(millis()-rcvTime);DEBUG("ms ");
-      	Serial.println("ack");
+//      	Serial.println("ack");
       	radio.sendACK();
+         delay(10);
     }
     Blink(LED,5);
   }
 
+   
   /*=== DO THE RESPONSES TO THE MESSAGES ===*/
   //Sends the time to the sensor that requested it
   if (reportTime) {
+    rtc.update();
+    now = rtc.unixtime(); //record time of this event
+    theTimeStamp.timestamp = now; //and save it to the global variable
     Serial.println(now);
     DEBUG("snd > "); DEBUG('['); DEBUG(lastRequesterNodeID); DEBUG("] ");
     if(radio.sendWithRetry(lastRequesterNodeID, (const void*)(&theTimeStamp), sizeof(theTimeStamp), ACK_RETRIES, ACK_WAIT_TIME)) {
@@ -195,7 +201,7 @@ void loop() {
       DEBUGln();
     }
     //And write data to that file
-    DEBUG("sd - writing to "); DEBUG(_fileName); DEBUGln();
+    Serial.print("sd - writing to "); Serial.print(_fileName); Serial.println();
     f.print(NETWORKID); f.print(".");
     f.print(radio.SENDERID); f.print(",");
     f.print(thePayload.time); f.print(",");
@@ -250,15 +256,15 @@ void initRadio()
   if (check)
   {
     //set radio rate to 4.8k
-    radio.writeReg(0x03,0x1A);
-    radio.writeReg(0x04,0x0B);
+//    radio.writeReg(0x03,0x1A);
+//    radio.writeReg(0x04,0x0B);
 //    //set radio rate to 1.2k
 //    radio.writeReg(0x03,0x68);
 //    radio.writeReg(0x04,0x2B);
-		//set baud to 9.6k
+    //set baud to 9.6k
 //    radio.writeReg(0x03,0x0D); 
 //    radio.writeReg(0x04,0x05);
-    DEBUG("-- Network Address: "); DEBUG(NETWORKID); DEBUG("."); DEBUGln(NODEID);
+    Serial.print("-- Network Address: "); Serial.print(NETWORKID); Serial.print("."); Serial.println(NODEID);
     #ifdef IS_RFM69HW 
       radio.setHighPower();
     #endif
@@ -267,12 +273,12 @@ void initRadio()
     // radio.encrypt(ENCRYPTKEY);
     // radio.setFrequency(433000000);
 #ifdef ATC_RSSI
-    DEBUGln("-- RFM69_ATC Enabled (Auto Transmission Control)");
+    Serial.println("-- RFM69_ATC Enabled (Auto Transmission Control)");
     radio.enableAutoPower(ATC_RSSI);
 #endif
     DEBUG("-- Transmitting at "); DEBUGln(radio.getFrequency());
   } else {
-    DEBUGln("-- Cannot initialize radio");
+    Serial.println("-- Cannot initialize radio");
   }
 }
 void initRTC()
@@ -302,16 +308,16 @@ void initSDCard()
   digitalWrite(LED, HIGH); //turn LED on to signal start of test
   CARD_PRESENT = digitalRead(CARD_DETECT); //read Card Detect pin
   if(CARD_PRESENT) { //If the Card is inserted correctly...
-    DEBUG("-- SD Present, ");
+    Serial.print("-- SD Present, ");
     if (SD.begin(SD_CS_PIN)) { //Try initializing the Card...
-      DEBUG("initialized, ");
+      Serial.println("initialized, ");
       File f; //declare a File
 //      SPI doesnt like using two spi devices concurrently
 //      rtc.update();
 //      now = rtc.unixtime(); //get current time
       if(f.open("start.txt", FILE_WRITE)) { //Try opening that File
-        DEBUGln("file write, OK!");
-        DEBUG("-- Time is "); DEBUGln(now);
+        Serial.println("file write, OK!");
+        Serial.print("-- Time is "); Serial.println(now);
         //printTime();
         //Print to open File
         f.print("program started at: ");

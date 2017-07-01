@@ -14,16 +14,16 @@
 /****************************************************************************/
 /***********************    DON'T FORGET TO SET ME    ***********************/
 /****************************************************************************/
-#define NODEID    9 //Node Address
-#define NETWORKID 100 //Network to communicate on
+#define NODEID    6 //Node Address
+#define NETWORKID 200 //Network to communicate on
 /****************************************************************************/
 
 #define GATEWAYID 0 //Address of datalogger/reciever
 #define FREQUENCY RF69_433MHZ
 #define IS_RFM69HW    //uncomment only for RFM69HW! 
 //#define ATC_RSSI -70 //ideal Signal Strength of trasmission
-#define ACK_WAIT_TIME 30 // # of ms to wait for an ack
-#define ACK_RETRIES 3 // # of attempts before giving up
+#define ACK_WAIT_TIME 200 // # of ms to wait for an ack
+#define ACK_RETRIES 5 // # of attempts before giving up
 #define DOUT  8
 #define CLK  7
 #define zOutput 3.3
@@ -50,8 +50,8 @@ const int bat_div_R2 = 3820;
 const uint8_t scaleNmeasurements = 80; //no times to measure load cell for average
 const int muxSelectPins[3] = {3, 4, 5}; // S0~3, S1~4, S2~5
 // Define calibration for LC   Y0   , Y1  , Y2  , Y3  , Y4  , Y5  , Y6  , Y8  }
-long calibration_factor[8] = {55087,54747,55230,54877,54580,54341,55026,54256};
-long zero_factor[8] =        {-28659,-23260,21568,9247,-22947,11495,5930,-718};
+long calibration_factor[8] = {55677,54420,55283,53967,54686,55428,1,1};
+long zero_factor[8] =        {-26980,-20036,5404,7616,-11304,7065,1,1};
 uint16_t count = 0; //measurement number
 uint16_t EEPROM_ADDR = 5; //Start of data storage in EEPROM
 
@@ -128,8 +128,8 @@ void setup() {
   //Setup Radio
   radio.initialize(FREQUENCY, NODEID, NETWORKID);
     //set radio rate to 4.8k
-//    radio.writeReg(0x03,0x1A);
-//    radio.writeReg(0x04,0x0B);
+    radio.writeReg(0x03,0x1A);
+    radio.writeReg(0x04,0x0B);
     //set baud to 9.6k
 //  radio.writeReg(0x03,0x0D); 
 //  radio.writeReg(0x04,0x05);
@@ -143,10 +143,11 @@ void setup() {
   #ifdef ATC_RSSI
     radio.enableAutoPower(ATC_RSSI);
    #endif
-  Serial.print("-- Network Address: "); Serial.print(NETWORKID); Serial.print("."); Serial.println(NODEID);
+  DEBUG("-- Network Address: "); DEBUG(NETWORKID); DEBUG("."); DEBUGln(NODEID);
   //   Ping the datalogger. If it is alive, it will respond with a 1
   while (!ping()) {
     Serial.println("Failed to setup ping");
+    DEBUGln("Failed to setup ping");
     //If datalogger doesn't respond, Blink, wait x seconds, and try again
     radio.sleep();
     Serial.flush();
@@ -166,8 +167,6 @@ void loop() {
     if (gotTime) {
       i = Retries;
       Serial.print(" [RX:"); Serial.print(radio.RSSI); Serial.print("]");
-    } else {
-      Sleepy::loseSomeTime(5000);
     }
   }
   if (!gotTime) { //Gets time from datalogger and stores in Global Variable
@@ -212,11 +211,7 @@ void loop() {
   for (int i = 0; i < Retries; i++) {
     DEBUG("Ping request: "); DEBUGln(i);
     gotPing = ping();
-    if (gotPing) {
-      i = Retries;
-    } else {
-      Sleepy::loseSomeTime(5000);
-    }
+    if (gotPing) i = Retries;
   }
   cycletime = int((millis()-starttime)/1000);
   DEBUG("measurement cycle time: ");DEBUGln(cycletime);
@@ -378,13 +373,14 @@ void sendStoredEEPROMData() {
     } else {
       sendRetries++;
       Serial.println("-stored send fail");
+      uint16_t waitTime = random(10000);
       digitalWrite(LED, LOW);
       DEBUG(".data send failed:"); DEBUG(sendRetries);
       DEBUG("..waiting for retry for:");
       DEBUG(waitTime);DEBUGln(" ms");
       Blink(20, 5);
       radio.sleep();
-      Sleepy::loseSomeTime(5000);
+      Sleepy::loseSomeTime(waitTime);
     }
   }
   if(!(theData.count > 0)) { //only reset if eeprom was erased
@@ -485,10 +481,7 @@ bool getTime()
         DEBUGln("failed . . . received not timestamp");
         return false;
       }
-      if (radio.ACKRequested()){
-        radio.sendACK();
-                delay(10);
-      }
+      if (radio.ACKRequested()) radio.sendACK();
     }
     if (millis() > timeout_start + timeout) { //it is possible that you could get the time and timeout, but only in the edge case
         DEBUGln(" ...timestamp timeout");

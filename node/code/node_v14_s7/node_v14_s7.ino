@@ -21,9 +21,9 @@
 #define GATEWAYID 0 //Address of datalogger/reciever
 #define FREQUENCY RF69_433MHZ
 #define IS_RFM69HW    //uncomment only for RFM69HW! 
-#define ATC_RSSI -70 //ideal Signal Strength of trasmission
-#define ACK_WAIT_TIME 200 // # of ms to wait for an ack
-#define ACK_RETRIES 5 // # of attempts before giving up
+//#define ATC_RSSI -70 //ideal Signal Strength of trasmission
+#define ACK_WAIT_TIME 30 // # of ms to wait for an ack
+#define ACK_RETRIES 3 // # of attempts before giving up
 #define DOUT  8
 #define CLK  7
 #define zOutput 3.3
@@ -62,7 +62,7 @@ const uint16_t SLEEP_MS = 60000; //one minute in milliseconds
 const uint32_t SLEEP_SECONDS = SLEEP_INTERVAL * (SLEEP_MS / 1000); //Sleep interval in seconds
 unsigned long timeout_start = 0; //holder for timeout counter
 int timeout = 5000; //time in milsec to wait for ping/ts response
-byte Retries = 1;  //times to try ping and timestamp before giving up
+byte Retries = 3;  //times to try ping and timestamp before giving up
 int cycletime = 0; //counter for measurment time to add to sleeptime
 
 HX711 scale(DOUT, CLK);
@@ -128,8 +128,8 @@ void setup() {
   //Setup Radio
   radio.initialize(FREQUENCY, NODEID, NETWORKID);
     //set radio rate to 4.8k
-    radio.writeReg(0x03,0x1A);
-    radio.writeReg(0x04,0x0B);
+//    radio.writeReg(0x03,0x1A);
+//    radio.writeReg(0x04,0x0B);
     //set baud to 9.6k
 //  radio.writeReg(0x03,0x0D); 
 //  radio.writeReg(0x04,0x05);
@@ -143,14 +143,14 @@ void setup() {
   #ifdef ATC_RSSI
     radio.enableAutoPower(ATC_RSSI);
    #endif
-  DEBUG("-- Network Address: "); DEBUG(NETWORKID); DEBUG("."); DEBUGln(NODEID);
+  Serial.print("-- Network Address: "); Serial.print(NETWORKID); Serial.print("."); Serial.println(NODEID);
   //   Ping the datalogger. If it is alive, it will respond with a 1
   while (!ping()) {
-    DEBUGln("Failed to setup ping");
+    Serial.println("Failed to setup ping");
     //If datalogger doesn't respond, Blink, wait x seconds, and try again
     radio.sleep();
     Serial.flush();
-    Sleepy::loseSomeTime(1000);
+    Sleepy::loseSomeTime(60000);
     Blink(20, 5);
   }
   DEBUGln("-- Datalogger Available");
@@ -166,6 +166,8 @@ void loop() {
     if (gotTime) {
       i = Retries;
       Serial.print(" [RX:"); Serial.print(radio.RSSI); Serial.print("]");
+    } else {
+      Sleepy::loseSomeTime(5000);
     }
   }
   if (!gotTime) { //Gets time from datalogger and stores in Global Variable
@@ -210,7 +212,11 @@ void loop() {
   for (int i = 0; i < Retries; i++) {
     DEBUG("Ping request: "); DEBUGln(i);
     gotPing = ping();
-    if (gotPing) i = Retries;
+    if (gotPing) {
+      i = Retries;
+    } else {
+      Sleepy::loseSomeTime(5000);
+    }
   }
   cycletime = int((millis()-starttime)/1000);
   DEBUG("measurement cycle time: ");DEBUGln(cycletime);
@@ -372,14 +378,13 @@ void sendStoredEEPROMData() {
     } else {
       sendRetries++;
       Serial.println("-stored send fail");
-      uint16_t waitTime = random(10000);
       digitalWrite(LED, LOW);
       DEBUG(".data send failed:"); DEBUG(sendRetries);
       DEBUG("..waiting for retry for:");
       DEBUG(waitTime);DEBUGln(" ms");
       Blink(20, 5);
       radio.sleep();
-      Sleepy::loseSomeTime(waitTime);
+      Sleepy::loseSomeTime(5000);
     }
   }
   if(!(theData.count > 0)) { //only reset if eeprom was erased
@@ -480,7 +485,10 @@ bool getTime()
         DEBUGln("failed . . . received not timestamp");
         return false;
       }
-      if (radio.ACKRequested()) radio.sendACK();
+      if (radio.ACKRequested()) {
+        radio.sendACK();
+        delay(10);
+      }
     }
     if (millis() > timeout_start + timeout) { //it is possible that you could get the time and timeout, but only in the edge case
         DEBUGln(" ...timestamp timeout");

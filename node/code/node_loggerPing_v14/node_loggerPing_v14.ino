@@ -21,8 +21,8 @@
 #define GATEWAYID 0 //Address of datalogger/reciever
 #define FREQUENCY RF69_433MHZ
 #define IS_RFM69HW    //uncomment only for RFM69HW! 
-#define ATC_RSSI -70 //ideal signal strength
-#define ACK_WAIT_TIME 200 // # of ms to wait for an ack
+//#define ATC_RSSI -70 //ideal signal strength
+#define ACK_WAIT_TIME 30 // # of ms to wait for an ack
 #define ACK_RETRIES 3 // # of attempts before giving up
 #define DOUT  8
 #define CLK  7
@@ -35,7 +35,7 @@
 
 unsigned long timeout_start = 0; //holder for timeout counter
 int timeout = 5000; //time in milsec to wait for ping/ts response
-byte Retries = 1;  //times to try ping and timestamp before giving up
+byte Retries = 3;  //times to try ping and timestamp before giving up
 
 ISR(WDT_vect) {
   Sleepy::watchdogEvent(); // set watchdog for Sleepy
@@ -59,8 +59,8 @@ void setup() {
   //Setup Radio
   radio.initialize(FREQUENCY, NODEID, NETWORKID);
   //set radio rate to 4.8k
-  radio.writeReg(0x03, 0x1A);
-  radio.writeReg(0x04, 0x0B);
+//  radio.writeReg(0x03, 0x1A);
+//  radio.writeReg(0x04, 0x0B);
   //    //set radio rate to 1.2k
   //    radio.writeReg(0x03,0x68);
   //    radio.writeReg(0x04,0x2B);
@@ -77,14 +77,14 @@ void setup() {
 #endif
   Serial.print("-- Network Address: "); Serial.print(NETWORKID); Serial.print("."); Serial.println(NODEID);
   //	 Ping the datalogger. If it is alive, it will respond with a 1
-  while (!ping()) {
-    Serial.println("Failed to Setup ping");
-    //If datalogger doesn't respond, Blink, wait 60 seconds, and try again
-    radio.sleep();
-    Serial.flush();
-    Blink(100, 5);
-    Sleepy::loseSomeTime(1000);
-  }
+//  while (!ping()) {
+//    Serial.println("Failed to Setup ping");
+//    //If datalogger doesn't respond, Blink, wait 60 seconds, and try again
+//    radio.sleep();
+//    Serial.flush();
+//    Blink(100, 5);
+//    Sleepy::loseSomeTime(1000);
+//  }
   Serial.println("-- Datalogger Available, setup complete ");
 }
 
@@ -93,6 +93,7 @@ void loop() {
   //Gets current time at start of measurement cycle. Stores in global theTimeStamp struct
   bool gotTime = false;
   for (int i = 0; i < Retries; i++) {
+    delay(1000);
     Serial.print("Timestamp request: "); Serial.println(i);
     gotTime = getTime();
     if (gotTime) {
@@ -105,10 +106,12 @@ void loop() {
     }
   bool gotPing = false;
   for (int i = 0; i < Retries; i++) {
+    delay(1000);
     Serial.print("Ping request: "); Serial.println(i);
     gotPing = ping();
     if (gotPing) i = Retries;
   }
+  delay(100);
   if (gotPing) {
     //If the Datalogger is listening and available to recieve data
     Serial.print("- Datalogger Available ");
@@ -117,9 +120,7 @@ void loop() {
   }
   Serial.flush();
   radio.sleep();
-  //	for(uint8_t i = 0; i < SLEEP_INTERVAL; i++)
-  //		Sleepy::loseSomeTime(SLEEP_MS);
-  Sleepy::loseSomeTime(3000);
+  delay(3000);
 }
 
 /**
@@ -136,11 +137,12 @@ bool getTime()
   bool HANDSHAKE_SENT = false;
   bool TIME_RECIEVED = false;
   timeout_start = millis();
+  byte sigStr;
   //digitalWrite(LED, HIGH); //turn on LED to signal tranmission event
   //Send request for time to the Datalogger
   if (!HANDSHAKE_SENT) {
     Serial.print("time - ");
-    if (radio.sendWithRetry(GATEWAYID, "t", 1, ACK_RETRIES, ACK_WAIT_TIME)) { //'t' requests time
+    if (radio.sendWithRetry(GATEWAYID, "t", 1,  ACK_RETRIES, ACK_WAIT_TIME)) { //'t' requests time
       Serial.print("snd . . ");
       HANDSHAKE_SENT = true;
     }
@@ -150,6 +152,7 @@ bool getTime()
       return false;
     }
   }
+  
   //Wait for the time to be returned from the datalogger
   while (!TIME_RECIEVED && HANDSHAKE_SENT) {
     if (radio.receiveDone()) {
@@ -157,9 +160,8 @@ bool getTime()
         theTimeStamp = *(TimeStamp*)radio.DATA; //save data to global variable
         Serial.print(" rcv - "); Serial.print('['); Serial.print(radio.SENDERID); Serial.print("] ");
         Serial.print(theTimeStamp.timestamp); Serial.print(" [RX_RSSI:"); Serial.print(radio.RSSI); Serial.print("]"); Serial.println();
-        byte sigStr = 11 - byte(radio.RSSI * -0.1);
+        sigStr = 11 - byte(radio.RSSI * -0.1);
         Serial.print("   [sigStr:");Serial.print(sigStr);Serial.print("]");Serial.println();
-        Blink(400,sigStr);
         TIME_RECIEVED = true;
         digitalWrite(LED, LOW); //turn off LED
       }
@@ -169,13 +171,17 @@ bool getTime()
         Serial.println("failed . . . received not timestamp");
         return false;
       }
-      if (radio.ACKRequested()) radio.sendACK();
+      if (radio.ACKRequested()) {
+        radio.sendACK();
+        delay(10);
+      }
     }
     if (millis() > timeout_start + timeout) { //it is possible that you could get the time and timeout, but only in the edge case
       Serial.println(" ...timestamp timeout");
       return false;
     }
   }
+  Blink(400,sigStr);
   return true;
 }
 /**
