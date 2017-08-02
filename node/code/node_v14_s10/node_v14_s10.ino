@@ -139,11 +139,11 @@ void setup() {
   #ifdef IS_RFM69HW 
     radio.setHighPower();
   #endif
-  radio.encrypt(null);
+  radio.encrypt("sampleEncryptKey");
   #ifdef ATC_RSSI
     radio.enableAutoPower(ATC_RSSI);
    #endif
-  DEBUG("-- Network Address: "); DEBUG(NETWORKID); DEBUG("."); DEBUGln(NODEID);
+  Serial.print("-- Network Address: "); Serial.print(NETWORKID); Serial.print("."); Serial.println(NODEID);
   //   Ping the datalogger. If it is alive, it will respond with a 1
   while (!ping()) {
     Serial.println("Failed to setup ping");

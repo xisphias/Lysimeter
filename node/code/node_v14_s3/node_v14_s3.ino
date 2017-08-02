@@ -139,7 +139,7 @@ void setup() {
   #ifdef IS_RFM69HW 
     radio.setHighPower();
   #endif
-  radio.encrypt(null);
+  radio.encrypt("sampleEncryptKey");
   #ifdef ATC_RSSI
     radio.enableAutoPower(ATC_RSSI);
    #endif
@@ -212,7 +212,11 @@ void loop() {
   for (int i = 0; i < Retries; i++) {
     DEBUG("Ping request: "); DEBUGln(i);
     gotPing = ping();
-    if (gotPing) i = Retries;
+    if (gotPing) {
+      i = Retries;
+    } else {
+      Sleepy::loseSomeTime(5000);
+    }
   }
   cycletime = int((millis()-starttime)/1000);
   DEBUG("measurement cycle time: ");DEBUGln(cycletime);

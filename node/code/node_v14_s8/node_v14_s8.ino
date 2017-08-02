@@ -139,7 +139,7 @@ void setup() {
   #ifdef IS_RFM69HW 
     radio.setHighPower();
   #endif
-  radio.encrypt(null);
+  radio.encrypt("sampleEncryptKey");
   #ifdef ATC_RSSI
     radio.enableAutoPower(ATC_RSSI);
    #endif
@@ -147,7 +147,6 @@ void setup() {
   //   Ping the datalogger. If it is alive, it will respond with a 1
   while (!ping()) {
     Serial.println("Failed to setup ping");
-    DEBUGln("Failed to setup ping");
     //If datalogger doesn't respond, Blink, wait x seconds, and try again
     radio.sleep();
     Serial.flush();

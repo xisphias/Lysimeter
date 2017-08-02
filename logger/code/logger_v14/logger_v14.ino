@@ -27,7 +27,7 @@
 #define CARD_DETECT 6 //Pin to detect presence of SD card
 //#define INTERRUPT_PIN 2 // DeadOn RTC SQW/interrupt pin (optional)
 
-//#define SERIAL_EN //Comment this out to remove Serial comms and save a few kb's of space
+#define SERIAL_EN //Comment this out to remove Serial comms and save a few kb's of space
 #ifdef SERIAL_EN
 #define DEBUG(input)   {Serial.print(input); delay(1);}
 #define DEBUGln(input) {Serial.println(input); delay(1);}
@@ -269,7 +269,7 @@ void initRadio()
       radio.setHighPower();
     #endif
     //radio.setPowerLevel(31); // power output ranges from 0 (5dBm) to 31 (20dBm)
-    radio.encrypt(NULL);
+    radio.encrypt("sampleEncryptKey");
     // radio.encrypt(ENCRYPTKEY);
     // radio.setFrequency(433000000);
 #ifdef ATC_RSSI

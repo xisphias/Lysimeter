@@ -1,6 +1,7 @@
 
-as.POSIXct(1498886468, origin="1970-01-01",tz="UTC")
-as.POSIXct(1497933503, origin="1970-01-01",tz="UTC")
+as.POSIXct(1499910592, origin="1970-01-01",tz="UTC")
+as.POSIXct(1499890592, origin="1970-01-01",tz="UTC")
+as.POSIXct(1501096421, origin="1970-01-01",tz="America/Anchorage")
 
 library(ggplot2)
 # dat<-read.csv("test_20170601_100_9.csv")

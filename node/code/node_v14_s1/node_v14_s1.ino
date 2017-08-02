@@ -139,7 +139,7 @@ void setup() {
   #ifdef IS_RFM69HW 
     radio.setHighPower();
   #endif
-  radio.encrypt(null);
+  radio.encrypt("sampleEncryptKey");
   #ifdef ATC_RSSI
     radio.enableAutoPower(ATC_RSSI);
    #endif

@@ -139,7 +139,7 @@ void setup() {
   #ifdef IS_RFM69HW 
     radio.setHighPower();
   #endif
-  radio.encrypt(null);
+  radio.encrypt("sampleEncryptKey");
   #ifdef ATC_RSSI
     radio.enableAutoPower(ATC_RSSI);
    #endif
@@ -485,7 +485,7 @@ bool getTime()
         DEBUGln("failed . . . received not timestamp");
         return false;
       }
-      if (radio.ACKRequested()){
+      if (radio.ACKRequested()) {
         radio.sendACK();
                 delay(10);
       }
