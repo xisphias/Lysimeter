@@ -3,7 +3,7 @@ library(reshape2)
 library(plyr)
 options(scipen=9999)
 datDir<-"/Users/jac/Documents/projects/plantWater/lysim/Lysimeter/logger/data/20170628/"
-datDir<-"C:/Users/Owner/Documents/GitHub/Lysimeter/logger/data/20170802/"
+datDir<-"C:/Users/Owner/Documents/GitHub/Lysimeter/logger/data/20170809/"
 datFiles<-grep("Rssi.csv",list.files(datDir),value=TRUE)
 datFiles
 setwd(datDir)
@@ -18,5 +18,5 @@ tail(rxDat)
 unique(rxDat$NodeID)
 rxDat$NodeID<-as.factor(rxDat$NodeID)
 
-ggplot(rxDat,aes(x=DateTime,y=-RxRssi))+geom_point(aes(color=NodeID))+ylim(0,115)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1));ggplot(rxDat[rxDat$DateTime>"2017-07-30",],aes(x=DateTime,y=-RxRssi))+geom_point(aes(color=NodeID))+ylim(0,115)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))ggplot(rxDat,aes(x=DateTime,y=-RxRssi))+geom_line(aes(color=NodeID))+ylim(0,115)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
+# ggplot(rxDat,aes(x=DateTime,y=-RxRssi))+geom_point(aes(color=NodeID))+ylim(0,115)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1));ggplot(rxDat[rxDat$DateTime>"2017-07-30",],aes(x=DateTime,y=-RxRssi))+geom_point(aes(color=NodeID))+ylim(0,115)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))ggplot(rxDat,aes(x=DateTime,y=-RxRssi))+geom_line(aes(color=NodeID))+ylim(0,115)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
 

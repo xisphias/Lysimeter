@@ -6,7 +6,7 @@ library(plyr)
 options(scipen=9999)
 #detach(unload=TRUE,"package:dplyr")
 datDir<-"/Users/jac/Documents/projects/plantWater/lysim/Lysimeter/logger/data/20170628/"
-datDir<-"C:/Users/Owner/Documents/GitHub/Lysimeter/logger/data/20170802/"
+datDir<-"C:/Users/Owner/Documents/GitHub/Lysimeter/logger/data/20170810/"
 datFiles<-grep(".csv",list.files(datDir),value=TRUE)
 if(length(datFiles[grep("Rssi",datFiles)])>=1){datFiles<-datFiles[-grep("Rssi",datFiles)]}
 datFiles
@@ -58,9 +58,9 @@ ggplot(Dat2a,aes(x=DateTime,y=BatV))+geom_point()+ylim(11.5,13.2)+facet_wrap(~No
 ggplot(Dat2a,aes(x=DateTime,y=BoardTemp))+geom_point()+ylim(-10,40)+facet_wrap(~NodeID)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
 ggplot(Dat2a,aes(x=DateTime,y=count))+geom_point()+ylim(0,1000)+facet_wrap(~NodeID)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
 
-ggplot(Dat2a[Dat2a$DateTime>"2017-07-28",],aes(x=DateTime,y=BatV))+geom_point()+ylim(11.5,13.2)+facet_wrap(~NodeID)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))+geom_line(aes(y=12.6),color='green')+geom_line(aes(y=11.5),color='red')
+ggplot(Dat2a[Dat2a$DateTime>"2017-08-01",],aes(x=DateTime,y=BatV))+geom_point()+ylim(11.5,13.2)+facet_wrap(~NodeID)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))+geom_line(aes(y=12.6),color='green')+geom_line(aes(y=11.5),color='red')
 ggplot(Dat2a[Dat2a$DateTime>"2017-07-28",],aes(x=DateTime,y=BoardTemp))+geom_point()+ylim(-10,35)+facet_wrap(~NodeID)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
-ggplot(Dat2a[Dat2a$DateTime>"2017-07-28",],aes(x=DateTime,y=count))+geom_point()+ylim(0,1000)+facet_wrap(~NodeID)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
+ggplot(Dat2a[Dat2a$DateTime>"2017-07-28",],aes(x=DateTime,y=count))+geom_point()+ylim(0,10)+facet_wrap(~NodeID)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
 
 ggplot(Dat2a[Dat2a$DateTime>"2017-06-29"&Dat2a$DateTime<"2017-07-03",],aes(x=DateTime,y=BatV))+geom_point()+ylim(11.5,13.2)+facet_wrap(~NodeID)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
 ggplot(Dat2a[Dat2a$DateTime>"2017-07-09",],aes(x=DateTime,y=BoardTemp))+geom_point()+ylim(-10,35)+facet_wrap(~NodeID)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
@@ -68,7 +68,7 @@ ggplot(Dat2a[Dat2a$DateTime>"2017-07-09",],aes(x=DateTime,y=count))+geom_point()
 
 ggplot(Dat2a[Dat2a$NodeID=='100.1',],aes(x=DateTime,y=Kg))+geom_point()+ylim(5,22)+facet_wrap(~ch)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
 ggplot(Dat2a[Dat2a$NodeID=='100.2',],aes(x=DateTime,y=Kg))+geom_point()+ylim(5,22)+facet_wrap(~ch)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
-ggplot(Dat2a[Dat2a$NodeID=='100.3',],aes(x=DateTime,y=Kg))+geom_point()+ylim(5,22)+facet_wrap(~ch)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
+ggplot(Dat2a[Dat2a$NodeID=='100.3',],aes(x=DateTime,y=Kg))+geom_point()+ylim(1,25)+facet_wrap(~ch)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
 ggplot(Dat2a[Dat2a$NodeID=='200.5'&Dat2a$DateTime>"2017-07-09",],aes(x=DateTime,y=Kg))+geom_point()+ylim(5,20)+facet_wrap(~ch)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
 ggplot(Dat2a[Dat2a$NodeID=='200.6'&Dat2a$DateTime>"2017-07-09",],aes(x=DateTime,y=Kg))+geom_point()+ylim(5,20)+facet_wrap(~ch)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
 ggplot(Dat2a[Dat2a$NodeID=='100.7',],aes(x=DateTime,y=Kg))+geom_point()+ylim(5,20)+facet_wrap(~ch)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
@@ -77,7 +77,7 @@ ggplot(Dat2a[Dat2a$NodeID=='100.9',],aes(x=DateTime,y=Kg))+geom_point()+ylim(5,2
 ggplot(Dat2a[Dat2a$NodeID=='101.9',],aes(x=DateTime,y=Kg))+geom_point()+ylim(5,20)+facet_wrap(~ch)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
 ggplot(Dat2a[Dat2a$NodeID=='100.10',],aes(x=DateTime,y=Kg))+geom_point()+ylim(5,25)+facet_wrap(~ch)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
 
-Datsub<-Dat2a[Dat2a$DateTime>'2017-07-30',];
+Datsub<-Dat2a[Dat2a$DateTime>='2017-08-10 15:00',];
 ggplot(Datsub,aes(x=DateTime,y=BatV))+geom_point()+ylim(11.5,13.2)+facet_wrap(~NodeID)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))+geom_line(aes(y=12.6),color='green')+geom_line(aes(y=11.5),color='red')
 ggplot(Datsub,aes(x=DateTime,y=BoardTemp))+geom_point()+ylim(-10,40)+facet_wrap(~NodeID)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
 ggplot(Datsub,aes(x=DateTime,y=count))+geom_point()+ylim(0,1000)+facet_wrap(~NodeID)+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))
